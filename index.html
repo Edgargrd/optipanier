@@ -211,7 +211,16 @@
           </div>
           <input type="checkbox" id="ex-vegetarian" class="rounded w-5 h-5 text-emerald-600 focus:ring-0">
         </label>
-
+<label class="flex items-center justify-between p-3 bg-emerald-50 border border-emerald-200 rounded-xl cursor-pointer">
+  <div class="flex items-center space-x-3">
+    <span class="text-lg">🌙</span>
+    <div>
+      <span class="text-xs font-black text-emerald-900 block">Régime Halal</span>
+      <span class="text-[11px] text-emerald-700">Sélectionne viandes halal et plats végétariens</span>
+    </div>
+  </div>
+  <input type="checkbox" id="ex-halal" class="rounded w-5 h-5 text-emerald-600">
+</label>
         <div class="grid grid-cols-2 gap-2 text-xs pt-1">
           <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
             <input type="checkbox" id="ex-brassica" checked class="rounded text-[#FA4A33] focus:ring-0">
@@ -739,417 +748,41 @@
     };
 
     /* ================= CATALOGUE DE RECETTES ================= */
-    const MASTER_RECIPES = [
-      // 1. PLATS VÉGÉTARIENS
-      {
-        id: "veg_1", name: "Gnocchis dorés à la poêle, courgettes au thym et feta rôtie",
-        prepTime: 12, calories: 520, macros: "P: 18g | G: 72g | L: 17g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "gnocchi", "onepot", "eco"],
-        ingredients: [
-          { key: "gnocchi", display: "180g de gnocchis à poêler", cut: "Prêts à cuire." },
-          { key: "zucchini", display: "1/2 courgette", cut: "Tailler en dés réguliers de 5 mm." },
-          { key: "feta", display: "40g de feta AOP", cut: "Émietter en gros morceaux." }
-        ],
-        steps: [
-          "Mettre une poêle antiadhésive sur feu vif avec 1 cuillère à café d'huile d'olive.",
-          "Déposer les gnocchis et les faire dorer 3 minutes à feu vif sans y toucher pour former une croûte bien croustillante.",
-          "Ajouter les dés de courgette, assaisonner avec 1 cuillère à café de thym séché (~2 g), 1 pincée de fleur de sel et 2 tours de moulin à poivre.",
-          "Faire sauter l'ensemble 4 minutes à feu moyen en remuant régulièrement jusqu'à ce que la courgette soit tendre.",
-          "Émietter la feta sur les gnocchis brûlants et couvrir la poêle 1 minute hors du feu pour que le fromage ramollisse.",
-          "Servir immédiatement avec un filet d'huile d'olive fraîche pour lier les sucs."
-        ]
-      },
-      {
-        id: "veg_2", name: "Shakshuka minute aux haricots rouges, tomates au cumin et œuf coulant",
-        prepTime: 14, calories: 480, macros: "P: 22g | G: 52g | L: 18g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "oeuf", "onepot", "eco"],
-        ingredients: [
-          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." },
-          { key: "red_beans", display: "140g de haricots rouges", cut: "Rincés et égouttés." },
-          { key: "tomatoes_coulis", display: "120g de coulis de tomate", cut: "Direct." },
-          { key: "tortillas", display: "1 galette wrap", cut: "À tiédir." }
-        ],
-        steps: [
-          "Faire chauffer 1 cuillère à café d'huile d'olive dans une sauteuse à feu moyen.",
-          "Ajouter 1 cuillère à café rase de cumin moulu (~3 g) et 1/2 cuillère à café de paprika doux (~2 g) pour torréfier les épices 30 secondes.",
-          "Verser le coulis de tomate et les haricots rouges égouttés, saler, poivrer et laisser frémir 4 minutes à feu moyen.",
-          "Former un petit creux au centre de la sauce tomate à l'aide d'une cuillère et y casser l'œuf entier.",
-          "Couvrir hermétiquement et cuire 3 minutes et demie à feu doux : le blanc doit être pris et le jaune parfaitement liquide.",
-          "Toaster la galette wrap 30 secondes dans une poêle sèche et déguster en la trempant dans le jaune coulant et la sauce épicée."
-        ]
-      },
-      {
-        id: "veg_3", name: "Dahl de lentilles au lait de coco, carottes fondantes et cumin",
-        prepTime: 24, calories: 520, macros: "P: 24g | G: 68g | L: 16g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "legumineuse", "onepot", "eco"],
-        ingredients: [
-          { key: "lentils", display: "80g de lentilles vertes", cut: "Rincées." },
-          { key: "carrots", display: "1 belle carotte", cut: "En petits dés de 5 mm." },
-          { key: "coconut_milk", display: "80ml de lait de coco", cut: "Prêt." },
-          { key: "tomatoes_coulis", display: "80g de coulis de tomate", cut: "Direct." }
-        ],
-        steps: [
-          "Dans une casserole, faire chauffer 1 cuillère à café d'huile avec 1 cuillère à café bombée de curry doux (~4 g) et 1/2 cuillère à café de curcuma (~2 g).",
-          "Ajouter les dés de carotte et les faire suer 3 minutes à feu moyen en remuant.",
-          "Verser les lentilles rincées et 200 ml d'eau non salée, couvrir et laisser cuire 16 minutes à petits bouillons.",
-          "Une fois l'eau presque absorbée, verser le coulis de tomate et le lait de coco crémeux.",
-          "Ajouter 1/2 cuillère à café de sel fin et un tour de poivre noir, puis laisser compoter 4 minutes à découvert pour épaissir.",
-          "Dresser dans un bol bien chaud avec une touche d'aromates frais."
-        ]
-      },
-      {
-        id: "veg_4", name: "Œufs au plat, haricots blancs à la tomate et pain grillé à l'ail",
-        prepTime: 15, calories: 490, macros: "P: 23g | G: 54g | L: 19g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "oeuf", "eco"],
-        ingredients: [
-          { key: "eggs", display: "2 œufs de plein air", cut: "Entiers." },
-          { key: "white_beans", display: "160g de haricots blancs", cut: "Égouttés." },
-          { key: "tomatoes_coulis", display: "80g de coulis de tomate", cut: "Direct." },
-          { key: "bread", display: "2 tranches de pain", cut: "Tranchées." }
-        ],
-        steps: [
-          "Dans une petite casserole, déposer les haricots blancs avec le coulis de tomate.",
-          "Assaisonner d'1/2 cuillère à café d'ail en poudre (~2 g), 1 cuillère à café d'origan séché (~2 g), sel et poivre.",
-          "Laisser mijoter doucement 5 minutes à feu doux en remuant.",
-          "Dans une poêle antiadhésive avec une noisette de matière grasse, cuire les 2 œufs au plat 3 minutes à feu moyen.",
-          "Faire griller les 2 tranches de pain de campagne au grille-pain ou à sec dans une poêle chaude.",
-          "Déposer les haricots crémeux dans l'assiette, déposer les œufs miroirs dessus et servir avec le pain grillé."
-        ]
-      },
-      {
-        id: "veg_5", name: "Curry de pois chiches aux épinards frais, coulis et riz basmati",
-        prepTime: 20, calories: 540, macros: "P: 20g | G: 74g | L: 14g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "legumineuse", "eco"],
-        ingredients: [
-          { key: "chickpeas", display: "150g de pois chiches en boîte", cut: "Rincés et égouttés." },
-          { key: "spinach_fresh", display: "80g d'épinards frais", cut: "Lavés." },
-          { key: "tomatoes_coulis", display: "100g de coulis de tomate", cut: "Prêt." },
-          { key: "rice", display: "60g de riz basmati", cut: "Rincé." }
-        ],
-        steps: [
-          "Plonger le riz basmati dans une casserole d'eau bouillante salée et cuire 11 minutes.",
-          "Dans une poêle profonde, chauffer 1 cuillère à café d'huile d'olive avec 1 cuillère à café de garam masala ou curry (~3 g).",
-          "Ajouter les pois chiches rincés et le coulis de tomate, puis saler et poivrer.",
-          "Laisser mijoter 6 minutes à feu moyen pour que les pois chiches absorbent les saveurs épicées.",
-          "Ajouter les pousses d'épinards fraîches et mélanger 2 minutes jusqu'à ce qu'elles tombent légèrement.",
-          "Égoutter le riz et dresser le curry fumant par-dessus."
-        ]
-      },
-      {
-        id: "veg_6", name: "Penne all'Arrabbiata aux tomates concassées, ail, piment doux et origan",
-        prepTime: 15, calories: 470, macros: "P: 15g | G: 78g | L: 10g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "pates", "express", "eco"],
-        ingredients: [
-          { key: "pasta", display: "85g de penne rigate", cut: "Crues." },
-          { key: "tomatoes_coulis", display: "130g de coulis de tomate", cut: "Direct." }
-        ],
-        steps: [
-          "Cuire les penne 10 minutes al dente dans une grande casserole d'eau salée.",
-          "Dans une poêle, chauffer 1 cuillère à soupe d'huile d'olive vierge extra.",
-          "Ajouter 1/2 cuillère à café de piment doux (~2 g) et 1 cuillère à café d'ail déshydraté (~3 g) et remuer 30 secondes.",
-          "Verser le coulis de tomate, assaisonner d'1 cuillère à café d'origan séché (~2 g) et d'une pincée de sel.",
-          "Laisser réduire la sauce tomate 5 minutes à feu moyen.",
-          "Égoutter les pâtes en gardant 2 cuillères d'eau de cuisson, mélanger le tout dans la poêle 1 minute et servir brûlant."
-        ]
-      },
-      {
-        id: "veg_7", name: "Bowl de quinoa aux patates douces rôties et pois chiches croustillants",
-        prepTime: 30, calories: 560, macros: "P: 21g | G: 82g | L: 16g", type: "Chaud", timeBracket: "45",
-        requiredEquipment: ["stove", "oven"], requiresFreezer: false, tags: ["veggie", "four"],
-        ingredients: [
-          { key: "quinoa", display: "65g de quinoa", cut: "Rincé." },
-          { key: "sweet_potatoes", display: "180g de patate douce", cut: "En dés réguliers de 1.5 cm." },
-          { key: "chickpeas", display: "100g de pois chiches", cut: "Bien séchés au torchon." }
-        ],
-        steps: [
-          "Préchauffer le four à 200°C en chaleur tournante.",
-          "Dans un saladier, enrober les dés de patate douce et les pois chiches avec 1 cuillère à soupe d'huile, 1 cuillère à café de paprika fumé (~3 g), 1/2 cuillère de cumin (~2 g) et 1 pincée de sel.",
-          "Étaler sur une plaque recouverte de papier cuisson et enfourner 22 minutes en remuant à mi-cuisson.",
-          "Pendant ce temps, faire cuire le quinoa dans de l'eau bouillante salée pendant 12 minutes, puis égoutter.",
-          "Déposer le quinoa tiède en base dans un grand bol creux.",
-          "Disposer les patates douces fondantes et les pois chiches croustillants sur le dessus."
-        ]
-      },
-      {
-        id: "veg_8", name: "Tian provençal au four de courgettes, pommes de terre et feta dorée",
-        prepTime: 40, calories: 490, macros: "P: 18g | G: 58g | L: 20g", type: "Chaud", timeBracket: "45",
-        requiredEquipment: ["oven"], requiresFreezer: false, tags: ["veggie", "four"],
-        ingredients: [
-          { key: "potatoes", display: "220g de pommes de terre", cut: "En fines rondelles de 2 mm." },
-          { key: "zucchini", display: "1 courgette", cut: "En fines rondelles de 2 mm." },
-          { key: "feta", display: "50g de feta AOP", cut: "En tranches fines de 3 mm." }
-        ],
-        steps: [
-          "Préchauffer le four à 190°C.",
-          "Huiler légèrement le fond d'un plat à gratin individuel avec un pinceau ou du papier essuie-tout.",
-          "Ranger les rondelles de pommes de terre et de courgettes à la verticale en les alternant de manière bien serrée.",
-          "Intercaler régulièrement les tranches de feta grecque entre les légumes.",
-          "Arroser d'1 cuillère à soupe d'huile d'olive, parsemer d'1 cuillère à café bombée d'herbes de Provence (~3 g), sel fin et poivre.",
-          "Couvrir d'une feuille de papier cuisson pendant 20 minutes, puis retirer la feuille et cuire encore 20 minutes pour gratiner les bords."
-        ]
-      },
-      {
-        id: "veg_9", name: "Salade fraîche de pois chiches au cumin, feta AOP et rubans de courgette",
-        prepTime: 10, calories: 490, macros: "P: 21g | G: 50g | L: 19g", type: "Froid", timeBracket: "15",
-        requiredEquipment: [], requiresFreezer: false, tags: ["veggie", "froid", "express", "eco"],
-        ingredients: [
-          { key: "chickpeas", display: "160g de pois chiches", cut: "Rincés et séchés au torchon." },
-          { key: "feta", display: "45g de feta AOP", cut: "Émiettée à la main." },
-          { key: "zucchini", display: "1/2 courgette", cut: "En rubans transparents à l'économe." },
-          { key: "carrots", display: "1/2 carotte", cut: "Râpée finement." }
-        ],
-        steps: [
-          "Dans un saladier, préparer la vinaigrette : 1 cuillère à soupe d'huile d'olive, 1 cuillère à café de jus de citron, 1/2 cuillère à café de cumin moulu (~2 g), sel et poivre noir.",
-          "Verser les pois chiches égouttés dans la sauce et mélanger pour bien les imprégner d'épices.",
-          "Tailler la courgette crue en rubans fins et râper la demi-carotte.",
-          "Ajouter les légumes croquants dans le saladier avec les pois chiches.",
-          "Parsemer la feta émiettée sur le dessus sans trop mélanger pour ne pas la briser en purée.",
-          "Déguster immédiatement ou réserver 10 minutes au frais."
-        ]
-      },
-      {
-        id: "veg_10", name: "Salade tiède de lentilles vertes, feta AOP et œuf mollet",
-        prepTime: 23, calories: 510, macros: "P: 28g | G: 48g | L: 20g", type: "Froid", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "froid", "salade", "oeuf"],
-        ingredients: [
-          { key: "lentils", display: "80g de lentilles vertes", cut: "Rincées." },
-          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." },
-          { key: "feta", display: "40g de feta AOP", cut: "Émiettée." },
-          { key: "carrots", display: "1/2 carotte", cut: "En fins bâtonnets croustillants." }
-        ],
-        steps: [
-          "Cuire les lentilles 20 minutes dans une casserole d'eau sans sel avec une pincée de thym, puis égoutter.",
-          "Dans une petite casserole d'eau bouillante, plonger l'œuf délicatement et cuire exactement 6 minutes.",
-          "Refroidir immédiatement l'œuf dans un bol d'eau avec des glaçons pour stopper la cuisson et faciliter l'écalage.",
-          "Dans un bol, mélanger les lentilles tièdes avec 1 cuillère à soupe d'huile d'olive, 1 cuillère de vinaigre, sel et poivre.",
-          "Ajouter les bâtonnets de carottes crues et la feta émiettée.",
-          "Écaler l'œuf mollet avec précaution, le poser au centre et fendre le dessus pour laisser s'écouler le jaune doré."
-        ]
-      },
-      {
-        id: "veg_11", name: "Poêlée chaude de quinoa aux épinards fondants et œuf poêlé",
-        prepTime: 18, calories: 500, macros: "P: 21g | G: 54g | L: 19g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "oeuf", "onepot"],
-        ingredients: [
-          { key: "quinoa", display: "70g de quinoa", cut: "Rincé sous l'eau." },
-          { key: "spinach_fresh", display: "100g d'épinards", cut: "Lavés." },
-          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." },
-          { key: "feta", display: "30g de feta", cut: "Émiettée." }
-        ],
-        steps: [
-          "Faire cuire le quinoa pendant 12 minutes dans de l'eau bouillante salée, puis égoutter soigneusement.",
-          "Dans une poêle, faire chauffer une cuillère d'huile et y faire tomber les pousses d'épinards 2 minutes avec 1 pincée de muscade râpée (~1 g).",
-          "Verser le quinoa cuit et la feta émiettée dans la poêle avec les épinards et réchauffer 1 minute à feu doux.",
-          "Dans une petite poêle à part, cuire l'œuf au plat 3 minutes pour garder le jaune bien coulant.",
-          "Dresser le mélange quinoa-épinards dans l'assiette creuse.",
-          "Couronner avec l'œuf au plat et assaisonner d'un tour de moulin à poivre."
-        ]
-      },
-      {
-        id: "veg_12", name: "Riz blanc sauté aux oignons caramélisés et œuf au plat coulant",
-        prepTime: 15, calories: 480, macros: "P: 18g | G: 72g | L: 13g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "eco", "oeuf"],
-        ingredients: [
-          { key: "rice", display: "75g de riz basmati", cut: "Rincé." },
-          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." }
-        ],
-        steps: [
-          "Cuire le riz basmati 11 minutes dans l'eau bouillante salée, égoutter et laisser tiédir 2 minutes.",
-          "Dans une poêle avec 1 cuillère à soupe d'huile, faire sauter le riz à feu très vif pendant 3 minutes.",
-          "Assaisonner le riz avec 1/2 cuillère à café d'ail en poudre (~2 g), sel fin et poivre pour donner du relief.",
-          "Dans une poêle à part, faire cuire l'œuf au plat 3 minutes à feu moyen.",
-          "Disposer le riz sauté bien doré et croustillant dans un bol.",
-          "Poser l'œuf au plat délicatement par-dessus et percer le jaune avant de déguster."
-        ]
-      },
-      {
-        id: "veg_13", name: "Penne au concentré de tomate, huile d'olive, ail et origan",
-        prepTime: 15, calories: 470, macros: "P: 14g | G: 78g | L: 11g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "pates", "express", "eco"],
-        ingredients: [
-          { key: "pasta", display: "85g de penne rigate", cut: "Crues." },
-          { key: "tomatoes_coulis", display: "100g de coulis de tomate", cut: "Direct." }
-        ],
-        steps: [
-          "Faire bouillir une casserole d'eau salée et cuire les penne 10 minutes al dente.",
-          "Dans une sauteuse, chauffer 1 cuillère à soupe d'huile d'olive avec 1 cuillère à café d'origan séché (~2 g) et 1 pincée de piment doux.",
-          "Verser le coulis de tomate, saler et laisser compoter 5 minutes à feu moyen.",
-          "Prélever 2 cuillères à soupe d'eau de cuisson des pâtes et les incorporer dans la sauce tomate.",
-          "Égoutter les pâtes et les jeter dans la sauteuse bien chaude.",
-          "Remuer vigoureusement 1 minute pour que la sauce nappe les rainures des penne et servir."
-        ]
-      },
-      {
-        id: "veg_14", name: "Poêlée de haricots blancs mijotés à la pulpe de tomate et ail",
-        prepTime: 12, calories: 430, macros: "P: 19g | G: 62g | L: 9g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "eco", "onepot"],
-        ingredients: [
-          { key: "white_beans", display: "180g de haricots blancs", cut: "Égouttés." },
-          { key: "tomatoes_coulis", display: "100g de coulis de tomate", cut: "Direct." },
-          { key: "bread", display: "2 tranches de pain", cut: "Tranchées." }
-        ],
-        steps: [
-          "Rincer les haricots blancs en boîte sous l'eau tiède et les égoutter.",
-          "Dans une poêle, verser 1 cuillère à café d'huile d'olive avec 1/2 cuillère à café d'ail déshydraté (~2 g) et 1 cuillère de thym (~2 g).",
-          "Ajouter le coulis de tomate et les haricots blancs, saler et poivrer.",
-          "Laisser mijoter doucement 5 minutes à feu moyen jusqu'à texture onctueuse.",
-          "Faire dorer les tranches de pain de campagne au grille-pain ou à sec dans une poêle.",
-          "Napper les tartines chaudes avec la poêlée de haricots fondants."
-        ]
-      },
-      {
-        id: "veg_15", name: "Pommes de terre sautées à la poêle au thym et œuf au plat",
-        prepTime: 20, calories: 470, macros: "P: 17g | G: 64g | L: 15g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "eco", "oeuf"],
-        ingredients: [
-          { key: "potatoes", display: "250g de pommes de terre", cut: "En petits dés de 1 cm." },
-          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." }
-        ],
-        steps: [
-          "Éplucher les pommes de terre et les découper en petits cubes réguliers de 1 cm pour accélérer la cuisson.",
-          "Faire chauffer 1 cuillère à soupe d'huile dans une poêle à feu moyen et y jeter les dés de pommes de terre.",
-          "Assaisonner d'1 cuillère à café de thym séché (~2 g), de sel et de poivre moulu.",
-          "Couvrir et laisser cuire 12 minutes en secouant la poêle toutes les 3 minutes.",
-          "Pousser les pommes de terre dorées sur le côté et casser l'œuf au plat directement dans l'espace libre.",
-          "Cuire l'œuf 3 minutes jusqu'à ce que le blanc soit figé et servir l'ensemble bien chaud."
-        ]
-      },
+    let MASTER_RECIPES = [];
 
-      // 2. PLATS VOLAILLE
-      {
-        id: "vol_1", name: "Wrap toasté au poulet doré au paprika, haricots rouges et coulis",
-        prepTime: 15, calories: 540, macros: "P: 39g | G: 58g | L: 13g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["volaille", "express", "wrap"],
-        ingredients: [
-          { key: "chicken", display: "140g de filet de poulet frais", cut: "Tailler en fines aiguillettes de 5 mm." },
-          { key: "tortillas", display: "2 galettes wraps", cut: "Prêtes." },
-          { key: "red_beans", display: "80g de haricots rouges", cut: "Rincer et égoutter." },
-          { key: "tomatoes_coulis", display: "50g de coulis de tomate", cut: "Direct." }
-        ],
-        steps: [
-          "Découper le blanc de poulet en très fines aiguillettes de 5 mm pour garantir une cuisson express.",
-          "Chauffer 1 cuillère à café d'huile dans une poêle à feu vif.",
-          "Faire sauter le poulet 4 minutes en assaisonnant avec 1 cuillère à café de paprika fumé (~3 g), sel et poivre.",
-          "Ajouter les haricots rouges égouttés et le coulis de tomate, puis mélanger 2 minutes à feu moyen.",
-          "Passer les 2 galettes 20 secondes au micro-ondes ou dans une poêle sèche tiède.",
-          "Déposer la garniture au centre, replier les bords, rouler fermement et trancher en diagonale."
-        ]
-      },
-      {
-        id: "vol_2", name: "Poêlée de coquillettes à la dinde au curry et emmental filant",
-        prepTime: 15, calories: 550, macros: "P: 42g | G: 62g | L: 14g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["volaille", "express"],
-        ingredients: [
-          { key: "coquillettes", display: "80g de coquillettes", cut: "Crues." },
-          { key: "turkey", display: "130g de dinde", cut: "Tailler en dés de 1 cm." },
-          { key: "emmental", display: "30g d'emmental râpé", cut: "Prêt." }
-        ],
-        steps: [
-          "Faire bouillir une casserole d'eau salée et cuire les coquillettes pendant 7 minutes, puis égoutter.",
-          "Dans une sauteuse avec 1 cuillère à café d'huile, saisir les dés de dinde 4 minutes à feu vif.",
-          "Assaisonner la dinde avec 1 cuillère à café bombée de curry doux de Madras (~4 g), sel et poivre.",
-          "Verser les coquillettes chaudes directement dans la sauteuse avec la dinde.",
-          "Saupoudrer les 30g d'emmental râpé sur les pâtes.",
-          "Couvrir hors du feu pendant 1 minute jusqu'à ce que le fromage forme des filaments fondants et servir."
-        ]
-      },
-      {
-        id: "vol_3", name: "Curry de poulet express au lait de coco, courgettes et riz basmati",
-        prepTime: 25, calories: 610, macros: "P: 40g | G: 64g | L: 18g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["volaille", "monde"],
-        ingredients: [
-          { key: "chicken", display: "140g de filet de poulet", cut: "Couper en bouchées de 2 cm." },
-          { key: "rice", display: "70g de riz basmati", cut: "Rincer sous l'eau." },
-          { key: "zucchini", display: "1/2 courgette", cut: "Tailler en dés de 1 cm." },
-          { key: "coconut_milk", display: "80ml de lait de coco", cut: "Prêt." }
-        ],
-        steps: [
-          "Cuire le riz basmati pendant 11 minutes dans l'eau bouillante salée, puis égoutter.",
-          "Dans une sauteuse chaude, faire dorer les bouchées de poulet 3 minutes avec un filet d'huile.",
-          "Ajouter les dés de courgette et faire revenir 3 minutes supplémentaires.",
-          "Saupoudrer d'1 cuillère à café de curry en poudre (~3 g) et 1/2 cuillère de curcuma (~2 g).",
-          "Verser le lait de coco, saler, poivrer et laisser mijoter 8 minutes à feu doux sous couvercle.",
-          "Dresser le riz basmati dans l'assiette et napper avec la sauce crémeuse au poulet."
-        ]
-      },
+// Charge automatiquement les 300 recettes créées dans recipes.json
+async function loadRecipesCatalog() {
+  try {
+    const res = await fetch('/data/recipes.json');
+    const rawRecipes = await res.json();
+    
+    MASTER_RECIPES = rawRecipes.map(r => ({
+      id: r.id,
+      name: r.name,
+      timeBracket: r.prep_time <= 15 ? '15' : (r.prep_time <= 30 ? '30' : '45'),
+      prepTime: r.prep_time,
+      calories: r.calories,
+      requiresFreezer: false,
+      requiredEquipment: ['stove'],
+      tags: [
+        r.diet,
+        r.diet === 'veggie' ? 'veggie' : null,
+        r.diet === 'halal' ? 'halal' : null
+      ].filter(Boolean),
+      ingredients: r.ingredients.map(ing => ({
+        key: ing.item,
+        display: ing.item,
+        qty: ing.qty,
+        unit: ing.unit
+      }))
+    }));
+    console.log(`OptiPanier : ${MASTER_RECIPES.length} recettes prêtes !`);
+  } catch (err) {
+    console.error("Erreur de chargement recipes.json :", err);
+  }
+}
 
-      // 3. PLATS POISSON (SAUMON)
-      {
-        id: "fish_1", name: "Pavé de saumon rôti côté peau, riz basmati et courgettes au romarin",
-        prepTime: 20, calories: 590, macros: "P: 36g | G: 58g | L: 20g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["saumon", "frais"],
-        ingredients: [
-          { key: "salmon", display: "1 pavé de saumon frais (125g)", cut: "Sécher soigneusement la peau." },
-          { key: "rice", display: "70g de riz basmati", cut: "Rincé." },
-          { key: "zucchini", display: "1/2 courgette", cut: "Tailler en rondelles régulières de 4 mm." }
-        ],
-        steps: [
-          "Mettre le riz basmati à cuire dans l'eau bouillante salée pendant 11 minutes, puis égoutter.",
-          "Dans une poêle avec 1 cuillère à café d'huile, faire sauter les rondelles de courgettes 6 minutes à feu moyen avec 1 cuillère à café de romarin séché (~2 g), sel et poivre.",
-          "Décaler les courgettes sur le côté de la poêle et déposer le pavé de saumon côté peau.",
-          "Laisser saisir 4 minutes à feu moyen sans le bouger pour que la peau croustille naturellement.",
-          "Retourner délicatement le pavé et cuire la face chair pendant 3 minutes à feu doux pour préserver le fondant.",
-          "Dresser le riz égoutté, entourer des courgettes et poser le pavé de saumon croustillant dessus."
-        ]
-      },
-      {
-        id: "fish_2", name: "Patate douce rôtie au paprika doux et pavé de saumon au four",
-        prepTime: 35, calories: 610, macros: "P: 37g | G: 58g | L: 23g", type: "Chaud", timeBracket: "45",
-        requiredEquipment: ["oven"], requiresFreezer: false, tags: ["saumon", "four"],
-        ingredients: [
-          { key: "sweet_potatoes", display: "200g de patate douce", cut: "Détailler en cubes de 1.5 cm." },
-          { key: "salmon", display: "1 pavé de saumon frais (125g)", cut: "Prêt." },
-          { key: "spinach_fresh", display: "60g d'épinards frais", cut: "Rincés." }
-        ],
-        steps: [
-          "Préchauffer le four à 200°C en chaleur tournante.",
-          "Mélanger les cubes de patates douces avec 1 cuillère à soupe d'huile, 1 cuillère à café de paprika doux (~3 g) et 1 pincée de sel.",
-          "Étaler sur une plaque et enfourner pour 20 minutes de pré-cuisson.",
-          "Sortir la plaque, déposer le saumon à côté des patates douces, saler et poivrer le poisson.",
-          "Enfourner l'ensemble 12 minutes à 190°C : le saumon rôtit délicatement et les patates caramélisent.",
-          "Déposer les épinards crus dans l'assiette et verser les patates et le saumon chauds par-dessus pour attendrir les feuilles."
-        ]
-      },
-
-      // 4. PLATS BŒUF & PORC
-      {
-        id: "beef_1", name: "Chili con carne express au bœuf haché, haricots rouges et riz basmati",
-        prepTime: 20, calories: 630, macros: "P: 42g | G: 70g | L: 17g", type: "Chaud", timeBracket: "25",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["viande_rouge", "complet"],
-        ingredients: [
-          { key: "beef_hache", display: "130g de bœuf haché frais 15%", cut: "Émietté à la spatule." },
-          { key: "red_beans", display: "120g de haricots rouges", cut: "Rincés et égouttés." },
-          { key: "tomatoes_coulis", display: "110g de coulis de tomate", cut: "Direct." },
-          { key: "rice", display: "60g de riz basmati", cut: "Rincé." }
-        ],
-        steps: [
-          "Lancer la cuisson du riz basmati dans l'eau bouillante salée pour 11 minutes.",
-          "Dans une sauteuse chaude sans matière grasse, déposer la viande hachée de bœuf.",
-          "Assaisonner d'1 cuillère à café de cumin moulu (~3 g), 1 cuillère de paprika doux (~3 g), sel et poivre noir.",
-          "Saisir 4 minutes à feu vif en écrasant à la spatule pour bien dorer la viande.",
-          "Verser le coulis de tomate et les haricots rouges égouttés, couvrir et laisser mijoter 8 minutes à feu doux.",
-          "Égoutter le riz et disposer le chili fumant à côté."
-        ]
-      },
-      {
-        id: "pork_1", name: "Coquillettes au beurre, dés de jambon blanc et emmental râpé",
-        prepTime: 10, calories: 510, macros: "P: 28g | G: 68g | L: 14g", type: "Chaud", timeBracket: "15",
-        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["porc", "express", "eco"],
-        ingredients: [
-          { key: "coquillettes", display: "85g de coquillettes", cut: "Crues." },
-          { key: "jambon", display: "2 tranches de jambon blanc", cut: "En carrés de 1 cm." },
-          { key: "emmental", display: "30g d'emmental râpé", cut: "Prêt." }
-        ],
-        steps: [
-          "Faire bouillir une grande casserole d'eau salée et cuire les coquillettes 7 minutes al dente.",
-          "Égoutter les pâtes et les remettre immédiatement dans la casserole encore chaude hors du feu.",
-          "Ajouter une belle noix de beurre salé (~10 g) et 2 tours de moulin à poivre.",
-          "Incorporer les carrés de jambon blanc et remuer pour les tiédir au contact des pâtes.",
-          "Saupoudrer l'emmental râpé généreusement sur le dessus.",
-          "Mélanger délicatement pour que le fromage fonde en filaments onctueux et déguster aussitôt."
-        ]
-      }
-    ];
+loadRecipesCatalog();
 
     /* ================= ALGORITHME STRICT, OBJECTIFS & BLOCAGE BUDGET ================= */
     let finalMealsPlan = [];
@@ -1180,6 +813,7 @@
       const goalCheap = document.getElementById('goal-cheap').checked;
 
       const exVegetarian = document.getElementById('ex-vegetarian').checked;
+      const exHalal = document.getElementById('ex-halal') ? document.getElementById('ex-halal').checked : false;
       const exBrassica = document.getElementById('ex-brassica').checked;
       const exSeafood = document.getElementById('ex-seafood').checked;
       const exPork = document.getElementById('ex-pork').checked;
@@ -1202,6 +836,10 @@
         }
 
         if (exVegetarian && !recipe.tags.includes('veggie')) return false;
+        if (exHalal) {
+  const isHalal = recipe.tags.includes('halal') || recipe.tags.includes('veggie');
+  if (!isHalal || recipe.tags.includes('porc')) return false;
+}
         if (exBrassica && recipe.tags.includes('choux')) return false;
         if (exSeafood && recipe.tags.includes('poisson_autre')) return false;
         if (exPork && recipe.tags.includes('porc')) return false;
