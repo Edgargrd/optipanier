@@ -1,0 +1,8702 @@
+[
+  {
+    "id": "normal_001",
+    "name": "Poulet sauté aux courgettes et riz basmati",
+    "diet": "normal",
+    "prep_time": 21,
+    "calories": 451,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_002",
+    "name": "Poulet sauté aux tomates concassées et riz basmati",
+    "diet": "normal",
+    "prep_time": 22,
+    "calories": 452,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_003",
+    "name": "Poulet sauté aux épinards et riz basmati",
+    "diet": "normal",
+    "prep_time": 23,
+    "calories": 453,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_004",
+    "name": "Poulet sauté aux poivrons et riz basmati",
+    "diet": "normal",
+    "prep_time": 24,
+    "calories": 454,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_005",
+    "name": "Poulet sauté aux brocolis et riz basmati",
+    "diet": "normal",
+    "prep_time": 25,
+    "calories": 455,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_006",
+    "name": "Poulet sauté aux haricots verts et riz basmati",
+    "diet": "normal",
+    "prep_time": 26,
+    "calories": 456,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_007",
+    "name": "Poulet sauté aux carottes fondantes et riz basmati",
+    "diet": "normal",
+    "prep_time": 27,
+    "calories": 457,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_008",
+    "name": "Poulet sauté aux courgettes et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 28,
+    "calories": 458,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_009",
+    "name": "Poulet sauté aux tomates concassées et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 29,
+    "calories": 459,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_010",
+    "name": "Poulet sauté aux épinards et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 30,
+    "calories": 460,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_011",
+    "name": "Poulet sauté aux poivrons et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 31,
+    "calories": 461,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_012",
+    "name": "Poulet sauté aux brocolis et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 32,
+    "calories": 462,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_013",
+    "name": "Poulet sauté aux haricots verts et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 33,
+    "calories": 463,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_014",
+    "name": "Poulet sauté aux carottes fondantes et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 34,
+    "calories": 464,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_015",
+    "name": "Poulet sauté aux courgettes et quinoa",
+    "diet": "normal",
+    "prep_time": 35,
+    "calories": 465,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_016",
+    "name": "Poulet sauté aux tomates concassées et quinoa",
+    "diet": "normal",
+    "prep_time": 36,
+    "calories": 466,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_017",
+    "name": "Poulet sauté aux épinards et quinoa",
+    "diet": "normal",
+    "prep_time": 37,
+    "calories": 467,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_018",
+    "name": "Poulet sauté aux poivrons et quinoa",
+    "diet": "normal",
+    "prep_time": 38,
+    "calories": 468,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_019",
+    "name": "Poulet sauté aux brocolis et quinoa",
+    "diet": "normal",
+    "prep_time": 39,
+    "calories": 469,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_020",
+    "name": "Poulet sauté aux haricots verts et quinoa",
+    "diet": "normal",
+    "prep_time": 40,
+    "calories": 470,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_021",
+    "name": "Poulet sauté aux carottes fondantes et quinoa",
+    "diet": "normal",
+    "prep_time": 41,
+    "calories": 471,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_022",
+    "name": "Poulet sauté aux courgettes et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 42,
+    "calories": 472,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_023",
+    "name": "Poulet sauté aux tomates concassées et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 43,
+    "calories": 473,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_024",
+    "name": "Poulet sauté aux épinards et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 44,
+    "calories": 474,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_025",
+    "name": "Poulet sauté aux poivrons et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 20,
+    "calories": 475,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_026",
+    "name": "Poulet sauté aux brocolis et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 21,
+    "calories": 476,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_027",
+    "name": "Poulet sauté aux haricots verts et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 22,
+    "calories": 477,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_028",
+    "name": "Poulet sauté aux carottes fondantes et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 23,
+    "calories": 478,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_029",
+    "name": "Poulet sauté aux courgettes et boulgour",
+    "diet": "normal",
+    "prep_time": 24,
+    "calories": 479,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_030",
+    "name": "Poulet sauté aux tomates concassées et boulgour",
+    "diet": "normal",
+    "prep_time": 25,
+    "calories": 480,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_031",
+    "name": "Poulet sauté aux épinards et boulgour",
+    "diet": "normal",
+    "prep_time": 26,
+    "calories": 481,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_032",
+    "name": "Poulet sauté aux poivrons et boulgour",
+    "diet": "normal",
+    "prep_time": 27,
+    "calories": 482,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_033",
+    "name": "Poulet sauté aux brocolis et boulgour",
+    "diet": "normal",
+    "prep_time": 28,
+    "calories": 483,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_034",
+    "name": "Poulet sauté aux haricots verts et boulgour",
+    "diet": "normal",
+    "prep_time": 29,
+    "calories": 484,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_035",
+    "name": "Poulet sauté aux carottes fondantes et boulgour",
+    "diet": "normal",
+    "prep_time": 30,
+    "calories": 485,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_036",
+    "name": "Poulet sauté aux courgettes et patates douces",
+    "diet": "normal",
+    "prep_time": 31,
+    "calories": 486,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_037",
+    "name": "Poulet sauté aux tomates concassées et patates douces",
+    "diet": "normal",
+    "prep_time": 32,
+    "calories": 487,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_038",
+    "name": "Poulet sauté aux épinards et patates douces",
+    "diet": "normal",
+    "prep_time": 33,
+    "calories": 488,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_039",
+    "name": "Poulet sauté aux poivrons et patates douces",
+    "diet": "normal",
+    "prep_time": 34,
+    "calories": 489,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_040",
+    "name": "Poulet sauté aux brocolis et patates douces",
+    "diet": "normal",
+    "prep_time": 35,
+    "calories": 490,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_041",
+    "name": "Poulet sauté aux haricots verts et patates douces",
+    "diet": "normal",
+    "prep_time": 36,
+    "calories": 491,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_042",
+    "name": "Poulet sauté aux carottes fondantes et patates douces",
+    "diet": "normal",
+    "prep_time": 37,
+    "calories": 492,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_043",
+    "name": "Poulet sauté aux courgettes et semoule fine",
+    "diet": "normal",
+    "prep_time": 38,
+    "calories": 493,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_044",
+    "name": "Poulet sauté aux tomates concassées et semoule fine",
+    "diet": "normal",
+    "prep_time": 39,
+    "calories": 494,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_045",
+    "name": "Poulet sauté aux épinards et semoule fine",
+    "diet": "normal",
+    "prep_time": 40,
+    "calories": 495,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_046",
+    "name": "Poulet sauté aux poivrons et semoule fine",
+    "diet": "normal",
+    "prep_time": 41,
+    "calories": 496,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_047",
+    "name": "Poulet sauté aux brocolis et semoule fine",
+    "diet": "normal",
+    "prep_time": 42,
+    "calories": 497,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_048",
+    "name": "Poulet sauté aux haricots verts et semoule fine",
+    "diet": "normal",
+    "prep_time": 43,
+    "calories": 498,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_049",
+    "name": "Poulet sauté aux carottes fondantes et semoule fine",
+    "diet": "normal",
+    "prep_time": 44,
+    "calories": 499,
+    "ingredients": [
+      {
+        "item": "poulet",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_050",
+    "name": "Bœuf sauté aux courgettes et riz basmati",
+    "diet": "normal",
+    "prep_time": 20,
+    "calories": 500,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_051",
+    "name": "Bœuf sauté aux tomates concassées et riz basmati",
+    "diet": "normal",
+    "prep_time": 21,
+    "calories": 501,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_052",
+    "name": "Bœuf sauté aux épinards et riz basmati",
+    "diet": "normal",
+    "prep_time": 22,
+    "calories": 502,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_053",
+    "name": "Bœuf sauté aux poivrons et riz basmati",
+    "diet": "normal",
+    "prep_time": 23,
+    "calories": 503,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_054",
+    "name": "Bœuf sauté aux brocolis et riz basmati",
+    "diet": "normal",
+    "prep_time": 24,
+    "calories": 504,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_055",
+    "name": "Bœuf sauté aux haricots verts et riz basmati",
+    "diet": "normal",
+    "prep_time": 25,
+    "calories": 505,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_056",
+    "name": "Bœuf sauté aux carottes fondantes et riz basmati",
+    "diet": "normal",
+    "prep_time": 26,
+    "calories": 506,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_057",
+    "name": "Bœuf sauté aux courgettes et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 27,
+    "calories": 507,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_058",
+    "name": "Bœuf sauté aux tomates concassées et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 28,
+    "calories": 508,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_059",
+    "name": "Bœuf sauté aux épinards et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 29,
+    "calories": 509,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_060",
+    "name": "Bœuf sauté aux poivrons et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 30,
+    "calories": 510,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_061",
+    "name": "Bœuf sauté aux brocolis et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 31,
+    "calories": 511,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_062",
+    "name": "Bœuf sauté aux haricots verts et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 32,
+    "calories": 512,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_063",
+    "name": "Bœuf sauté aux carottes fondantes et pâtes complètes",
+    "diet": "normal",
+    "prep_time": 33,
+    "calories": 513,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_064",
+    "name": "Bœuf sauté aux courgettes et quinoa",
+    "diet": "normal",
+    "prep_time": 34,
+    "calories": 514,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_065",
+    "name": "Bœuf sauté aux tomates concassées et quinoa",
+    "diet": "normal",
+    "prep_time": 35,
+    "calories": 515,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_066",
+    "name": "Bœuf sauté aux épinards et quinoa",
+    "diet": "normal",
+    "prep_time": 36,
+    "calories": 516,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_067",
+    "name": "Bœuf sauté aux poivrons et quinoa",
+    "diet": "normal",
+    "prep_time": 37,
+    "calories": 517,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_068",
+    "name": "Bœuf sauté aux brocolis et quinoa",
+    "diet": "normal",
+    "prep_time": 38,
+    "calories": 518,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_069",
+    "name": "Bœuf sauté aux haricots verts et quinoa",
+    "diet": "normal",
+    "prep_time": 39,
+    "calories": 519,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_070",
+    "name": "Bœuf sauté aux carottes fondantes et quinoa",
+    "diet": "normal",
+    "prep_time": 40,
+    "calories": 520,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_071",
+    "name": "Bœuf sauté aux courgettes et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 41,
+    "calories": 521,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_072",
+    "name": "Bœuf sauté aux tomates concassées et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 42,
+    "calories": 522,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_073",
+    "name": "Bœuf sauté aux épinards et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 43,
+    "calories": 523,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_074",
+    "name": "Bœuf sauté aux poivrons et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 44,
+    "calories": 524,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_075",
+    "name": "Bœuf sauté aux brocolis et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 20,
+    "calories": 525,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_076",
+    "name": "Bœuf sauté aux haricots verts et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 21,
+    "calories": 526,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_077",
+    "name": "Bœuf sauté aux carottes fondantes et pommes de terre rôties",
+    "diet": "normal",
+    "prep_time": 22,
+    "calories": 527,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_078",
+    "name": "Bœuf sauté aux courgettes et boulgour",
+    "diet": "normal",
+    "prep_time": 23,
+    "calories": 528,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_079",
+    "name": "Bœuf sauté aux tomates concassées et boulgour",
+    "diet": "normal",
+    "prep_time": 24,
+    "calories": 529,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_080",
+    "name": "Bœuf sauté aux épinards et boulgour",
+    "diet": "normal",
+    "prep_time": 25,
+    "calories": 530,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_081",
+    "name": "Bœuf sauté aux poivrons et boulgour",
+    "diet": "normal",
+    "prep_time": 26,
+    "calories": 531,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_082",
+    "name": "Bœuf sauté aux brocolis et boulgour",
+    "diet": "normal",
+    "prep_time": 27,
+    "calories": 532,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_083",
+    "name": "Bœuf sauté aux haricots verts et boulgour",
+    "diet": "normal",
+    "prep_time": 28,
+    "calories": 533,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_084",
+    "name": "Bœuf sauté aux carottes fondantes et boulgour",
+    "diet": "normal",
+    "prep_time": 29,
+    "calories": 534,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_085",
+    "name": "Bœuf sauté aux courgettes et patates douces",
+    "diet": "normal",
+    "prep_time": 30,
+    "calories": 535,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_086",
+    "name": "Bœuf sauté aux tomates concassées et patates douces",
+    "diet": "normal",
+    "prep_time": 31,
+    "calories": 536,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_087",
+    "name": "Bœuf sauté aux épinards et patates douces",
+    "diet": "normal",
+    "prep_time": 32,
+    "calories": 537,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_088",
+    "name": "Bœuf sauté aux poivrons et patates douces",
+    "diet": "normal",
+    "prep_time": 33,
+    "calories": 538,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_089",
+    "name": "Bœuf sauté aux brocolis et patates douces",
+    "diet": "normal",
+    "prep_time": 34,
+    "calories": 539,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_090",
+    "name": "Bœuf sauté aux haricots verts et patates douces",
+    "diet": "normal",
+    "prep_time": 35,
+    "calories": 540,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_091",
+    "name": "Bœuf sauté aux carottes fondantes et patates douces",
+    "diet": "normal",
+    "prep_time": 36,
+    "calories": 541,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_092",
+    "name": "Bœuf sauté aux courgettes et semoule fine",
+    "diet": "normal",
+    "prep_time": 37,
+    "calories": 542,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_093",
+    "name": "Bœuf sauté aux tomates concassées et semoule fine",
+    "diet": "normal",
+    "prep_time": 38,
+    "calories": 543,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_094",
+    "name": "Bœuf sauté aux épinards et semoule fine",
+    "diet": "normal",
+    "prep_time": 39,
+    "calories": 544,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_095",
+    "name": "Bœuf sauté aux poivrons et semoule fine",
+    "diet": "normal",
+    "prep_time": 40,
+    "calories": 545,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_096",
+    "name": "Bœuf sauté aux brocolis et semoule fine",
+    "diet": "normal",
+    "prep_time": 41,
+    "calories": 546,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_097",
+    "name": "Bœuf sauté aux haricots verts et semoule fine",
+    "diet": "normal",
+    "prep_time": 42,
+    "calories": 547,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_098",
+    "name": "Bœuf sauté aux carottes fondantes et semoule fine",
+    "diet": "normal",
+    "prep_time": 43,
+    "calories": 548,
+    "ingredients": [
+      {
+        "item": "bœuf",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_099",
+    "name": "Saumon sauté aux courgettes et riz basmati",
+    "diet": "normal",
+    "prep_time": 44,
+    "calories": 549,
+    "ingredients": [
+      {
+        "item": "saumon",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "normal_100",
+    "name": "Saumon sauté aux tomates concassées et riz basmati",
+    "diet": "normal",
+    "prep_time": 20,
+    "calories": 550,
+    "ingredients": [
+      {
+        "item": "saumon",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_001",
+    "name": "Lentilles corail sauté aux courgettes et riz basmati",
+    "diet": "veggie",
+    "prep_time": 21,
+    "calories": 451,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_002",
+    "name": "Lentilles corail sauté aux tomates concassées et riz basmati",
+    "diet": "veggie",
+    "prep_time": 22,
+    "calories": 452,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_003",
+    "name": "Lentilles corail sauté aux épinards et riz basmati",
+    "diet": "veggie",
+    "prep_time": 23,
+    "calories": 453,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_004",
+    "name": "Lentilles corail sauté aux poivrons et riz basmati",
+    "diet": "veggie",
+    "prep_time": 24,
+    "calories": 454,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_005",
+    "name": "Lentilles corail sauté aux brocolis et riz basmati",
+    "diet": "veggie",
+    "prep_time": 25,
+    "calories": 455,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_006",
+    "name": "Lentilles corail sauté aux haricots verts et riz basmati",
+    "diet": "veggie",
+    "prep_time": 26,
+    "calories": 456,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_007",
+    "name": "Lentilles corail sauté aux carottes fondantes et riz basmati",
+    "diet": "veggie",
+    "prep_time": 27,
+    "calories": 457,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_008",
+    "name": "Lentilles corail sauté aux courgettes et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 28,
+    "calories": 458,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_009",
+    "name": "Lentilles corail sauté aux tomates concassées et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 29,
+    "calories": 459,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_010",
+    "name": "Lentilles corail sauté aux épinards et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 30,
+    "calories": 460,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_011",
+    "name": "Lentilles corail sauté aux poivrons et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 31,
+    "calories": 461,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_012",
+    "name": "Lentilles corail sauté aux brocolis et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 32,
+    "calories": 462,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_013",
+    "name": "Lentilles corail sauté aux haricots verts et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 33,
+    "calories": 463,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_014",
+    "name": "Lentilles corail sauté aux carottes fondantes et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 34,
+    "calories": 464,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_015",
+    "name": "Lentilles corail sauté aux courgettes et quinoa",
+    "diet": "veggie",
+    "prep_time": 35,
+    "calories": 465,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_016",
+    "name": "Lentilles corail sauté aux tomates concassées et quinoa",
+    "diet": "veggie",
+    "prep_time": 36,
+    "calories": 466,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_017",
+    "name": "Lentilles corail sauté aux épinards et quinoa",
+    "diet": "veggie",
+    "prep_time": 37,
+    "calories": 467,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_018",
+    "name": "Lentilles corail sauté aux poivrons et quinoa",
+    "diet": "veggie",
+    "prep_time": 38,
+    "calories": 468,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_019",
+    "name": "Lentilles corail sauté aux brocolis et quinoa",
+    "diet": "veggie",
+    "prep_time": 39,
+    "calories": 469,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_020",
+    "name": "Lentilles corail sauté aux haricots verts et quinoa",
+    "diet": "veggie",
+    "prep_time": 40,
+    "calories": 470,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_021",
+    "name": "Lentilles corail sauté aux carottes fondantes et quinoa",
+    "diet": "veggie",
+    "prep_time": 41,
+    "calories": 471,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_022",
+    "name": "Lentilles corail sauté aux courgettes et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 42,
+    "calories": 472,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_023",
+    "name": "Lentilles corail sauté aux tomates concassées et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 43,
+    "calories": 473,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_024",
+    "name": "Lentilles corail sauté aux épinards et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 44,
+    "calories": 474,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_025",
+    "name": "Lentilles corail sauté aux poivrons et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 20,
+    "calories": 475,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_026",
+    "name": "Lentilles corail sauté aux brocolis et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 21,
+    "calories": 476,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_027",
+    "name": "Lentilles corail sauté aux haricots verts et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 22,
+    "calories": 477,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_028",
+    "name": "Lentilles corail sauté aux carottes fondantes et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 23,
+    "calories": 478,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_029",
+    "name": "Lentilles corail sauté aux courgettes et boulgour",
+    "diet": "veggie",
+    "prep_time": 24,
+    "calories": 479,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_030",
+    "name": "Lentilles corail sauté aux tomates concassées et boulgour",
+    "diet": "veggie",
+    "prep_time": 25,
+    "calories": 480,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_031",
+    "name": "Lentilles corail sauté aux épinards et boulgour",
+    "diet": "veggie",
+    "prep_time": 26,
+    "calories": 481,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_032",
+    "name": "Lentilles corail sauté aux poivrons et boulgour",
+    "diet": "veggie",
+    "prep_time": 27,
+    "calories": 482,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_033",
+    "name": "Lentilles corail sauté aux brocolis et boulgour",
+    "diet": "veggie",
+    "prep_time": 28,
+    "calories": 483,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_034",
+    "name": "Lentilles corail sauté aux haricots verts et boulgour",
+    "diet": "veggie",
+    "prep_time": 29,
+    "calories": 484,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_035",
+    "name": "Lentilles corail sauté aux carottes fondantes et boulgour",
+    "diet": "veggie",
+    "prep_time": 30,
+    "calories": 485,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_036",
+    "name": "Lentilles corail sauté aux courgettes et patates douces",
+    "diet": "veggie",
+    "prep_time": 31,
+    "calories": 486,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_037",
+    "name": "Lentilles corail sauté aux tomates concassées et patates douces",
+    "diet": "veggie",
+    "prep_time": 32,
+    "calories": 487,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_038",
+    "name": "Lentilles corail sauté aux épinards et patates douces",
+    "diet": "veggie",
+    "prep_time": 33,
+    "calories": 488,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_039",
+    "name": "Lentilles corail sauté aux poivrons et patates douces",
+    "diet": "veggie",
+    "prep_time": 34,
+    "calories": 489,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_040",
+    "name": "Lentilles corail sauté aux brocolis et patates douces",
+    "diet": "veggie",
+    "prep_time": 35,
+    "calories": 490,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_041",
+    "name": "Lentilles corail sauté aux haricots verts et patates douces",
+    "diet": "veggie",
+    "prep_time": 36,
+    "calories": 491,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_042",
+    "name": "Lentilles corail sauté aux carottes fondantes et patates douces",
+    "diet": "veggie",
+    "prep_time": 37,
+    "calories": 492,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_043",
+    "name": "Lentilles corail sauté aux courgettes et semoule fine",
+    "diet": "veggie",
+    "prep_time": 38,
+    "calories": 493,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_044",
+    "name": "Lentilles corail sauté aux tomates concassées et semoule fine",
+    "diet": "veggie",
+    "prep_time": 39,
+    "calories": 494,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_045",
+    "name": "Lentilles corail sauté aux épinards et semoule fine",
+    "diet": "veggie",
+    "prep_time": 40,
+    "calories": 495,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_046",
+    "name": "Lentilles corail sauté aux poivrons et semoule fine",
+    "diet": "veggie",
+    "prep_time": 41,
+    "calories": 496,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_047",
+    "name": "Lentilles corail sauté aux brocolis et semoule fine",
+    "diet": "veggie",
+    "prep_time": 42,
+    "calories": 497,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_048",
+    "name": "Lentilles corail sauté aux haricots verts et semoule fine",
+    "diet": "veggie",
+    "prep_time": 43,
+    "calories": 498,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_049",
+    "name": "Lentilles corail sauté aux carottes fondantes et semoule fine",
+    "diet": "veggie",
+    "prep_time": 44,
+    "calories": 499,
+    "ingredients": [
+      {
+        "item": "lentilles corail",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_050",
+    "name": "Pois chiches sauté aux courgettes et riz basmati",
+    "diet": "veggie",
+    "prep_time": 20,
+    "calories": 500,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_051",
+    "name": "Pois chiches sauté aux tomates concassées et riz basmati",
+    "diet": "veggie",
+    "prep_time": 21,
+    "calories": 501,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_052",
+    "name": "Pois chiches sauté aux épinards et riz basmati",
+    "diet": "veggie",
+    "prep_time": 22,
+    "calories": 502,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_053",
+    "name": "Pois chiches sauté aux poivrons et riz basmati",
+    "diet": "veggie",
+    "prep_time": 23,
+    "calories": 503,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_054",
+    "name": "Pois chiches sauté aux brocolis et riz basmati",
+    "diet": "veggie",
+    "prep_time": 24,
+    "calories": 504,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_055",
+    "name": "Pois chiches sauté aux haricots verts et riz basmati",
+    "diet": "veggie",
+    "prep_time": 25,
+    "calories": 505,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_056",
+    "name": "Pois chiches sauté aux carottes fondantes et riz basmati",
+    "diet": "veggie",
+    "prep_time": 26,
+    "calories": 506,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_057",
+    "name": "Pois chiches sauté aux courgettes et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 27,
+    "calories": 507,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_058",
+    "name": "Pois chiches sauté aux tomates concassées et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 28,
+    "calories": 508,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_059",
+    "name": "Pois chiches sauté aux épinards et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 29,
+    "calories": 509,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_060",
+    "name": "Pois chiches sauté aux poivrons et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 30,
+    "calories": 510,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_061",
+    "name": "Pois chiches sauté aux brocolis et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 31,
+    "calories": 511,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_062",
+    "name": "Pois chiches sauté aux haricots verts et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 32,
+    "calories": 512,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_063",
+    "name": "Pois chiches sauté aux carottes fondantes et pâtes complètes",
+    "diet": "veggie",
+    "prep_time": 33,
+    "calories": 513,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_064",
+    "name": "Pois chiches sauté aux courgettes et quinoa",
+    "diet": "veggie",
+    "prep_time": 34,
+    "calories": 514,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_065",
+    "name": "Pois chiches sauté aux tomates concassées et quinoa",
+    "diet": "veggie",
+    "prep_time": 35,
+    "calories": 515,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_066",
+    "name": "Pois chiches sauté aux épinards et quinoa",
+    "diet": "veggie",
+    "prep_time": 36,
+    "calories": 516,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_067",
+    "name": "Pois chiches sauté aux poivrons et quinoa",
+    "diet": "veggie",
+    "prep_time": 37,
+    "calories": 517,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_068",
+    "name": "Pois chiches sauté aux brocolis et quinoa",
+    "diet": "veggie",
+    "prep_time": 38,
+    "calories": 518,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_069",
+    "name": "Pois chiches sauté aux haricots verts et quinoa",
+    "diet": "veggie",
+    "prep_time": 39,
+    "calories": 519,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_070",
+    "name": "Pois chiches sauté aux carottes fondantes et quinoa",
+    "diet": "veggie",
+    "prep_time": 40,
+    "calories": 520,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_071",
+    "name": "Pois chiches sauté aux courgettes et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 41,
+    "calories": 521,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_072",
+    "name": "Pois chiches sauté aux tomates concassées et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 42,
+    "calories": 522,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_073",
+    "name": "Pois chiches sauté aux épinards et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 43,
+    "calories": 523,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_074",
+    "name": "Pois chiches sauté aux poivrons et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 44,
+    "calories": 524,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_075",
+    "name": "Pois chiches sauté aux brocolis et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 20,
+    "calories": 525,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_076",
+    "name": "Pois chiches sauté aux haricots verts et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 21,
+    "calories": 526,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_077",
+    "name": "Pois chiches sauté aux carottes fondantes et pommes de terre rôties",
+    "diet": "veggie",
+    "prep_time": 22,
+    "calories": 527,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_078",
+    "name": "Pois chiches sauté aux courgettes et boulgour",
+    "diet": "veggie",
+    "prep_time": 23,
+    "calories": 528,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_079",
+    "name": "Pois chiches sauté aux tomates concassées et boulgour",
+    "diet": "veggie",
+    "prep_time": 24,
+    "calories": 529,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_080",
+    "name": "Pois chiches sauté aux épinards et boulgour",
+    "diet": "veggie",
+    "prep_time": 25,
+    "calories": 530,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_081",
+    "name": "Pois chiches sauté aux poivrons et boulgour",
+    "diet": "veggie",
+    "prep_time": 26,
+    "calories": 531,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_082",
+    "name": "Pois chiches sauté aux brocolis et boulgour",
+    "diet": "veggie",
+    "prep_time": 27,
+    "calories": 532,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_083",
+    "name": "Pois chiches sauté aux haricots verts et boulgour",
+    "diet": "veggie",
+    "prep_time": 28,
+    "calories": 533,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_084",
+    "name": "Pois chiches sauté aux carottes fondantes et boulgour",
+    "diet": "veggie",
+    "prep_time": 29,
+    "calories": 534,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_085",
+    "name": "Pois chiches sauté aux courgettes et patates douces",
+    "diet": "veggie",
+    "prep_time": 30,
+    "calories": 535,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_086",
+    "name": "Pois chiches sauté aux tomates concassées et patates douces",
+    "diet": "veggie",
+    "prep_time": 31,
+    "calories": 536,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_087",
+    "name": "Pois chiches sauté aux épinards et patates douces",
+    "diet": "veggie",
+    "prep_time": 32,
+    "calories": 537,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_088",
+    "name": "Pois chiches sauté aux poivrons et patates douces",
+    "diet": "veggie",
+    "prep_time": 33,
+    "calories": 538,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_089",
+    "name": "Pois chiches sauté aux brocolis et patates douces",
+    "diet": "veggie",
+    "prep_time": 34,
+    "calories": 539,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_090",
+    "name": "Pois chiches sauté aux haricots verts et patates douces",
+    "diet": "veggie",
+    "prep_time": 35,
+    "calories": 540,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_091",
+    "name": "Pois chiches sauté aux carottes fondantes et patates douces",
+    "diet": "veggie",
+    "prep_time": 36,
+    "calories": 541,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_092",
+    "name": "Pois chiches sauté aux courgettes et semoule fine",
+    "diet": "veggie",
+    "prep_time": 37,
+    "calories": 542,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_093",
+    "name": "Pois chiches sauté aux tomates concassées et semoule fine",
+    "diet": "veggie",
+    "prep_time": 38,
+    "calories": 543,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_094",
+    "name": "Pois chiches sauté aux épinards et semoule fine",
+    "diet": "veggie",
+    "prep_time": 39,
+    "calories": 544,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_095",
+    "name": "Pois chiches sauté aux poivrons et semoule fine",
+    "diet": "veggie",
+    "prep_time": 40,
+    "calories": 545,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_096",
+    "name": "Pois chiches sauté aux brocolis et semoule fine",
+    "diet": "veggie",
+    "prep_time": 41,
+    "calories": 546,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_097",
+    "name": "Pois chiches sauté aux haricots verts et semoule fine",
+    "diet": "veggie",
+    "prep_time": 42,
+    "calories": 547,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_098",
+    "name": "Pois chiches sauté aux carottes fondantes et semoule fine",
+    "diet": "veggie",
+    "prep_time": 43,
+    "calories": 548,
+    "ingredients": [
+      {
+        "item": "pois chiches",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_099",
+    "name": "Tofu mariné sauté aux courgettes et riz basmati",
+    "diet": "veggie",
+    "prep_time": 44,
+    "calories": 549,
+    "ingredients": [
+      {
+        "item": "tofu mariné",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "veggie_100",
+    "name": "Tofu mariné sauté aux tomates concassées et riz basmati",
+    "diet": "veggie",
+    "prep_time": 20,
+    "calories": 550,
+    "ingredients": [
+      {
+        "item": "tofu mariné",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_001",
+    "name": "Poulet certifié Halal sauté aux courgettes et riz basmati",
+    "diet": "halal",
+    "prep_time": 21,
+    "calories": 451,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_002",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et riz basmati",
+    "diet": "halal",
+    "prep_time": 22,
+    "calories": 452,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_003",
+    "name": "Poulet certifié Halal sauté aux épinards et riz basmati",
+    "diet": "halal",
+    "prep_time": 23,
+    "calories": 453,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_004",
+    "name": "Poulet certifié Halal sauté aux poivrons et riz basmati",
+    "diet": "halal",
+    "prep_time": 24,
+    "calories": 454,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_005",
+    "name": "Poulet certifié Halal sauté aux brocolis et riz basmati",
+    "diet": "halal",
+    "prep_time": 25,
+    "calories": 455,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_006",
+    "name": "Poulet certifié Halal sauté aux haricots verts et riz basmati",
+    "diet": "halal",
+    "prep_time": 26,
+    "calories": 456,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_007",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et riz basmati",
+    "diet": "halal",
+    "prep_time": 27,
+    "calories": 457,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_008",
+    "name": "Poulet certifié Halal sauté aux courgettes et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 28,
+    "calories": 458,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_009",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 29,
+    "calories": 459,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_010",
+    "name": "Poulet certifié Halal sauté aux épinards et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 30,
+    "calories": 460,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_011",
+    "name": "Poulet certifié Halal sauté aux poivrons et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 31,
+    "calories": 461,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_012",
+    "name": "Poulet certifié Halal sauté aux brocolis et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 32,
+    "calories": 462,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_013",
+    "name": "Poulet certifié Halal sauté aux haricots verts et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 33,
+    "calories": 463,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_014",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 34,
+    "calories": 464,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_015",
+    "name": "Poulet certifié Halal sauté aux courgettes et quinoa",
+    "diet": "halal",
+    "prep_time": 35,
+    "calories": 465,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_016",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et quinoa",
+    "diet": "halal",
+    "prep_time": 36,
+    "calories": 466,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_017",
+    "name": "Poulet certifié Halal sauté aux épinards et quinoa",
+    "diet": "halal",
+    "prep_time": 37,
+    "calories": 467,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_018",
+    "name": "Poulet certifié Halal sauté aux poivrons et quinoa",
+    "diet": "halal",
+    "prep_time": 38,
+    "calories": 468,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_019",
+    "name": "Poulet certifié Halal sauté aux brocolis et quinoa",
+    "diet": "halal",
+    "prep_time": 39,
+    "calories": 469,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_020",
+    "name": "Poulet certifié Halal sauté aux haricots verts et quinoa",
+    "diet": "halal",
+    "prep_time": 40,
+    "calories": 470,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_021",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et quinoa",
+    "diet": "halal",
+    "prep_time": 41,
+    "calories": 471,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_022",
+    "name": "Poulet certifié Halal sauté aux courgettes et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 42,
+    "calories": 472,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_023",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 43,
+    "calories": 473,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_024",
+    "name": "Poulet certifié Halal sauté aux épinards et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 44,
+    "calories": 474,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_025",
+    "name": "Poulet certifié Halal sauté aux poivrons et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 20,
+    "calories": 475,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_026",
+    "name": "Poulet certifié Halal sauté aux brocolis et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 21,
+    "calories": 476,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_027",
+    "name": "Poulet certifié Halal sauté aux haricots verts et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 22,
+    "calories": 477,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_028",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 23,
+    "calories": 478,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_029",
+    "name": "Poulet certifié Halal sauté aux courgettes et boulgour",
+    "diet": "halal",
+    "prep_time": 24,
+    "calories": 479,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_030",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et boulgour",
+    "diet": "halal",
+    "prep_time": 25,
+    "calories": 480,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_031",
+    "name": "Poulet certifié Halal sauté aux épinards et boulgour",
+    "diet": "halal",
+    "prep_time": 26,
+    "calories": 481,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_032",
+    "name": "Poulet certifié Halal sauté aux poivrons et boulgour",
+    "diet": "halal",
+    "prep_time": 27,
+    "calories": 482,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_033",
+    "name": "Poulet certifié Halal sauté aux brocolis et boulgour",
+    "diet": "halal",
+    "prep_time": 28,
+    "calories": 483,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_034",
+    "name": "Poulet certifié Halal sauté aux haricots verts et boulgour",
+    "diet": "halal",
+    "prep_time": 29,
+    "calories": 484,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_035",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et boulgour",
+    "diet": "halal",
+    "prep_time": 30,
+    "calories": 485,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_036",
+    "name": "Poulet certifié Halal sauté aux courgettes et patates douces",
+    "diet": "halal",
+    "prep_time": 31,
+    "calories": 486,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_037",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et patates douces",
+    "diet": "halal",
+    "prep_time": 32,
+    "calories": 487,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_038",
+    "name": "Poulet certifié Halal sauté aux épinards et patates douces",
+    "diet": "halal",
+    "prep_time": 33,
+    "calories": 488,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_039",
+    "name": "Poulet certifié Halal sauté aux poivrons et patates douces",
+    "diet": "halal",
+    "prep_time": 34,
+    "calories": 489,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_040",
+    "name": "Poulet certifié Halal sauté aux brocolis et patates douces",
+    "diet": "halal",
+    "prep_time": 35,
+    "calories": 490,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_041",
+    "name": "Poulet certifié Halal sauté aux haricots verts et patates douces",
+    "diet": "halal",
+    "prep_time": 36,
+    "calories": 491,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_042",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et patates douces",
+    "diet": "halal",
+    "prep_time": 37,
+    "calories": 492,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_043",
+    "name": "Poulet certifié Halal sauté aux courgettes et semoule fine",
+    "diet": "halal",
+    "prep_time": 38,
+    "calories": 493,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_044",
+    "name": "Poulet certifié Halal sauté aux tomates concassées et semoule fine",
+    "diet": "halal",
+    "prep_time": 39,
+    "calories": 494,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_045",
+    "name": "Poulet certifié Halal sauté aux épinards et semoule fine",
+    "diet": "halal",
+    "prep_time": 40,
+    "calories": 495,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_046",
+    "name": "Poulet certifié Halal sauté aux poivrons et semoule fine",
+    "diet": "halal",
+    "prep_time": 41,
+    "calories": 496,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_047",
+    "name": "Poulet certifié Halal sauté aux brocolis et semoule fine",
+    "diet": "halal",
+    "prep_time": 42,
+    "calories": 497,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_048",
+    "name": "Poulet certifié Halal sauté aux haricots verts et semoule fine",
+    "diet": "halal",
+    "prep_time": 43,
+    "calories": 498,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_049",
+    "name": "Poulet certifié Halal sauté aux carottes fondantes et semoule fine",
+    "diet": "halal",
+    "prep_time": 44,
+    "calories": 499,
+    "ingredients": [
+      {
+        "item": "poulet certifié halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_050",
+    "name": "Veau Halal sauté aux courgettes et riz basmati",
+    "diet": "halal",
+    "prep_time": 20,
+    "calories": 500,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_051",
+    "name": "Veau Halal sauté aux tomates concassées et riz basmati",
+    "diet": "halal",
+    "prep_time": 21,
+    "calories": 501,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_052",
+    "name": "Veau Halal sauté aux épinards et riz basmati",
+    "diet": "halal",
+    "prep_time": 22,
+    "calories": 502,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_053",
+    "name": "Veau Halal sauté aux poivrons et riz basmati",
+    "diet": "halal",
+    "prep_time": 23,
+    "calories": 503,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_054",
+    "name": "Veau Halal sauté aux brocolis et riz basmati",
+    "diet": "halal",
+    "prep_time": 24,
+    "calories": 504,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_055",
+    "name": "Veau Halal sauté aux haricots verts et riz basmati",
+    "diet": "halal",
+    "prep_time": 25,
+    "calories": 505,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_056",
+    "name": "Veau Halal sauté aux carottes fondantes et riz basmati",
+    "diet": "halal",
+    "prep_time": 26,
+    "calories": 506,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_057",
+    "name": "Veau Halal sauté aux courgettes et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 27,
+    "calories": 507,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_058",
+    "name": "Veau Halal sauté aux tomates concassées et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 28,
+    "calories": 508,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_059",
+    "name": "Veau Halal sauté aux épinards et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 29,
+    "calories": 509,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_060",
+    "name": "Veau Halal sauté aux poivrons et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 30,
+    "calories": 510,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_061",
+    "name": "Veau Halal sauté aux brocolis et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 31,
+    "calories": 511,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_062",
+    "name": "Veau Halal sauté aux haricots verts et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 32,
+    "calories": 512,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_063",
+    "name": "Veau Halal sauté aux carottes fondantes et pâtes complètes",
+    "diet": "halal",
+    "prep_time": 33,
+    "calories": 513,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pâtes complètes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_064",
+    "name": "Veau Halal sauté aux courgettes et quinoa",
+    "diet": "halal",
+    "prep_time": 34,
+    "calories": 514,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_065",
+    "name": "Veau Halal sauté aux tomates concassées et quinoa",
+    "diet": "halal",
+    "prep_time": 35,
+    "calories": 515,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_066",
+    "name": "Veau Halal sauté aux épinards et quinoa",
+    "diet": "halal",
+    "prep_time": 36,
+    "calories": 516,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_067",
+    "name": "Veau Halal sauté aux poivrons et quinoa",
+    "diet": "halal",
+    "prep_time": 37,
+    "calories": 517,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_068",
+    "name": "Veau Halal sauté aux brocolis et quinoa",
+    "diet": "halal",
+    "prep_time": 38,
+    "calories": 518,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_069",
+    "name": "Veau Halal sauté aux haricots verts et quinoa",
+    "diet": "halal",
+    "prep_time": 39,
+    "calories": 519,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_070",
+    "name": "Veau Halal sauté aux carottes fondantes et quinoa",
+    "diet": "halal",
+    "prep_time": 40,
+    "calories": 520,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "quinoa",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_071",
+    "name": "Veau Halal sauté aux courgettes et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 41,
+    "calories": 521,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_072",
+    "name": "Veau Halal sauté aux tomates concassées et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 42,
+    "calories": 522,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_073",
+    "name": "Veau Halal sauté aux épinards et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 43,
+    "calories": 523,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_074",
+    "name": "Veau Halal sauté aux poivrons et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 44,
+    "calories": 524,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_075",
+    "name": "Veau Halal sauté aux brocolis et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 20,
+    "calories": 525,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_076",
+    "name": "Veau Halal sauté aux haricots verts et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 21,
+    "calories": 526,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_077",
+    "name": "Veau Halal sauté aux carottes fondantes et pommes de terre rôties",
+    "diet": "halal",
+    "prep_time": 22,
+    "calories": 527,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "pommes de terre rôties",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_078",
+    "name": "Veau Halal sauté aux courgettes et boulgour",
+    "diet": "halal",
+    "prep_time": 23,
+    "calories": 528,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_079",
+    "name": "Veau Halal sauté aux tomates concassées et boulgour",
+    "diet": "halal",
+    "prep_time": 24,
+    "calories": 529,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_080",
+    "name": "Veau Halal sauté aux épinards et boulgour",
+    "diet": "halal",
+    "prep_time": 25,
+    "calories": 530,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_081",
+    "name": "Veau Halal sauté aux poivrons et boulgour",
+    "diet": "halal",
+    "prep_time": 26,
+    "calories": 531,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_082",
+    "name": "Veau Halal sauté aux brocolis et boulgour",
+    "diet": "halal",
+    "prep_time": 27,
+    "calories": 532,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_083",
+    "name": "Veau Halal sauté aux haricots verts et boulgour",
+    "diet": "halal",
+    "prep_time": 28,
+    "calories": 533,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_084",
+    "name": "Veau Halal sauté aux carottes fondantes et boulgour",
+    "diet": "halal",
+    "prep_time": 29,
+    "calories": 534,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "boulgour",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_085",
+    "name": "Veau Halal sauté aux courgettes et patates douces",
+    "diet": "halal",
+    "prep_time": 30,
+    "calories": 535,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_086",
+    "name": "Veau Halal sauté aux tomates concassées et patates douces",
+    "diet": "halal",
+    "prep_time": 31,
+    "calories": 536,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_087",
+    "name": "Veau Halal sauté aux épinards et patates douces",
+    "diet": "halal",
+    "prep_time": 32,
+    "calories": 537,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_088",
+    "name": "Veau Halal sauté aux poivrons et patates douces",
+    "diet": "halal",
+    "prep_time": 33,
+    "calories": 538,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_089",
+    "name": "Veau Halal sauté aux brocolis et patates douces",
+    "diet": "halal",
+    "prep_time": 34,
+    "calories": 539,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_090",
+    "name": "Veau Halal sauté aux haricots verts et patates douces",
+    "diet": "halal",
+    "prep_time": 35,
+    "calories": 540,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_091",
+    "name": "Veau Halal sauté aux carottes fondantes et patates douces",
+    "diet": "halal",
+    "prep_time": 36,
+    "calories": 541,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "patates douces",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_092",
+    "name": "Veau Halal sauté aux courgettes et semoule fine",
+    "diet": "halal",
+    "prep_time": 37,
+    "calories": 542,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_093",
+    "name": "Veau Halal sauté aux tomates concassées et semoule fine",
+    "diet": "halal",
+    "prep_time": 38,
+    "calories": 543,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_094",
+    "name": "Veau Halal sauté aux épinards et semoule fine",
+    "diet": "halal",
+    "prep_time": 39,
+    "calories": 544,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "épinards",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_095",
+    "name": "Veau Halal sauté aux poivrons et semoule fine",
+    "diet": "halal",
+    "prep_time": 40,
+    "calories": 545,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "poivrons",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_096",
+    "name": "Veau Halal sauté aux brocolis et semoule fine",
+    "diet": "halal",
+    "prep_time": 41,
+    "calories": 546,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "brocolis",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_097",
+    "name": "Veau Halal sauté aux haricots verts et semoule fine",
+    "diet": "halal",
+    "prep_time": 42,
+    "calories": 547,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "haricots verts",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_098",
+    "name": "Veau Halal sauté aux carottes fondantes et semoule fine",
+    "diet": "halal",
+    "prep_time": 43,
+    "calories": 548,
+    "ingredients": [
+      {
+        "item": "veau halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "semoule fine",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "carottes fondantes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_099",
+    "name": "Bœuf Halal sauté aux courgettes et riz basmati",
+    "diet": "halal",
+    "prep_time": 44,
+    "calories": 549,
+    "ingredients": [
+      {
+        "item": "bœuf halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "courgettes",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "halal_100",
+    "name": "Bœuf Halal sauté aux tomates concassées et riz basmati",
+    "diet": "halal",
+    "prep_time": 20,
+    "calories": 550,
+    "ingredients": [
+      {
+        "item": "bœuf halal",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "item": "riz basmati",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "tomates concassées",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "huile d'olive",
+        "qty": 10,
+        "unit": "ml"
+      }
+    ]
+  }
+]
