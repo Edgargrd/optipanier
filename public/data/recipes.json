@@ -3,7 +3,7 @@
     "id": "normal_001",
     "name": "Poulet sauté aux courgettes et riz basmati",
     "diet": "normal",
-    "prep_time": 21,
+    "prep_time": 15,
     "calories": 451,
     "ingredients": [
       {
@@ -32,7 +32,7 @@
     "id": "normal_002",
     "name": "Poulet sauté aux tomates concassées et riz basmati",
     "diet": "normal",
-    "prep_time": 22,
+    "prep_time": 20,
     "calories": 452,
     "ingredients": [
       {
@@ -61,7 +61,7 @@
     "id": "normal_003",
     "name": "Poulet sauté aux épinards et riz basmati",
     "diet": "normal",
-    "prep_time": 23,
+    "prep_time": 25,
     "calories": 453,
     "ingredients": [
       {
@@ -90,7 +90,7 @@
     "id": "normal_004",
     "name": "Poulet sauté aux poivrons et riz basmati",
     "diet": "normal",
-    "prep_time": 24,
+    "prep_time": 30,
     "calories": 454,
     "ingredients": [
       {
@@ -119,7 +119,7 @@
     "id": "normal_005",
     "name": "Poulet sauté aux brocolis et riz basmati",
     "diet": "normal",
-    "prep_time": 25,
+    "prep_time": 40,
     "calories": 455,
     "ingredients": [
       {
@@ -148,7 +148,7 @@
     "id": "normal_006",
     "name": "Poulet sauté aux haricots verts et riz basmati",
     "diet": "normal",
-    "prep_time": 26,
+    "prep_time": 10,
     "calories": 456,
     "ingredients": [
       {
@@ -177,7 +177,7 @@
     "id": "normal_007",
     "name": "Poulet sauté aux carottes fondantes et riz basmati",
     "diet": "normal",
-    "prep_time": 27,
+    "prep_time": 15,
     "calories": 457,
     "ingredients": [
       {
@@ -206,7 +206,7 @@
     "id": "normal_008",
     "name": "Poulet sauté aux courgettes et pâtes complètes",
     "diet": "normal",
-    "prep_time": 28,
+    "prep_time": 20,
     "calories": 458,
     "ingredients": [
       {
@@ -235,7 +235,7 @@
     "id": "normal_009",
     "name": "Poulet sauté aux tomates concassées et pâtes complètes",
     "diet": "normal",
-    "prep_time": 29,
+    "prep_time": 25,
     "calories": 459,
     "ingredients": [
       {
@@ -293,7 +293,7 @@
     "id": "normal_011",
     "name": "Poulet sauté aux poivrons et pâtes complètes",
     "diet": "normal",
-    "prep_time": 31,
+    "prep_time": 40,
     "calories": 461,
     "ingredients": [
       {
@@ -322,7 +322,7 @@
     "id": "normal_012",
     "name": "Poulet sauté aux brocolis et pâtes complètes",
     "diet": "normal",
-    "prep_time": 32,
+    "prep_time": 10,
     "calories": 462,
     "ingredients": [
       {
@@ -351,7 +351,7 @@
     "id": "normal_013",
     "name": "Poulet sauté aux haricots verts et pâtes complètes",
     "diet": "normal",
-    "prep_time": 33,
+    "prep_time": 15,
     "calories": 463,
     "ingredients": [
       {
@@ -380,7 +380,7 @@
     "id": "normal_014",
     "name": "Poulet sauté aux carottes fondantes et pâtes complètes",
     "diet": "normal",
-    "prep_time": 34,
+    "prep_time": 20,
     "calories": 464,
     "ingredients": [
       {
@@ -409,7 +409,7 @@
     "id": "normal_015",
     "name": "Poulet sauté aux courgettes et quinoa",
     "diet": "normal",
-    "prep_time": 35,
+    "prep_time": 25,
     "calories": 465,
     "ingredients": [
       {
@@ -438,7 +438,7 @@
     "id": "normal_016",
     "name": "Poulet sauté aux tomates concassées et quinoa",
     "diet": "normal",
-    "prep_time": 36,
+    "prep_time": 30,
     "calories": 466,
     "ingredients": [
       {
@@ -467,7 +467,7 @@
     "id": "normal_017",
     "name": "Poulet sauté aux épinards et quinoa",
     "diet": "normal",
-    "prep_time": 37,
+    "prep_time": 40,
     "calories": 467,
     "ingredients": [
       {
@@ -496,7 +496,7 @@
     "id": "normal_018",
     "name": "Poulet sauté aux poivrons et quinoa",
     "diet": "normal",
-    "prep_time": 38,
+    "prep_time": 10,
     "calories": 468,
     "ingredients": [
       {
@@ -525,7 +525,7 @@
     "id": "normal_019",
     "name": "Poulet sauté aux brocolis et quinoa",
     "diet": "normal",
-    "prep_time": 39,
+    "prep_time": 15,
     "calories": 469,
     "ingredients": [
       {
@@ -554,7 +554,7 @@
     "id": "normal_020",
     "name": "Poulet sauté aux haricots verts et quinoa",
     "diet": "normal",
-    "prep_time": 40,
+    "prep_time": 20,
     "calories": 470,
     "ingredients": [
       {
@@ -583,7 +583,7 @@
     "id": "normal_021",
     "name": "Poulet sauté aux carottes fondantes et quinoa",
     "diet": "normal",
-    "prep_time": 41,
+    "prep_time": 25,
     "calories": 471,
     "ingredients": [
       {
@@ -612,7 +612,7 @@
     "id": "normal_022",
     "name": "Poulet sauté aux courgettes et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 42,
+    "prep_time": 30,
     "calories": 472,
     "ingredients": [
       {
@@ -641,7 +641,7 @@
     "id": "normal_023",
     "name": "Poulet sauté aux tomates concassées et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 43,
+    "prep_time": 40,
     "calories": 473,
     "ingredients": [
       {
@@ -670,7 +670,7 @@
     "id": "normal_024",
     "name": "Poulet sauté aux épinards et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 44,
+    "prep_time": 10,
     "calories": 474,
     "ingredients": [
       {
@@ -699,7 +699,7 @@
     "id": "normal_025",
     "name": "Poulet sauté aux poivrons et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 20,
+    "prep_time": 15,
     "calories": 475,
     "ingredients": [
       {
@@ -728,7 +728,7 @@
     "id": "normal_026",
     "name": "Poulet sauté aux brocolis et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 21,
+    "prep_time": 20,
     "calories": 476,
     "ingredients": [
       {
@@ -757,7 +757,7 @@
     "id": "normal_027",
     "name": "Poulet sauté aux haricots verts et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 22,
+    "prep_time": 25,
     "calories": 477,
     "ingredients": [
       {
@@ -786,7 +786,7 @@
     "id": "normal_028",
     "name": "Poulet sauté aux carottes fondantes et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 23,
+    "prep_time": 30,
     "calories": 478,
     "ingredients": [
       {
@@ -815,7 +815,7 @@
     "id": "normal_029",
     "name": "Poulet sauté aux courgettes et boulgour",
     "diet": "normal",
-    "prep_time": 24,
+    "prep_time": 40,
     "calories": 479,
     "ingredients": [
       {
@@ -844,7 +844,7 @@
     "id": "normal_030",
     "name": "Poulet sauté aux tomates concassées et boulgour",
     "diet": "normal",
-    "prep_time": 25,
+    "prep_time": 10,
     "calories": 480,
     "ingredients": [
       {
@@ -873,7 +873,7 @@
     "id": "normal_031",
     "name": "Poulet sauté aux épinards et boulgour",
     "diet": "normal",
-    "prep_time": 26,
+    "prep_time": 15,
     "calories": 481,
     "ingredients": [
       {
@@ -902,7 +902,7 @@
     "id": "normal_032",
     "name": "Poulet sauté aux poivrons et boulgour",
     "diet": "normal",
-    "prep_time": 27,
+    "prep_time": 20,
     "calories": 482,
     "ingredients": [
       {
@@ -931,7 +931,7 @@
     "id": "normal_033",
     "name": "Poulet sauté aux brocolis et boulgour",
     "diet": "normal",
-    "prep_time": 28,
+    "prep_time": 25,
     "calories": 483,
     "ingredients": [
       {
@@ -960,7 +960,7 @@
     "id": "normal_034",
     "name": "Poulet sauté aux haricots verts et boulgour",
     "diet": "normal",
-    "prep_time": 29,
+    "prep_time": 30,
     "calories": 484,
     "ingredients": [
       {
@@ -989,7 +989,7 @@
     "id": "normal_035",
     "name": "Poulet sauté aux carottes fondantes et boulgour",
     "diet": "normal",
-    "prep_time": 30,
+    "prep_time": 40,
     "calories": 485,
     "ingredients": [
       {
@@ -1018,7 +1018,7 @@
     "id": "normal_036",
     "name": "Poulet sauté aux courgettes et patates douces",
     "diet": "normal",
-    "prep_time": 31,
+    "prep_time": 10,
     "calories": 486,
     "ingredients": [
       {
@@ -1047,7 +1047,7 @@
     "id": "normal_037",
     "name": "Poulet sauté aux tomates concassées et patates douces",
     "diet": "normal",
-    "prep_time": 32,
+    "prep_time": 15,
     "calories": 487,
     "ingredients": [
       {
@@ -1076,7 +1076,7 @@
     "id": "normal_038",
     "name": "Poulet sauté aux épinards et patates douces",
     "diet": "normal",
-    "prep_time": 33,
+    "prep_time": 20,
     "calories": 488,
     "ingredients": [
       {
@@ -1105,7 +1105,7 @@
     "id": "normal_039",
     "name": "Poulet sauté aux poivrons et patates douces",
     "diet": "normal",
-    "prep_time": 34,
+    "prep_time": 25,
     "calories": 489,
     "ingredients": [
       {
@@ -1134,7 +1134,7 @@
     "id": "normal_040",
     "name": "Poulet sauté aux brocolis et patates douces",
     "diet": "normal",
-    "prep_time": 35,
+    "prep_time": 30,
     "calories": 490,
     "ingredients": [
       {
@@ -1163,7 +1163,7 @@
     "id": "normal_041",
     "name": "Poulet sauté aux haricots verts et patates douces",
     "diet": "normal",
-    "prep_time": 36,
+    "prep_time": 40,
     "calories": 491,
     "ingredients": [
       {
@@ -1192,7 +1192,7 @@
     "id": "normal_042",
     "name": "Poulet sauté aux carottes fondantes et patates douces",
     "diet": "normal",
-    "prep_time": 37,
+    "prep_time": 10,
     "calories": 492,
     "ingredients": [
       {
@@ -1221,7 +1221,7 @@
     "id": "normal_043",
     "name": "Poulet sauté aux courgettes et semoule fine",
     "diet": "normal",
-    "prep_time": 38,
+    "prep_time": 15,
     "calories": 493,
     "ingredients": [
       {
@@ -1250,7 +1250,7 @@
     "id": "normal_044",
     "name": "Poulet sauté aux tomates concassées et semoule fine",
     "diet": "normal",
-    "prep_time": 39,
+    "prep_time": 20,
     "calories": 494,
     "ingredients": [
       {
@@ -1279,7 +1279,7 @@
     "id": "normal_045",
     "name": "Poulet sauté aux épinards et semoule fine",
     "diet": "normal",
-    "prep_time": 40,
+    "prep_time": 25,
     "calories": 495,
     "ingredients": [
       {
@@ -1308,7 +1308,7 @@
     "id": "normal_046",
     "name": "Poulet sauté aux poivrons et semoule fine",
     "diet": "normal",
-    "prep_time": 41,
+    "prep_time": 30,
     "calories": 496,
     "ingredients": [
       {
@@ -1337,7 +1337,7 @@
     "id": "normal_047",
     "name": "Poulet sauté aux brocolis et semoule fine",
     "diet": "normal",
-    "prep_time": 42,
+    "prep_time": 40,
     "calories": 497,
     "ingredients": [
       {
@@ -1366,7 +1366,7 @@
     "id": "normal_048",
     "name": "Poulet sauté aux haricots verts et semoule fine",
     "diet": "normal",
-    "prep_time": 43,
+    "prep_time": 10,
     "calories": 498,
     "ingredients": [
       {
@@ -1395,7 +1395,7 @@
     "id": "normal_049",
     "name": "Poulet sauté aux carottes fondantes et semoule fine",
     "diet": "normal",
-    "prep_time": 44,
+    "prep_time": 15,
     "calories": 499,
     "ingredients": [
       {
@@ -1453,7 +1453,7 @@
     "id": "normal_051",
     "name": "Bœuf sauté aux tomates concassées et riz basmati",
     "diet": "normal",
-    "prep_time": 21,
+    "prep_time": 25,
     "calories": 501,
     "ingredients": [
       {
@@ -1482,7 +1482,7 @@
     "id": "normal_052",
     "name": "Bœuf sauté aux épinards et riz basmati",
     "diet": "normal",
-    "prep_time": 22,
+    "prep_time": 30,
     "calories": 502,
     "ingredients": [
       {
@@ -1511,7 +1511,7 @@
     "id": "normal_053",
     "name": "Bœuf sauté aux poivrons et riz basmati",
     "diet": "normal",
-    "prep_time": 23,
+    "prep_time": 40,
     "calories": 503,
     "ingredients": [
       {
@@ -1540,7 +1540,7 @@
     "id": "normal_054",
     "name": "Bœuf sauté aux brocolis et riz basmati",
     "diet": "normal",
-    "prep_time": 24,
+    "prep_time": 10,
     "calories": 504,
     "ingredients": [
       {
@@ -1569,7 +1569,7 @@
     "id": "normal_055",
     "name": "Bœuf sauté aux haricots verts et riz basmati",
     "diet": "normal",
-    "prep_time": 25,
+    "prep_time": 15,
     "calories": 505,
     "ingredients": [
       {
@@ -1598,7 +1598,7 @@
     "id": "normal_056",
     "name": "Bœuf sauté aux carottes fondantes et riz basmati",
     "diet": "normal",
-    "prep_time": 26,
+    "prep_time": 20,
     "calories": 506,
     "ingredients": [
       {
@@ -1627,7 +1627,7 @@
     "id": "normal_057",
     "name": "Bœuf sauté aux courgettes et pâtes complètes",
     "diet": "normal",
-    "prep_time": 27,
+    "prep_time": 25,
     "calories": 507,
     "ingredients": [
       {
@@ -1656,7 +1656,7 @@
     "id": "normal_058",
     "name": "Bœuf sauté aux tomates concassées et pâtes complètes",
     "diet": "normal",
-    "prep_time": 28,
+    "prep_time": 30,
     "calories": 508,
     "ingredients": [
       {
@@ -1685,7 +1685,7 @@
     "id": "normal_059",
     "name": "Bœuf sauté aux épinards et pâtes complètes",
     "diet": "normal",
-    "prep_time": 29,
+    "prep_time": 40,
     "calories": 509,
     "ingredients": [
       {
@@ -1714,7 +1714,7 @@
     "id": "normal_060",
     "name": "Bœuf sauté aux poivrons et pâtes complètes",
     "diet": "normal",
-    "prep_time": 30,
+    "prep_time": 10,
     "calories": 510,
     "ingredients": [
       {
@@ -1743,7 +1743,7 @@
     "id": "normal_061",
     "name": "Bœuf sauté aux brocolis et pâtes complètes",
     "diet": "normal",
-    "prep_time": 31,
+    "prep_time": 15,
     "calories": 511,
     "ingredients": [
       {
@@ -1772,7 +1772,7 @@
     "id": "normal_062",
     "name": "Bœuf sauté aux haricots verts et pâtes complètes",
     "diet": "normal",
-    "prep_time": 32,
+    "prep_time": 20,
     "calories": 512,
     "ingredients": [
       {
@@ -1801,7 +1801,7 @@
     "id": "normal_063",
     "name": "Bœuf sauté aux carottes fondantes et pâtes complètes",
     "diet": "normal",
-    "prep_time": 33,
+    "prep_time": 25,
     "calories": 513,
     "ingredients": [
       {
@@ -1830,7 +1830,7 @@
     "id": "normal_064",
     "name": "Bœuf sauté aux courgettes et quinoa",
     "diet": "normal",
-    "prep_time": 34,
+    "prep_time": 30,
     "calories": 514,
     "ingredients": [
       {
@@ -1859,7 +1859,7 @@
     "id": "normal_065",
     "name": "Bœuf sauté aux tomates concassées et quinoa",
     "diet": "normal",
-    "prep_time": 35,
+    "prep_time": 40,
     "calories": 515,
     "ingredients": [
       {
@@ -1888,7 +1888,7 @@
     "id": "normal_066",
     "name": "Bœuf sauté aux épinards et quinoa",
     "diet": "normal",
-    "prep_time": 36,
+    "prep_time": 10,
     "calories": 516,
     "ingredients": [
       {
@@ -1917,7 +1917,7 @@
     "id": "normal_067",
     "name": "Bœuf sauté aux poivrons et quinoa",
     "diet": "normal",
-    "prep_time": 37,
+    "prep_time": 15,
     "calories": 517,
     "ingredients": [
       {
@@ -1946,7 +1946,7 @@
     "id": "normal_068",
     "name": "Bœuf sauté aux brocolis et quinoa",
     "diet": "normal",
-    "prep_time": 38,
+    "prep_time": 20,
     "calories": 518,
     "ingredients": [
       {
@@ -1975,7 +1975,7 @@
     "id": "normal_069",
     "name": "Bœuf sauté aux haricots verts et quinoa",
     "diet": "normal",
-    "prep_time": 39,
+    "prep_time": 25,
     "calories": 519,
     "ingredients": [
       {
@@ -2004,7 +2004,7 @@
     "id": "normal_070",
     "name": "Bœuf sauté aux carottes fondantes et quinoa",
     "diet": "normal",
-    "prep_time": 40,
+    "prep_time": 30,
     "calories": 520,
     "ingredients": [
       {
@@ -2033,7 +2033,7 @@
     "id": "normal_071",
     "name": "Bœuf sauté aux courgettes et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 41,
+    "prep_time": 40,
     "calories": 521,
     "ingredients": [
       {
@@ -2062,7 +2062,7 @@
     "id": "normal_072",
     "name": "Bœuf sauté aux tomates concassées et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 42,
+    "prep_time": 10,
     "calories": 522,
     "ingredients": [
       {
@@ -2091,7 +2091,7 @@
     "id": "normal_073",
     "name": "Bœuf sauté aux épinards et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 43,
+    "prep_time": 15,
     "calories": 523,
     "ingredients": [
       {
@@ -2120,7 +2120,7 @@
     "id": "normal_074",
     "name": "Bœuf sauté aux poivrons et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 44,
+    "prep_time": 20,
     "calories": 524,
     "ingredients": [
       {
@@ -2149,7 +2149,7 @@
     "id": "normal_075",
     "name": "Bœuf sauté aux brocolis et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 20,
+    "prep_time": 25,
     "calories": 525,
     "ingredients": [
       {
@@ -2178,7 +2178,7 @@
     "id": "normal_076",
     "name": "Bœuf sauté aux haricots verts et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 21,
+    "prep_time": 30,
     "calories": 526,
     "ingredients": [
       {
@@ -2207,7 +2207,7 @@
     "id": "normal_077",
     "name": "Bœuf sauté aux carottes fondantes et pommes de terre rôties",
     "diet": "normal",
-    "prep_time": 22,
+    "prep_time": 40,
     "calories": 527,
     "ingredients": [
       {
@@ -2236,7 +2236,7 @@
     "id": "normal_078",
     "name": "Bœuf sauté aux courgettes et boulgour",
     "diet": "normal",
-    "prep_time": 23,
+    "prep_time": 10,
     "calories": 528,
     "ingredients": [
       {
@@ -2265,7 +2265,7 @@
     "id": "normal_079",
     "name": "Bœuf sauté aux tomates concassées et boulgour",
     "diet": "normal",
-    "prep_time": 24,
+    "prep_time": 15,
     "calories": 529,
     "ingredients": [
       {
@@ -2294,7 +2294,7 @@
     "id": "normal_080",
     "name": "Bœuf sauté aux épinards et boulgour",
     "diet": "normal",
-    "prep_time": 25,
+    "prep_time": 20,
     "calories": 530,
     "ingredients": [
       {
@@ -2323,7 +2323,7 @@
     "id": "normal_081",
     "name": "Bœuf sauté aux poivrons et boulgour",
     "diet": "normal",
-    "prep_time": 26,
+    "prep_time": 25,
     "calories": 531,
     "ingredients": [
       {
@@ -2352,7 +2352,7 @@
     "id": "normal_082",
     "name": "Bœuf sauté aux brocolis et boulgour",
     "diet": "normal",
-    "prep_time": 27,
+    "prep_time": 30,
     "calories": 532,
     "ingredients": [
       {
@@ -2381,7 +2381,7 @@
     "id": "normal_083",
     "name": "Bœuf sauté aux haricots verts et boulgour",
     "diet": "normal",
-    "prep_time": 28,
+    "prep_time": 40,
     "calories": 533,
     "ingredients": [
       {
@@ -2410,7 +2410,7 @@
     "id": "normal_084",
     "name": "Bœuf sauté aux carottes fondantes et boulgour",
     "diet": "normal",
-    "prep_time": 29,
+    "prep_time": 10,
     "calories": 534,
     "ingredients": [
       {
@@ -2439,7 +2439,7 @@
     "id": "normal_085",
     "name": "Bœuf sauté aux courgettes et patates douces",
     "diet": "normal",
-    "prep_time": 30,
+    "prep_time": 15,
     "calories": 535,
     "ingredients": [
       {
@@ -2468,7 +2468,7 @@
     "id": "normal_086",
     "name": "Bœuf sauté aux tomates concassées et patates douces",
     "diet": "normal",
-    "prep_time": 31,
+    "prep_time": 20,
     "calories": 536,
     "ingredients": [
       {
@@ -2497,7 +2497,7 @@
     "id": "normal_087",
     "name": "Bœuf sauté aux épinards et patates douces",
     "diet": "normal",
-    "prep_time": 32,
+    "prep_time": 25,
     "calories": 537,
     "ingredients": [
       {
@@ -2526,7 +2526,7 @@
     "id": "normal_088",
     "name": "Bœuf sauté aux poivrons et patates douces",
     "diet": "normal",
-    "prep_time": 33,
+    "prep_time": 30,
     "calories": 538,
     "ingredients": [
       {
@@ -2555,7 +2555,7 @@
     "id": "normal_089",
     "name": "Bœuf sauté aux brocolis et patates douces",
     "diet": "normal",
-    "prep_time": 34,
+    "prep_time": 40,
     "calories": 539,
     "ingredients": [
       {
@@ -2584,7 +2584,7 @@
     "id": "normal_090",
     "name": "Bœuf sauté aux haricots verts et patates douces",
     "diet": "normal",
-    "prep_time": 35,
+    "prep_time": 10,
     "calories": 540,
     "ingredients": [
       {
@@ -2613,7 +2613,7 @@
     "id": "normal_091",
     "name": "Bœuf sauté aux carottes fondantes et patates douces",
     "diet": "normal",
-    "prep_time": 36,
+    "prep_time": 15,
     "calories": 541,
     "ingredients": [
       {
@@ -2642,7 +2642,7 @@
     "id": "normal_092",
     "name": "Bœuf sauté aux courgettes et semoule fine",
     "diet": "normal",
-    "prep_time": 37,
+    "prep_time": 20,
     "calories": 542,
     "ingredients": [
       {
@@ -2671,7 +2671,7 @@
     "id": "normal_093",
     "name": "Bœuf sauté aux tomates concassées et semoule fine",
     "diet": "normal",
-    "prep_time": 38,
+    "prep_time": 25,
     "calories": 543,
     "ingredients": [
       {
@@ -2700,7 +2700,7 @@
     "id": "normal_094",
     "name": "Bœuf sauté aux épinards et semoule fine",
     "diet": "normal",
-    "prep_time": 39,
+    "prep_time": 30,
     "calories": 544,
     "ingredients": [
       {
@@ -2758,7 +2758,7 @@
     "id": "normal_096",
     "name": "Bœuf sauté aux brocolis et semoule fine",
     "diet": "normal",
-    "prep_time": 41,
+    "prep_time": 10,
     "calories": 546,
     "ingredients": [
       {
@@ -2787,7 +2787,7 @@
     "id": "normal_097",
     "name": "Bœuf sauté aux haricots verts et semoule fine",
     "diet": "normal",
-    "prep_time": 42,
+    "prep_time": 15,
     "calories": 547,
     "ingredients": [
       {
@@ -2816,7 +2816,7 @@
     "id": "normal_098",
     "name": "Bœuf sauté aux carottes fondantes et semoule fine",
     "diet": "normal",
-    "prep_time": 43,
+    "prep_time": 20,
     "calories": 548,
     "ingredients": [
       {
@@ -2845,7 +2845,7 @@
     "id": "normal_099",
     "name": "Saumon sauté aux courgettes et riz basmati",
     "diet": "normal",
-    "prep_time": 44,
+    "prep_time": 25,
     "calories": 549,
     "ingredients": [
       {
@@ -2874,7 +2874,7 @@
     "id": "normal_100",
     "name": "Saumon sauté aux tomates concassées et riz basmati",
     "diet": "normal",
-    "prep_time": 20,
+    "prep_time": 30,
     "calories": 550,
     "ingredients": [
       {
@@ -2903,7 +2903,7 @@
     "id": "veggie_001",
     "name": "Lentilles corail sauté aux courgettes et riz basmati",
     "diet": "veggie",
-    "prep_time": 21,
+    "prep_time": 15,
     "calories": 451,
     "ingredients": [
       {
@@ -2932,7 +2932,7 @@
     "id": "veggie_002",
     "name": "Lentilles corail sauté aux tomates concassées et riz basmati",
     "diet": "veggie",
-    "prep_time": 22,
+    "prep_time": 20,
     "calories": 452,
     "ingredients": [
       {
@@ -2961,7 +2961,7 @@
     "id": "veggie_003",
     "name": "Lentilles corail sauté aux épinards et riz basmati",
     "diet": "veggie",
-    "prep_time": 23,
+    "prep_time": 25,
     "calories": 453,
     "ingredients": [
       {
@@ -2990,7 +2990,7 @@
     "id": "veggie_004",
     "name": "Lentilles corail sauté aux poivrons et riz basmati",
     "diet": "veggie",
-    "prep_time": 24,
+    "prep_time": 30,
     "calories": 454,
     "ingredients": [
       {
@@ -3019,7 +3019,7 @@
     "id": "veggie_005",
     "name": "Lentilles corail sauté aux brocolis et riz basmati",
     "diet": "veggie",
-    "prep_time": 25,
+    "prep_time": 40,
     "calories": 455,
     "ingredients": [
       {
@@ -3048,7 +3048,7 @@
     "id": "veggie_006",
     "name": "Lentilles corail sauté aux haricots verts et riz basmati",
     "diet": "veggie",
-    "prep_time": 26,
+    "prep_time": 10,
     "calories": 456,
     "ingredients": [
       {
@@ -3077,7 +3077,7 @@
     "id": "veggie_007",
     "name": "Lentilles corail sauté aux carottes fondantes et riz basmati",
     "diet": "veggie",
-    "prep_time": 27,
+    "prep_time": 15,
     "calories": 457,
     "ingredients": [
       {
@@ -3106,7 +3106,7 @@
     "id": "veggie_008",
     "name": "Lentilles corail sauté aux courgettes et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 28,
+    "prep_time": 20,
     "calories": 458,
     "ingredients": [
       {
@@ -3135,7 +3135,7 @@
     "id": "veggie_009",
     "name": "Lentilles corail sauté aux tomates concassées et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 29,
+    "prep_time": 25,
     "calories": 459,
     "ingredients": [
       {
@@ -3193,7 +3193,7 @@
     "id": "veggie_011",
     "name": "Lentilles corail sauté aux poivrons et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 31,
+    "prep_time": 40,
     "calories": 461,
     "ingredients": [
       {
@@ -3222,7 +3222,7 @@
     "id": "veggie_012",
     "name": "Lentilles corail sauté aux brocolis et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 32,
+    "prep_time": 10,
     "calories": 462,
     "ingredients": [
       {
@@ -3251,7 +3251,7 @@
     "id": "veggie_013",
     "name": "Lentilles corail sauté aux haricots verts et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 33,
+    "prep_time": 15,
     "calories": 463,
     "ingredients": [
       {
@@ -3280,7 +3280,7 @@
     "id": "veggie_014",
     "name": "Lentilles corail sauté aux carottes fondantes et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 34,
+    "prep_time": 20,
     "calories": 464,
     "ingredients": [
       {
@@ -3309,7 +3309,7 @@
     "id": "veggie_015",
     "name": "Lentilles corail sauté aux courgettes et quinoa",
     "diet": "veggie",
-    "prep_time": 35,
+    "prep_time": 25,
     "calories": 465,
     "ingredients": [
       {
@@ -3338,7 +3338,7 @@
     "id": "veggie_016",
     "name": "Lentilles corail sauté aux tomates concassées et quinoa",
     "diet": "veggie",
-    "prep_time": 36,
+    "prep_time": 30,
     "calories": 466,
     "ingredients": [
       {
@@ -3367,7 +3367,7 @@
     "id": "veggie_017",
     "name": "Lentilles corail sauté aux épinards et quinoa",
     "diet": "veggie",
-    "prep_time": 37,
+    "prep_time": 40,
     "calories": 467,
     "ingredients": [
       {
@@ -3396,7 +3396,7 @@
     "id": "veggie_018",
     "name": "Lentilles corail sauté aux poivrons et quinoa",
     "diet": "veggie",
-    "prep_time": 38,
+    "prep_time": 10,
     "calories": 468,
     "ingredients": [
       {
@@ -3425,7 +3425,7 @@
     "id": "veggie_019",
     "name": "Lentilles corail sauté aux brocolis et quinoa",
     "diet": "veggie",
-    "prep_time": 39,
+    "prep_time": 15,
     "calories": 469,
     "ingredients": [
       {
@@ -3454,7 +3454,7 @@
     "id": "veggie_020",
     "name": "Lentilles corail sauté aux haricots verts et quinoa",
     "diet": "veggie",
-    "prep_time": 40,
+    "prep_time": 20,
     "calories": 470,
     "ingredients": [
       {
@@ -3483,7 +3483,7 @@
     "id": "veggie_021",
     "name": "Lentilles corail sauté aux carottes fondantes et quinoa",
     "diet": "veggie",
-    "prep_time": 41,
+    "prep_time": 25,
     "calories": 471,
     "ingredients": [
       {
@@ -3512,7 +3512,7 @@
     "id": "veggie_022",
     "name": "Lentilles corail sauté aux courgettes et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 42,
+    "prep_time": 30,
     "calories": 472,
     "ingredients": [
       {
@@ -3541,7 +3541,7 @@
     "id": "veggie_023",
     "name": "Lentilles corail sauté aux tomates concassées et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 43,
+    "prep_time": 40,
     "calories": 473,
     "ingredients": [
       {
@@ -3570,7 +3570,7 @@
     "id": "veggie_024",
     "name": "Lentilles corail sauté aux épinards et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 44,
+    "prep_time": 10,
     "calories": 474,
     "ingredients": [
       {
@@ -3599,7 +3599,7 @@
     "id": "veggie_025",
     "name": "Lentilles corail sauté aux poivrons et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 20,
+    "prep_time": 15,
     "calories": 475,
     "ingredients": [
       {
@@ -3628,7 +3628,7 @@
     "id": "veggie_026",
     "name": "Lentilles corail sauté aux brocolis et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 21,
+    "prep_time": 20,
     "calories": 476,
     "ingredients": [
       {
@@ -3657,7 +3657,7 @@
     "id": "veggie_027",
     "name": "Lentilles corail sauté aux haricots verts et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 22,
+    "prep_time": 25,
     "calories": 477,
     "ingredients": [
       {
@@ -3686,7 +3686,7 @@
     "id": "veggie_028",
     "name": "Lentilles corail sauté aux carottes fondantes et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 23,
+    "prep_time": 30,
     "calories": 478,
     "ingredients": [
       {
@@ -3715,7 +3715,7 @@
     "id": "veggie_029",
     "name": "Lentilles corail sauté aux courgettes et boulgour",
     "diet": "veggie",
-    "prep_time": 24,
+    "prep_time": 40,
     "calories": 479,
     "ingredients": [
       {
@@ -3744,7 +3744,7 @@
     "id": "veggie_030",
     "name": "Lentilles corail sauté aux tomates concassées et boulgour",
     "diet": "veggie",
-    "prep_time": 25,
+    "prep_time": 10,
     "calories": 480,
     "ingredients": [
       {
@@ -3773,7 +3773,7 @@
     "id": "veggie_031",
     "name": "Lentilles corail sauté aux épinards et boulgour",
     "diet": "veggie",
-    "prep_time": 26,
+    "prep_time": 15,
     "calories": 481,
     "ingredients": [
       {
@@ -3802,7 +3802,7 @@
     "id": "veggie_032",
     "name": "Lentilles corail sauté aux poivrons et boulgour",
     "diet": "veggie",
-    "prep_time": 27,
+    "prep_time": 20,
     "calories": 482,
     "ingredients": [
       {
@@ -3831,7 +3831,7 @@
     "id": "veggie_033",
     "name": "Lentilles corail sauté aux brocolis et boulgour",
     "diet": "veggie",
-    "prep_time": 28,
+    "prep_time": 25,
     "calories": 483,
     "ingredients": [
       {
@@ -3860,7 +3860,7 @@
     "id": "veggie_034",
     "name": "Lentilles corail sauté aux haricots verts et boulgour",
     "diet": "veggie",
-    "prep_time": 29,
+    "prep_time": 30,
     "calories": 484,
     "ingredients": [
       {
@@ -3889,7 +3889,7 @@
     "id": "veggie_035",
     "name": "Lentilles corail sauté aux carottes fondantes et boulgour",
     "diet": "veggie",
-    "prep_time": 30,
+    "prep_time": 40,
     "calories": 485,
     "ingredients": [
       {
@@ -3918,7 +3918,7 @@
     "id": "veggie_036",
     "name": "Lentilles corail sauté aux courgettes et patates douces",
     "diet": "veggie",
-    "prep_time": 31,
+    "prep_time": 10,
     "calories": 486,
     "ingredients": [
       {
@@ -3947,7 +3947,7 @@
     "id": "veggie_037",
     "name": "Lentilles corail sauté aux tomates concassées et patates douces",
     "diet": "veggie",
-    "prep_time": 32,
+    "prep_time": 15,
     "calories": 487,
     "ingredients": [
       {
@@ -3976,7 +3976,7 @@
     "id": "veggie_038",
     "name": "Lentilles corail sauté aux épinards et patates douces",
     "diet": "veggie",
-    "prep_time": 33,
+    "prep_time": 20,
     "calories": 488,
     "ingredients": [
       {
@@ -4005,7 +4005,7 @@
     "id": "veggie_039",
     "name": "Lentilles corail sauté aux poivrons et patates douces",
     "diet": "veggie",
-    "prep_time": 34,
+    "prep_time": 25,
     "calories": 489,
     "ingredients": [
       {
@@ -4034,7 +4034,7 @@
     "id": "veggie_040",
     "name": "Lentilles corail sauté aux brocolis et patates douces",
     "diet": "veggie",
-    "prep_time": 35,
+    "prep_time": 30,
     "calories": 490,
     "ingredients": [
       {
@@ -4063,7 +4063,7 @@
     "id": "veggie_041",
     "name": "Lentilles corail sauté aux haricots verts et patates douces",
     "diet": "veggie",
-    "prep_time": 36,
+    "prep_time": 40,
     "calories": 491,
     "ingredients": [
       {
@@ -4092,7 +4092,7 @@
     "id": "veggie_042",
     "name": "Lentilles corail sauté aux carottes fondantes et patates douces",
     "diet": "veggie",
-    "prep_time": 37,
+    "prep_time": 10,
     "calories": 492,
     "ingredients": [
       {
@@ -4121,7 +4121,7 @@
     "id": "veggie_043",
     "name": "Lentilles corail sauté aux courgettes et semoule fine",
     "diet": "veggie",
-    "prep_time": 38,
+    "prep_time": 15,
     "calories": 493,
     "ingredients": [
       {
@@ -4150,7 +4150,7 @@
     "id": "veggie_044",
     "name": "Lentilles corail sauté aux tomates concassées et semoule fine",
     "diet": "veggie",
-    "prep_time": 39,
+    "prep_time": 20,
     "calories": 494,
     "ingredients": [
       {
@@ -4179,7 +4179,7 @@
     "id": "veggie_045",
     "name": "Lentilles corail sauté aux épinards et semoule fine",
     "diet": "veggie",
-    "prep_time": 40,
+    "prep_time": 25,
     "calories": 495,
     "ingredients": [
       {
@@ -4208,7 +4208,7 @@
     "id": "veggie_046",
     "name": "Lentilles corail sauté aux poivrons et semoule fine",
     "diet": "veggie",
-    "prep_time": 41,
+    "prep_time": 30,
     "calories": 496,
     "ingredients": [
       {
@@ -4237,7 +4237,7 @@
     "id": "veggie_047",
     "name": "Lentilles corail sauté aux brocolis et semoule fine",
     "diet": "veggie",
-    "prep_time": 42,
+    "prep_time": 40,
     "calories": 497,
     "ingredients": [
       {
@@ -4266,7 +4266,7 @@
     "id": "veggie_048",
     "name": "Lentilles corail sauté aux haricots verts et semoule fine",
     "diet": "veggie",
-    "prep_time": 43,
+    "prep_time": 10,
     "calories": 498,
     "ingredients": [
       {
@@ -4295,7 +4295,7 @@
     "id": "veggie_049",
     "name": "Lentilles corail sauté aux carottes fondantes et semoule fine",
     "diet": "veggie",
-    "prep_time": 44,
+    "prep_time": 15,
     "calories": 499,
     "ingredients": [
       {
@@ -4353,7 +4353,7 @@
     "id": "veggie_051",
     "name": "Pois chiches sauté aux tomates concassées et riz basmati",
     "diet": "veggie",
-    "prep_time": 21,
+    "prep_time": 25,
     "calories": 501,
     "ingredients": [
       {
@@ -4382,7 +4382,7 @@
     "id": "veggie_052",
     "name": "Pois chiches sauté aux épinards et riz basmati",
     "diet": "veggie",
-    "prep_time": 22,
+    "prep_time": 30,
     "calories": 502,
     "ingredients": [
       {
@@ -4411,7 +4411,7 @@
     "id": "veggie_053",
     "name": "Pois chiches sauté aux poivrons et riz basmati",
     "diet": "veggie",
-    "prep_time": 23,
+    "prep_time": 40,
     "calories": 503,
     "ingredients": [
       {
@@ -4440,7 +4440,7 @@
     "id": "veggie_054",
     "name": "Pois chiches sauté aux brocolis et riz basmati",
     "diet": "veggie",
-    "prep_time": 24,
+    "prep_time": 10,
     "calories": 504,
     "ingredients": [
       {
@@ -4469,7 +4469,7 @@
     "id": "veggie_055",
     "name": "Pois chiches sauté aux haricots verts et riz basmati",
     "diet": "veggie",
-    "prep_time": 25,
+    "prep_time": 15,
     "calories": 505,
     "ingredients": [
       {
@@ -4498,7 +4498,7 @@
     "id": "veggie_056",
     "name": "Pois chiches sauté aux carottes fondantes et riz basmati",
     "diet": "veggie",
-    "prep_time": 26,
+    "prep_time": 20,
     "calories": 506,
     "ingredients": [
       {
@@ -4527,7 +4527,7 @@
     "id": "veggie_057",
     "name": "Pois chiches sauté aux courgettes et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 27,
+    "prep_time": 25,
     "calories": 507,
     "ingredients": [
       {
@@ -4556,7 +4556,7 @@
     "id": "veggie_058",
     "name": "Pois chiches sauté aux tomates concassées et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 28,
+    "prep_time": 30,
     "calories": 508,
     "ingredients": [
       {
@@ -4585,7 +4585,7 @@
     "id": "veggie_059",
     "name": "Pois chiches sauté aux épinards et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 29,
+    "prep_time": 40,
     "calories": 509,
     "ingredients": [
       {
@@ -4614,7 +4614,7 @@
     "id": "veggie_060",
     "name": "Pois chiches sauté aux poivrons et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 30,
+    "prep_time": 10,
     "calories": 510,
     "ingredients": [
       {
@@ -4643,7 +4643,7 @@
     "id": "veggie_061",
     "name": "Pois chiches sauté aux brocolis et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 31,
+    "prep_time": 15,
     "calories": 511,
     "ingredients": [
       {
@@ -4672,7 +4672,7 @@
     "id": "veggie_062",
     "name": "Pois chiches sauté aux haricots verts et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 32,
+    "prep_time": 20,
     "calories": 512,
     "ingredients": [
       {
@@ -4701,7 +4701,7 @@
     "id": "veggie_063",
     "name": "Pois chiches sauté aux carottes fondantes et pâtes complètes",
     "diet": "veggie",
-    "prep_time": 33,
+    "prep_time": 25,
     "calories": 513,
     "ingredients": [
       {
@@ -4730,7 +4730,7 @@
     "id": "veggie_064",
     "name": "Pois chiches sauté aux courgettes et quinoa",
     "diet": "veggie",
-    "prep_time": 34,
+    "prep_time": 30,
     "calories": 514,
     "ingredients": [
       {
@@ -4759,7 +4759,7 @@
     "id": "veggie_065",
     "name": "Pois chiches sauté aux tomates concassées et quinoa",
     "diet": "veggie",
-    "prep_time": 35,
+    "prep_time": 40,
     "calories": 515,
     "ingredients": [
       {
@@ -4788,7 +4788,7 @@
     "id": "veggie_066",
     "name": "Pois chiches sauté aux épinards et quinoa",
     "diet": "veggie",
-    "prep_time": 36,
+    "prep_time": 10,
     "calories": 516,
     "ingredients": [
       {
@@ -4817,7 +4817,7 @@
     "id": "veggie_067",
     "name": "Pois chiches sauté aux poivrons et quinoa",
     "diet": "veggie",
-    "prep_time": 37,
+    "prep_time": 15,
     "calories": 517,
     "ingredients": [
       {
@@ -4846,7 +4846,7 @@
     "id": "veggie_068",
     "name": "Pois chiches sauté aux brocolis et quinoa",
     "diet": "veggie",
-    "prep_time": 38,
+    "prep_time": 20,
     "calories": 518,
     "ingredients": [
       {
@@ -4875,7 +4875,7 @@
     "id": "veggie_069",
     "name": "Pois chiches sauté aux haricots verts et quinoa",
     "diet": "veggie",
-    "prep_time": 39,
+    "prep_time": 25,
     "calories": 519,
     "ingredients": [
       {
@@ -4904,7 +4904,7 @@
     "id": "veggie_070",
     "name": "Pois chiches sauté aux carottes fondantes et quinoa",
     "diet": "veggie",
-    "prep_time": 40,
+    "prep_time": 30,
     "calories": 520,
     "ingredients": [
       {
@@ -4933,7 +4933,7 @@
     "id": "veggie_071",
     "name": "Pois chiches sauté aux courgettes et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 41,
+    "prep_time": 40,
     "calories": 521,
     "ingredients": [
       {
@@ -4962,7 +4962,7 @@
     "id": "veggie_072",
     "name": "Pois chiches sauté aux tomates concassées et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 42,
+    "prep_time": 10,
     "calories": 522,
     "ingredients": [
       {
@@ -4991,7 +4991,7 @@
     "id": "veggie_073",
     "name": "Pois chiches sauté aux épinards et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 43,
+    "prep_time": 15,
     "calories": 523,
     "ingredients": [
       {
@@ -5020,7 +5020,7 @@
     "id": "veggie_074",
     "name": "Pois chiches sauté aux poivrons et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 44,
+    "prep_time": 20,
     "calories": 524,
     "ingredients": [
       {
@@ -5049,7 +5049,7 @@
     "id": "veggie_075",
     "name": "Pois chiches sauté aux brocolis et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 20,
+    "prep_time": 25,
     "calories": 525,
     "ingredients": [
       {
@@ -5078,7 +5078,7 @@
     "id": "veggie_076",
     "name": "Pois chiches sauté aux haricots verts et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 21,
+    "prep_time": 30,
     "calories": 526,
     "ingredients": [
       {
@@ -5107,7 +5107,7 @@
     "id": "veggie_077",
     "name": "Pois chiches sauté aux carottes fondantes et pommes de terre rôties",
     "diet": "veggie",
-    "prep_time": 22,
+    "prep_time": 40,
     "calories": 527,
     "ingredients": [
       {
@@ -5136,7 +5136,7 @@
     "id": "veggie_078",
     "name": "Pois chiches sauté aux courgettes et boulgour",
     "diet": "veggie",
-    "prep_time": 23,
+    "prep_time": 10,
     "calories": 528,
     "ingredients": [
       {
@@ -5165,7 +5165,7 @@
     "id": "veggie_079",
     "name": "Pois chiches sauté aux tomates concassées et boulgour",
     "diet": "veggie",
-    "prep_time": 24,
+    "prep_time": 15,
     "calories": 529,
     "ingredients": [
       {
@@ -5194,7 +5194,7 @@
     "id": "veggie_080",
     "name": "Pois chiches sauté aux épinards et boulgour",
     "diet": "veggie",
-    "prep_time": 25,
+    "prep_time": 20,
     "calories": 530,
     "ingredients": [
       {
@@ -5223,7 +5223,7 @@
     "id": "veggie_081",
     "name": "Pois chiches sauté aux poivrons et boulgour",
     "diet": "veggie",
-    "prep_time": 26,
+    "prep_time": 25,
     "calories": 531,
     "ingredients": [
       {
@@ -5252,7 +5252,7 @@
     "id": "veggie_082",
     "name": "Pois chiches sauté aux brocolis et boulgour",
     "diet": "veggie",
-    "prep_time": 27,
+    "prep_time": 30,
     "calories": 532,
     "ingredients": [
       {
@@ -5281,7 +5281,7 @@
     "id": "veggie_083",
     "name": "Pois chiches sauté aux haricots verts et boulgour",
     "diet": "veggie",
-    "prep_time": 28,
+    "prep_time": 40,
     "calories": 533,
     "ingredients": [
       {
@@ -5310,7 +5310,7 @@
     "id": "veggie_084",
     "name": "Pois chiches sauté aux carottes fondantes et boulgour",
     "diet": "veggie",
-    "prep_time": 29,
+    "prep_time": 10,
     "calories": 534,
     "ingredients": [
       {
@@ -5339,7 +5339,7 @@
     "id": "veggie_085",
     "name": "Pois chiches sauté aux courgettes et patates douces",
     "diet": "veggie",
-    "prep_time": 30,
+    "prep_time": 15,
     "calories": 535,
     "ingredients": [
       {
@@ -5368,7 +5368,7 @@
     "id": "veggie_086",
     "name": "Pois chiches sauté aux tomates concassées et patates douces",
     "diet": "veggie",
-    "prep_time": 31,
+    "prep_time": 20,
     "calories": 536,
     "ingredients": [
       {
@@ -5397,7 +5397,7 @@
     "id": "veggie_087",
     "name": "Pois chiches sauté aux épinards et patates douces",
     "diet": "veggie",
-    "prep_time": 32,
+    "prep_time": 25,
     "calories": 537,
     "ingredients": [
       {
@@ -5426,7 +5426,7 @@
     "id": "veggie_088",
     "name": "Pois chiches sauté aux poivrons et patates douces",
     "diet": "veggie",
-    "prep_time": 33,
+    "prep_time": 30,
     "calories": 538,
     "ingredients": [
       {
@@ -5455,7 +5455,7 @@
     "id": "veggie_089",
     "name": "Pois chiches sauté aux brocolis et patates douces",
     "diet": "veggie",
-    "prep_time": 34,
+    "prep_time": 40,
     "calories": 539,
     "ingredients": [
       {
@@ -5484,7 +5484,7 @@
     "id": "veggie_090",
     "name": "Pois chiches sauté aux haricots verts et patates douces",
     "diet": "veggie",
-    "prep_time": 35,
+    "prep_time": 10,
     "calories": 540,
     "ingredients": [
       {
@@ -5513,7 +5513,7 @@
     "id": "veggie_091",
     "name": "Pois chiches sauté aux carottes fondantes et patates douces",
     "diet": "veggie",
-    "prep_time": 36,
+    "prep_time": 15,
     "calories": 541,
     "ingredients": [
       {
@@ -5542,7 +5542,7 @@
     "id": "veggie_092",
     "name": "Pois chiches sauté aux courgettes et semoule fine",
     "diet": "veggie",
-    "prep_time": 37,
+    "prep_time": 20,
     "calories": 542,
     "ingredients": [
       {
@@ -5571,7 +5571,7 @@
     "id": "veggie_093",
     "name": "Pois chiches sauté aux tomates concassées et semoule fine",
     "diet": "veggie",
-    "prep_time": 38,
+    "prep_time": 25,
     "calories": 543,
     "ingredients": [
       {
@@ -5600,7 +5600,7 @@
     "id": "veggie_094",
     "name": "Pois chiches sauté aux épinards et semoule fine",
     "diet": "veggie",
-    "prep_time": 39,
+    "prep_time": 30,
     "calories": 544,
     "ingredients": [
       {
@@ -5658,7 +5658,7 @@
     "id": "veggie_096",
     "name": "Pois chiches sauté aux brocolis et semoule fine",
     "diet": "veggie",
-    "prep_time": 41,
+    "prep_time": 10,
     "calories": 546,
     "ingredients": [
       {
@@ -5687,7 +5687,7 @@
     "id": "veggie_097",
     "name": "Pois chiches sauté aux haricots verts et semoule fine",
     "diet": "veggie",
-    "prep_time": 42,
+    "prep_time": 15,
     "calories": 547,
     "ingredients": [
       {
@@ -5716,7 +5716,7 @@
     "id": "veggie_098",
     "name": "Pois chiches sauté aux carottes fondantes et semoule fine",
     "diet": "veggie",
-    "prep_time": 43,
+    "prep_time": 20,
     "calories": 548,
     "ingredients": [
       {
@@ -5745,7 +5745,7 @@
     "id": "veggie_099",
     "name": "Tofu mariné sauté aux courgettes et riz basmati",
     "diet": "veggie",
-    "prep_time": 44,
+    "prep_time": 25,
     "calories": 549,
     "ingredients": [
       {
@@ -5774,7 +5774,7 @@
     "id": "veggie_100",
     "name": "Tofu mariné sauté aux tomates concassées et riz basmati",
     "diet": "veggie",
-    "prep_time": 20,
+    "prep_time": 30,
     "calories": 550,
     "ingredients": [
       {
@@ -5803,7 +5803,7 @@
     "id": "halal_001",
     "name": "Poulet certifié Halal sauté aux courgettes et riz basmati",
     "diet": "halal",
-    "prep_time": 21,
+    "prep_time": 15,
     "calories": 451,
     "ingredients": [
       {
@@ -5832,7 +5832,7 @@
     "id": "halal_002",
     "name": "Poulet certifié Halal sauté aux tomates concassées et riz basmati",
     "diet": "halal",
-    "prep_time": 22,
+    "prep_time": 20,
     "calories": 452,
     "ingredients": [
       {
@@ -5861,7 +5861,7 @@
     "id": "halal_003",
     "name": "Poulet certifié Halal sauté aux épinards et riz basmati",
     "diet": "halal",
-    "prep_time": 23,
+    "prep_time": 25,
     "calories": 453,
     "ingredients": [
       {
@@ -5890,7 +5890,7 @@
     "id": "halal_004",
     "name": "Poulet certifié Halal sauté aux poivrons et riz basmati",
     "diet": "halal",
-    "prep_time": 24,
+    "prep_time": 30,
     "calories": 454,
     "ingredients": [
       {
@@ -5919,7 +5919,7 @@
     "id": "halal_005",
     "name": "Poulet certifié Halal sauté aux brocolis et riz basmati",
     "diet": "halal",
-    "prep_time": 25,
+    "prep_time": 40,
     "calories": 455,
     "ingredients": [
       {
@@ -5948,7 +5948,7 @@
     "id": "halal_006",
     "name": "Poulet certifié Halal sauté aux haricots verts et riz basmati",
     "diet": "halal",
-    "prep_time": 26,
+    "prep_time": 10,
     "calories": 456,
     "ingredients": [
       {
@@ -5977,7 +5977,7 @@
     "id": "halal_007",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et riz basmati",
     "diet": "halal",
-    "prep_time": 27,
+    "prep_time": 15,
     "calories": 457,
     "ingredients": [
       {
@@ -6006,7 +6006,7 @@
     "id": "halal_008",
     "name": "Poulet certifié Halal sauté aux courgettes et pâtes complètes",
     "diet": "halal",
-    "prep_time": 28,
+    "prep_time": 20,
     "calories": 458,
     "ingredients": [
       {
@@ -6035,7 +6035,7 @@
     "id": "halal_009",
     "name": "Poulet certifié Halal sauté aux tomates concassées et pâtes complètes",
     "diet": "halal",
-    "prep_time": 29,
+    "prep_time": 25,
     "calories": 459,
     "ingredients": [
       {
@@ -6093,7 +6093,7 @@
     "id": "halal_011",
     "name": "Poulet certifié Halal sauté aux poivrons et pâtes complètes",
     "diet": "halal",
-    "prep_time": 31,
+    "prep_time": 40,
     "calories": 461,
     "ingredients": [
       {
@@ -6122,7 +6122,7 @@
     "id": "halal_012",
     "name": "Poulet certifié Halal sauté aux brocolis et pâtes complètes",
     "diet": "halal",
-    "prep_time": 32,
+    "prep_time": 10,
     "calories": 462,
     "ingredients": [
       {
@@ -6151,7 +6151,7 @@
     "id": "halal_013",
     "name": "Poulet certifié Halal sauté aux haricots verts et pâtes complètes",
     "diet": "halal",
-    "prep_time": 33,
+    "prep_time": 15,
     "calories": 463,
     "ingredients": [
       {
@@ -6180,7 +6180,7 @@
     "id": "halal_014",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et pâtes complètes",
     "diet": "halal",
-    "prep_time": 34,
+    "prep_time": 20,
     "calories": 464,
     "ingredients": [
       {
@@ -6209,7 +6209,7 @@
     "id": "halal_015",
     "name": "Poulet certifié Halal sauté aux courgettes et quinoa",
     "diet": "halal",
-    "prep_time": 35,
+    "prep_time": 25,
     "calories": 465,
     "ingredients": [
       {
@@ -6238,7 +6238,7 @@
     "id": "halal_016",
     "name": "Poulet certifié Halal sauté aux tomates concassées et quinoa",
     "diet": "halal",
-    "prep_time": 36,
+    "prep_time": 30,
     "calories": 466,
     "ingredients": [
       {
@@ -6267,7 +6267,7 @@
     "id": "halal_017",
     "name": "Poulet certifié Halal sauté aux épinards et quinoa",
     "diet": "halal",
-    "prep_time": 37,
+    "prep_time": 40,
     "calories": 467,
     "ingredients": [
       {
@@ -6296,7 +6296,7 @@
     "id": "halal_018",
     "name": "Poulet certifié Halal sauté aux poivrons et quinoa",
     "diet": "halal",
-    "prep_time": 38,
+    "prep_time": 10,
     "calories": 468,
     "ingredients": [
       {
@@ -6325,7 +6325,7 @@
     "id": "halal_019",
     "name": "Poulet certifié Halal sauté aux brocolis et quinoa",
     "diet": "halal",
-    "prep_time": 39,
+    "prep_time": 15,
     "calories": 469,
     "ingredients": [
       {
@@ -6354,7 +6354,7 @@
     "id": "halal_020",
     "name": "Poulet certifié Halal sauté aux haricots verts et quinoa",
     "diet": "halal",
-    "prep_time": 40,
+    "prep_time": 20,
     "calories": 470,
     "ingredients": [
       {
@@ -6383,7 +6383,7 @@
     "id": "halal_021",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et quinoa",
     "diet": "halal",
-    "prep_time": 41,
+    "prep_time": 25,
     "calories": 471,
     "ingredients": [
       {
@@ -6412,7 +6412,7 @@
     "id": "halal_022",
     "name": "Poulet certifié Halal sauté aux courgettes et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 42,
+    "prep_time": 30,
     "calories": 472,
     "ingredients": [
       {
@@ -6441,7 +6441,7 @@
     "id": "halal_023",
     "name": "Poulet certifié Halal sauté aux tomates concassées et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 43,
+    "prep_time": 40,
     "calories": 473,
     "ingredients": [
       {
@@ -6470,7 +6470,7 @@
     "id": "halal_024",
     "name": "Poulet certifié Halal sauté aux épinards et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 44,
+    "prep_time": 10,
     "calories": 474,
     "ingredients": [
       {
@@ -6499,7 +6499,7 @@
     "id": "halal_025",
     "name": "Poulet certifié Halal sauté aux poivrons et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 20,
+    "prep_time": 15,
     "calories": 475,
     "ingredients": [
       {
@@ -6528,7 +6528,7 @@
     "id": "halal_026",
     "name": "Poulet certifié Halal sauté aux brocolis et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 21,
+    "prep_time": 20,
     "calories": 476,
     "ingredients": [
       {
@@ -6557,7 +6557,7 @@
     "id": "halal_027",
     "name": "Poulet certifié Halal sauté aux haricots verts et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 22,
+    "prep_time": 25,
     "calories": 477,
     "ingredients": [
       {
@@ -6586,7 +6586,7 @@
     "id": "halal_028",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 23,
+    "prep_time": 30,
     "calories": 478,
     "ingredients": [
       {
@@ -6615,7 +6615,7 @@
     "id": "halal_029",
     "name": "Poulet certifié Halal sauté aux courgettes et boulgour",
     "diet": "halal",
-    "prep_time": 24,
+    "prep_time": 40,
     "calories": 479,
     "ingredients": [
       {
@@ -6644,7 +6644,7 @@
     "id": "halal_030",
     "name": "Poulet certifié Halal sauté aux tomates concassées et boulgour",
     "diet": "halal",
-    "prep_time": 25,
+    "prep_time": 10,
     "calories": 480,
     "ingredients": [
       {
@@ -6673,7 +6673,7 @@
     "id": "halal_031",
     "name": "Poulet certifié Halal sauté aux épinards et boulgour",
     "diet": "halal",
-    "prep_time": 26,
+    "prep_time": 15,
     "calories": 481,
     "ingredients": [
       {
@@ -6702,7 +6702,7 @@
     "id": "halal_032",
     "name": "Poulet certifié Halal sauté aux poivrons et boulgour",
     "diet": "halal",
-    "prep_time": 27,
+    "prep_time": 20,
     "calories": 482,
     "ingredients": [
       {
@@ -6731,7 +6731,7 @@
     "id": "halal_033",
     "name": "Poulet certifié Halal sauté aux brocolis et boulgour",
     "diet": "halal",
-    "prep_time": 28,
+    "prep_time": 25,
     "calories": 483,
     "ingredients": [
       {
@@ -6760,7 +6760,7 @@
     "id": "halal_034",
     "name": "Poulet certifié Halal sauté aux haricots verts et boulgour",
     "diet": "halal",
-    "prep_time": 29,
+    "prep_time": 30,
     "calories": 484,
     "ingredients": [
       {
@@ -6789,7 +6789,7 @@
     "id": "halal_035",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et boulgour",
     "diet": "halal",
-    "prep_time": 30,
+    "prep_time": 40,
     "calories": 485,
     "ingredients": [
       {
@@ -6818,7 +6818,7 @@
     "id": "halal_036",
     "name": "Poulet certifié Halal sauté aux courgettes et patates douces",
     "diet": "halal",
-    "prep_time": 31,
+    "prep_time": 10,
     "calories": 486,
     "ingredients": [
       {
@@ -6847,7 +6847,7 @@
     "id": "halal_037",
     "name": "Poulet certifié Halal sauté aux tomates concassées et patates douces",
     "diet": "halal",
-    "prep_time": 32,
+    "prep_time": 15,
     "calories": 487,
     "ingredients": [
       {
@@ -6876,7 +6876,7 @@
     "id": "halal_038",
     "name": "Poulet certifié Halal sauté aux épinards et patates douces",
     "diet": "halal",
-    "prep_time": 33,
+    "prep_time": 20,
     "calories": 488,
     "ingredients": [
       {
@@ -6905,7 +6905,7 @@
     "id": "halal_039",
     "name": "Poulet certifié Halal sauté aux poivrons et patates douces",
     "diet": "halal",
-    "prep_time": 34,
+    "prep_time": 25,
     "calories": 489,
     "ingredients": [
       {
@@ -6934,7 +6934,7 @@
     "id": "halal_040",
     "name": "Poulet certifié Halal sauté aux brocolis et patates douces",
     "diet": "halal",
-    "prep_time": 35,
+    "prep_time": 30,
     "calories": 490,
     "ingredients": [
       {
@@ -6963,7 +6963,7 @@
     "id": "halal_041",
     "name": "Poulet certifié Halal sauté aux haricots verts et patates douces",
     "diet": "halal",
-    "prep_time": 36,
+    "prep_time": 40,
     "calories": 491,
     "ingredients": [
       {
@@ -6992,7 +6992,7 @@
     "id": "halal_042",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et patates douces",
     "diet": "halal",
-    "prep_time": 37,
+    "prep_time": 10,
     "calories": 492,
     "ingredients": [
       {
@@ -7021,7 +7021,7 @@
     "id": "halal_043",
     "name": "Poulet certifié Halal sauté aux courgettes et semoule fine",
     "diet": "halal",
-    "prep_time": 38,
+    "prep_time": 15,
     "calories": 493,
     "ingredients": [
       {
@@ -7050,7 +7050,7 @@
     "id": "halal_044",
     "name": "Poulet certifié Halal sauté aux tomates concassées et semoule fine",
     "diet": "halal",
-    "prep_time": 39,
+    "prep_time": 20,
     "calories": 494,
     "ingredients": [
       {
@@ -7079,7 +7079,7 @@
     "id": "halal_045",
     "name": "Poulet certifié Halal sauté aux épinards et semoule fine",
     "diet": "halal",
-    "prep_time": 40,
+    "prep_time": 25,
     "calories": 495,
     "ingredients": [
       {
@@ -7108,7 +7108,7 @@
     "id": "halal_046",
     "name": "Poulet certifié Halal sauté aux poivrons et semoule fine",
     "diet": "halal",
-    "prep_time": 41,
+    "prep_time": 30,
     "calories": 496,
     "ingredients": [
       {
@@ -7137,7 +7137,7 @@
     "id": "halal_047",
     "name": "Poulet certifié Halal sauté aux brocolis et semoule fine",
     "diet": "halal",
-    "prep_time": 42,
+    "prep_time": 40,
     "calories": 497,
     "ingredients": [
       {
@@ -7166,7 +7166,7 @@
     "id": "halal_048",
     "name": "Poulet certifié Halal sauté aux haricots verts et semoule fine",
     "diet": "halal",
-    "prep_time": 43,
+    "prep_time": 10,
     "calories": 498,
     "ingredients": [
       {
@@ -7195,7 +7195,7 @@
     "id": "halal_049",
     "name": "Poulet certifié Halal sauté aux carottes fondantes et semoule fine",
     "diet": "halal",
-    "prep_time": 44,
+    "prep_time": 15,
     "calories": 499,
     "ingredients": [
       {
@@ -7253,7 +7253,7 @@
     "id": "halal_051",
     "name": "Veau Halal sauté aux tomates concassées et riz basmati",
     "diet": "halal",
-    "prep_time": 21,
+    "prep_time": 25,
     "calories": 501,
     "ingredients": [
       {
@@ -7282,7 +7282,7 @@
     "id": "halal_052",
     "name": "Veau Halal sauté aux épinards et riz basmati",
     "diet": "halal",
-    "prep_time": 22,
+    "prep_time": 30,
     "calories": 502,
     "ingredients": [
       {
@@ -7311,7 +7311,7 @@
     "id": "halal_053",
     "name": "Veau Halal sauté aux poivrons et riz basmati",
     "diet": "halal",
-    "prep_time": 23,
+    "prep_time": 40,
     "calories": 503,
     "ingredients": [
       {
@@ -7340,7 +7340,7 @@
     "id": "halal_054",
     "name": "Veau Halal sauté aux brocolis et riz basmati",
     "diet": "halal",
-    "prep_time": 24,
+    "prep_time": 10,
     "calories": 504,
     "ingredients": [
       {
@@ -7369,7 +7369,7 @@
     "id": "halal_055",
     "name": "Veau Halal sauté aux haricots verts et riz basmati",
     "diet": "halal",
-    "prep_time": 25,
+    "prep_time": 15,
     "calories": 505,
     "ingredients": [
       {
@@ -7398,7 +7398,7 @@
     "id": "halal_056",
     "name": "Veau Halal sauté aux carottes fondantes et riz basmati",
     "diet": "halal",
-    "prep_time": 26,
+    "prep_time": 20,
     "calories": 506,
     "ingredients": [
       {
@@ -7427,7 +7427,7 @@
     "id": "halal_057",
     "name": "Veau Halal sauté aux courgettes et pâtes complètes",
     "diet": "halal",
-    "prep_time": 27,
+    "prep_time": 25,
     "calories": 507,
     "ingredients": [
       {
@@ -7456,7 +7456,7 @@
     "id": "halal_058",
     "name": "Veau Halal sauté aux tomates concassées et pâtes complètes",
     "diet": "halal",
-    "prep_time": 28,
+    "prep_time": 30,
     "calories": 508,
     "ingredients": [
       {
@@ -7485,7 +7485,7 @@
     "id": "halal_059",
     "name": "Veau Halal sauté aux épinards et pâtes complètes",
     "diet": "halal",
-    "prep_time": 29,
+    "prep_time": 40,
     "calories": 509,
     "ingredients": [
       {
@@ -7514,7 +7514,7 @@
     "id": "halal_060",
     "name": "Veau Halal sauté aux poivrons et pâtes complètes",
     "diet": "halal",
-    "prep_time": 30,
+    "prep_time": 10,
     "calories": 510,
     "ingredients": [
       {
@@ -7543,7 +7543,7 @@
     "id": "halal_061",
     "name": "Veau Halal sauté aux brocolis et pâtes complètes",
     "diet": "halal",
-    "prep_time": 31,
+    "prep_time": 15,
     "calories": 511,
     "ingredients": [
       {
@@ -7572,7 +7572,7 @@
     "id": "halal_062",
     "name": "Veau Halal sauté aux haricots verts et pâtes complètes",
     "diet": "halal",
-    "prep_time": 32,
+    "prep_time": 20,
     "calories": 512,
     "ingredients": [
       {
@@ -7601,7 +7601,7 @@
     "id": "halal_063",
     "name": "Veau Halal sauté aux carottes fondantes et pâtes complètes",
     "diet": "halal",
-    "prep_time": 33,
+    "prep_time": 25,
     "calories": 513,
     "ingredients": [
       {
@@ -7630,7 +7630,7 @@
     "id": "halal_064",
     "name": "Veau Halal sauté aux courgettes et quinoa",
     "diet": "halal",
-    "prep_time": 34,
+    "prep_time": 30,
     "calories": 514,
     "ingredients": [
       {
@@ -7659,7 +7659,7 @@
     "id": "halal_065",
     "name": "Veau Halal sauté aux tomates concassées et quinoa",
     "diet": "halal",
-    "prep_time": 35,
+    "prep_time": 40,
     "calories": 515,
     "ingredients": [
       {
@@ -7688,7 +7688,7 @@
     "id": "halal_066",
     "name": "Veau Halal sauté aux épinards et quinoa",
     "diet": "halal",
-    "prep_time": 36,
+    "prep_time": 10,
     "calories": 516,
     "ingredients": [
       {
@@ -7717,7 +7717,7 @@
     "id": "halal_067",
     "name": "Veau Halal sauté aux poivrons et quinoa",
     "diet": "halal",
-    "prep_time": 37,
+    "prep_time": 15,
     "calories": 517,
     "ingredients": [
       {
@@ -7746,7 +7746,7 @@
     "id": "halal_068",
     "name": "Veau Halal sauté aux brocolis et quinoa",
     "diet": "halal",
-    "prep_time": 38,
+    "prep_time": 20,
     "calories": 518,
     "ingredients": [
       {
@@ -7775,7 +7775,7 @@
     "id": "halal_069",
     "name": "Veau Halal sauté aux haricots verts et quinoa",
     "diet": "halal",
-    "prep_time": 39,
+    "prep_time": 25,
     "calories": 519,
     "ingredients": [
       {
@@ -7804,7 +7804,7 @@
     "id": "halal_070",
     "name": "Veau Halal sauté aux carottes fondantes et quinoa",
     "diet": "halal",
-    "prep_time": 40,
+    "prep_time": 30,
     "calories": 520,
     "ingredients": [
       {
@@ -7833,7 +7833,7 @@
     "id": "halal_071",
     "name": "Veau Halal sauté aux courgettes et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 41,
+    "prep_time": 40,
     "calories": 521,
     "ingredients": [
       {
@@ -7862,7 +7862,7 @@
     "id": "halal_072",
     "name": "Veau Halal sauté aux tomates concassées et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 42,
+    "prep_time": 10,
     "calories": 522,
     "ingredients": [
       {
@@ -7891,7 +7891,7 @@
     "id": "halal_073",
     "name": "Veau Halal sauté aux épinards et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 43,
+    "prep_time": 15,
     "calories": 523,
     "ingredients": [
       {
@@ -7920,7 +7920,7 @@
     "id": "halal_074",
     "name": "Veau Halal sauté aux poivrons et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 44,
+    "prep_time": 20,
     "calories": 524,
     "ingredients": [
       {
@@ -7949,7 +7949,7 @@
     "id": "halal_075",
     "name": "Veau Halal sauté aux brocolis et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 20,
+    "prep_time": 25,
     "calories": 525,
     "ingredients": [
       {
@@ -7978,7 +7978,7 @@
     "id": "halal_076",
     "name": "Veau Halal sauté aux haricots verts et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 21,
+    "prep_time": 30,
     "calories": 526,
     "ingredients": [
       {
@@ -8007,7 +8007,7 @@
     "id": "halal_077",
     "name": "Veau Halal sauté aux carottes fondantes et pommes de terre rôties",
     "diet": "halal",
-    "prep_time": 22,
+    "prep_time": 40,
     "calories": 527,
     "ingredients": [
       {
@@ -8036,7 +8036,7 @@
     "id": "halal_078",
     "name": "Veau Halal sauté aux courgettes et boulgour",
     "diet": "halal",
-    "prep_time": 23,
+    "prep_time": 10,
     "calories": 528,
     "ingredients": [
       {
@@ -8065,7 +8065,7 @@
     "id": "halal_079",
     "name": "Veau Halal sauté aux tomates concassées et boulgour",
     "diet": "halal",
-    "prep_time": 24,
+    "prep_time": 15,
     "calories": 529,
     "ingredients": [
       {
@@ -8094,7 +8094,7 @@
     "id": "halal_080",
     "name": "Veau Halal sauté aux épinards et boulgour",
     "diet": "halal",
-    "prep_time": 25,
+    "prep_time": 20,
     "calories": 530,
     "ingredients": [
       {
@@ -8123,7 +8123,7 @@
     "id": "halal_081",
     "name": "Veau Halal sauté aux poivrons et boulgour",
     "diet": "halal",
-    "prep_time": 26,
+    "prep_time": 25,
     "calories": 531,
     "ingredients": [
       {
@@ -8152,7 +8152,7 @@
     "id": "halal_082",
     "name": "Veau Halal sauté aux brocolis et boulgour",
     "diet": "halal",
-    "prep_time": 27,
+    "prep_time": 30,
     "calories": 532,
     "ingredients": [
       {
@@ -8181,7 +8181,7 @@
     "id": "halal_083",
     "name": "Veau Halal sauté aux haricots verts et boulgour",
     "diet": "halal",
-    "prep_time": 28,
+    "prep_time": 40,
     "calories": 533,
     "ingredients": [
       {
@@ -8210,7 +8210,7 @@
     "id": "halal_084",
     "name": "Veau Halal sauté aux carottes fondantes et boulgour",
     "diet": "halal",
-    "prep_time": 29,
+    "prep_time": 10,
     "calories": 534,
     "ingredients": [
       {
@@ -8239,7 +8239,7 @@
     "id": "halal_085",
     "name": "Veau Halal sauté aux courgettes et patates douces",
     "diet": "halal",
-    "prep_time": 30,
+    "prep_time": 15,
     "calories": 535,
     "ingredients": [
       {
@@ -8268,7 +8268,7 @@
     "id": "halal_086",
     "name": "Veau Halal sauté aux tomates concassées et patates douces",
     "diet": "halal",
-    "prep_time": 31,
+    "prep_time": 20,
     "calories": 536,
     "ingredients": [
       {
@@ -8297,7 +8297,7 @@
     "id": "halal_087",
     "name": "Veau Halal sauté aux épinards et patates douces",
     "diet": "halal",
-    "prep_time": 32,
+    "prep_time": 25,
     "calories": 537,
     "ingredients": [
       {
@@ -8326,7 +8326,7 @@
     "id": "halal_088",
     "name": "Veau Halal sauté aux poivrons et patates douces",
     "diet": "halal",
-    "prep_time": 33,
+    "prep_time": 30,
     "calories": 538,
     "ingredients": [
       {
@@ -8355,7 +8355,7 @@
     "id": "halal_089",
     "name": "Veau Halal sauté aux brocolis et patates douces",
     "diet": "halal",
-    "prep_time": 34,
+    "prep_time": 40,
     "calories": 539,
     "ingredients": [
       {
@@ -8384,7 +8384,7 @@
     "id": "halal_090",
     "name": "Veau Halal sauté aux haricots verts et patates douces",
     "diet": "halal",
-    "prep_time": 35,
+    "prep_time": 10,
     "calories": 540,
     "ingredients": [
       {
@@ -8413,7 +8413,7 @@
     "id": "halal_091",
     "name": "Veau Halal sauté aux carottes fondantes et patates douces",
     "diet": "halal",
-    "prep_time": 36,
+    "prep_time": 15,
     "calories": 541,
     "ingredients": [
       {
@@ -8442,7 +8442,7 @@
     "id": "halal_092",
     "name": "Veau Halal sauté aux courgettes et semoule fine",
     "diet": "halal",
-    "prep_time": 37,
+    "prep_time": 20,
     "calories": 542,
     "ingredients": [
       {
@@ -8471,7 +8471,7 @@
     "id": "halal_093",
     "name": "Veau Halal sauté aux tomates concassées et semoule fine",
     "diet": "halal",
-    "prep_time": 38,
+    "prep_time": 25,
     "calories": 543,
     "ingredients": [
       {
@@ -8500,7 +8500,7 @@
     "id": "halal_094",
     "name": "Veau Halal sauté aux épinards et semoule fine",
     "diet": "halal",
-    "prep_time": 39,
+    "prep_time": 30,
     "calories": 544,
     "ingredients": [
       {
@@ -8558,7 +8558,7 @@
     "id": "halal_096",
     "name": "Veau Halal sauté aux brocolis et semoule fine",
     "diet": "halal",
-    "prep_time": 41,
+    "prep_time": 10,
     "calories": 546,
     "ingredients": [
       {
@@ -8587,7 +8587,7 @@
     "id": "halal_097",
     "name": "Veau Halal sauté aux haricots verts et semoule fine",
     "diet": "halal",
-    "prep_time": 42,
+    "prep_time": 15,
     "calories": 547,
     "ingredients": [
       {
@@ -8616,7 +8616,7 @@
     "id": "halal_098",
     "name": "Veau Halal sauté aux carottes fondantes et semoule fine",
     "diet": "halal",
-    "prep_time": 43,
+    "prep_time": 20,
     "calories": 548,
     "ingredients": [
       {
@@ -8645,7 +8645,7 @@
     "id": "halal_099",
     "name": "Bœuf Halal sauté aux courgettes et riz basmati",
     "diet": "halal",
-    "prep_time": 44,
+    "prep_time": 25,
     "calories": 549,
     "ingredients": [
       {
@@ -8674,7 +8674,7 @@
     "id": "halal_100",
     "name": "Bœuf Halal sauté aux tomates concassées et riz basmati",
     "diet": "halal",
-    "prep_time": 20,
+    "prep_time": 30,
     "calories": 550,
     "ingredients": [
       {

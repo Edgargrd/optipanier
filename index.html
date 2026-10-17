@@ -824,8 +824,7 @@ loadRecipesCatalog();
       const exCustom = document.getElementById('ex-custom').value.toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
 
       let availableRecipes = MASTER_RECIPES.filter(recipe => {
-        if (selectedTime !== 'all' && recipe.timeBracket !== selectedTime) return false;
-        if (storageType === 'fridge-only' && recipe.requiresFreezer) return false;
+if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return false;        if (storageType === 'fridge-only' && recipe.requiresFreezer) return false;
         if (recipe.requiredEquipment.includes('stove') && !hasStove) return false;
         if (recipe.requiredEquipment.includes('oven') && !hasOven) return false;
 
