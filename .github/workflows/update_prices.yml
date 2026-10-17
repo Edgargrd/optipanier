@@ -1,0 +1,35 @@
+name: Actualisation automatique des prix
+
+on:
+  schedule:
+    # Tourne tous les lundis matin à 06h00 UTC (07h00 / 08h00 heure de Paris)
+    - cron: '0 6 * * 1'
+  workflow_dispatch: # Permet aussi de lancer le robot manuellement en 1 clic sur GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le code du projet
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dependances
+        run: pip install -r requirements.txt
+
+      - name: Lancer le script d'actualisation des prix
+        run: python update_prices.py
+
+      - name: Enregistrer et publier le nouveau catalogue
+        run: |
+          git config --global user.name "OptiPanier Bot"
+          git config --global user.email "bot@optipanier.fr"
+          git add public/data/catalog.json
+          git diff-index --quiet HEAD || (git commit -m "chore: actualisation automatique des prix [skip ci]" && git push)

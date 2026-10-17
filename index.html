@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptiPanier - Menus & Courses Sur-Mesure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .custom-scroll::-webkit-scrollbar { width: 6px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans min-h-screen flex flex-col justify-between">
+
+  <!-- En-tête avec barre de progression globale -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <button id="topBackBtn" onclick="prevStep()" class="text-slate-500 hover:text-slate-800 p-1.5 rounded-lg text-sm hidden">
+          <i class="fa-solid fa-arrow-left text-base"></i>
+        </button>
+        <span class="font-extrabold text-base tracking-tight text-slate-900">OptiPanier<span class="text-[#FA4A33]">.fr</span></span>
+      </div>
+      <span id="stepCounter" class="text-xs font-bold text-slate-400">Étape 1 sur 8</span>
+    </div>
+    <div class="w-full bg-slate-100 h-1.5">
+      <div id="progressBar" class="bg-[#FA4A33] h-full transition-all duration-300 ease-out" style="width: 12.5%;"></div>
+    </div>
+  </header>
+
+  <!-- Conteneur principal des étapes (Wizard Onboarding) -->
+  <main class="max-w-xl mx-auto w-full p-4 md:py-8 flex-1 flex flex-col justify-center relative z-10">
+
+    <!-- Message d'alerte globale avec diagnostic détaillé -->
+    <div id="globalErrorAlert" class="hidden mb-4 bg-rose-50 border-l-4 border-rose-500 p-4 rounded-xl text-rose-800 text-xs">
+      <div class="flex items-center gap-2 font-bold mb-1 text-sm">
+        <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> Paramètres impossibles à honorer
+      </div>
+      <p id="globalErrorMsg" class="leading-relaxed"></p>
+      <div id="globalErrorDiagnosis" class="mt-2.5 pt-2 border-t border-rose-200 font-medium space-y-1"></div>
+    </div>
+
+    <!-- ================= ÉTAPE 1 : OBJECTIFS ================= -->
+    <div id="step-1" class="wizard-step space-y-6">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Vos objectifs</h2>
+        <p class="text-xs text-slate-500">OptiPanier adapte directement le générateur à vos priorités.</p>
+      </div>
+
+      <div class="space-y-2.5">
+        <label class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-slate-400 cursor-pointer transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🧘</span>
+            <div>
+              <span class="text-sm font-semibold text-slate-800 block">Diminuer ma charge mentale</span>
+              <span class="text-[11px] text-slate-400">Priorise les plats rapides en une seule poêle</span>
+            </div>
+          </div>
+          <input type="checkbox" id="goal-mental" value="mental" class="goal-cb rounded-md w-5 h-5 text-[#FA4A33] focus:ring-0">
+        </label>
+        <label class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-slate-400 cursor-pointer transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🥕</span>
+            <div>
+              <span class="text-sm font-semibold text-slate-800 block">Manger moins de viande</span>
+              <span class="text-[11px] text-slate-400">Garantit au minimum 70% de repas végétariens (ex: 10/14)</span>
+            </div>
+          </div>
+          <input type="checkbox" id="goal-less-meat" value="less_meat" class="goal-cb rounded-md w-5 h-5 text-[#FA4A33] focus:ring-0">
+        </label>
+        <label class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-slate-400 cursor-pointer transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">♻️</span>
+            <div>
+              <span class="text-sm font-semibold text-slate-800 block">Éviter les achats superflus</span>
+              <span class="text-[11px] text-slate-400">Consolide les paquets pour zéro gaspillage</span>
+            </div>
+          </div>
+          <input type="checkbox" id="goal-no-waste" value="no_waste" checked class="goal-cb rounded-md w-5 h-5 text-[#FA4A33] focus:ring-0">
+        </label>
+        <label class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-slate-400 cursor-pointer transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">💸</span>
+            <div>
+              <span class="text-sm font-semibold text-slate-800 block">Payer moins cher mes courses</span>
+              <span class="text-[11px] text-slate-400">Privilégie les légumineuses et féculents économiques</span>
+            </div>
+          </div>
+          <input type="checkbox" id="goal-cheap" value="cheap" checked class="goal-cb rounded-md w-5 h-5 text-[#FA4A33] focus:ring-0">
+        </label>
+        <label class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-slate-400 cursor-pointer transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">👨‍🍳</span>
+            <div>
+              <span class="text-sm font-semibold text-slate-800 block">Cuisiner et découvrir des recettes</span>
+              <span class="text-[11px] text-slate-400">Variété d'épices et assaisonnements savoureux</span>
+            </div>
+          </div>
+          <input type="checkbox" id="goal-discover" value="discover" class="goal-cb rounded-md w-5 h-5 text-[#FA4A33] focus:ring-0">
+        </label>
+        <label class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-slate-400 cursor-pointer transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🥗</span>
+            <div>
+              <span class="text-sm font-semibold text-slate-800 block">Manger plus équilibré et de saison</span>
+              <span class="text-[11px] text-slate-400">Équilibre complet en fibres et micronutriments</span>
+            </div>
+          </div>
+          <input type="checkbox" id="goal-balanced" value="balanced" class="goal-cb rounded-md w-5 h-5 text-[#FA4A33] focus:ring-0">
+        </label>
+      </div>
+
+      <p class="text-center text-xs text-slate-400">Vous pouvez choisir jusqu'à 3 challenges.</p>
+      <button type="button" id="btnNextStep1" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer relative z-20">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 2 : SUPERMARCHÉ ================= -->
+    <div id="step-2" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Votre supermarché</h2>
+        <p class="text-xs text-slate-500">Lidl, Aldi et Auchan d'Île-de-France.</p>
+      </div>
+
+      <div class="space-y-2 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-600">Rechercher ou saisir votre magasin :</label>
+        <div class="relative">
+          <input type="text" id="storeInput" 
+            value="Lidl - 1 Rue de Hanovre, 92290 Châtenay-Malabry"
+            placeholder="Tapez une ville, code postal ou enseigne..."
+            class="w-full text-sm border border-slate-300 rounded-xl p-3 pr-10 focus:ring-2 focus:ring-[#FA4A33] focus:outline-none font-medium">
+          <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3.5 text-slate-400"></i>
+        </div>
+        <div id="storeDropdown" class="hidden max-h-48 overflow-y-auto border border-slate-200 rounded-xl bg-white shadow-lg divide-y divide-slate-100 text-xs mt-1 custom-scroll"></div>
+        <p class="text-[11px] text-slate-400">Exemples : Antony, Massy, Paris 15, Vélizy, Créteil, Montreuil...</p>
+      </div>
+
+      <button type="button" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 3 : ÉQUIPEMENTS & FROID ================= -->
+    <div id="step-3" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Vos équipements</h2>
+        <p class="text-xs text-slate-500">Nous éliminerons les cuissons impossibles chez vous.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <span class="block text-xs font-bold uppercase tracking-wider text-slate-600">Appareils disponibles :</span>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <label class="flex items-center gap-2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="equip-stove" checked class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Plaques de cuisson</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="equip-oven" checked class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Four traditionnel</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="equip-microwave" checked class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Micro-ondes</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="equip-airfryer" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Air Fryer</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="equip-blender" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Mixeur / Blender</span>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="equip-kettle" checked class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Bouilloire</span>
+          </label>
+        </div>
+
+        <div class="pt-3 border-t border-slate-100">
+          <span class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Conservation au froid :</span>
+          <div class="space-y-2 text-xs">
+            <label class="flex items-center gap-2.5 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+              <input type="radio" name="storageType" value="freezer" checked class="text-[#FA4A33]">
+              <span>Frigo <strong>ET Congélateur</strong> (surgelés acceptés)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+              <input type="radio" name="storageType" value="fridge-only" class="text-[#FA4A33]">
+              <span><strong>Uniquement un Frigo</strong> (zéro surgelé dans la liste)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 4 : ALIMENTS À BANNIR ================= -->
+    <div id="step-4" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Aliments à bannir</h2>
+        <p class="text-xs text-slate-500">Cochez vos régimes stricts et vos aversions alimentaires.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+        <label class="flex items-center justify-between p-3 bg-emerald-50 border-2 border-emerald-300 rounded-xl cursor-pointer">
+          <div class="flex items-center gap-2.5">
+            <span class="text-lg">🌱</span>
+            <div>
+              <span class="text-xs font-black text-emerald-900 block">Régime 100% Végétarien</span>
+              <span class="text-[11px] text-emerald-700">Bannit immédiatement toutes viandes, charcuteries et poissons</span>
+            </div>
+          </div>
+          <input type="checkbox" id="ex-vegetarian" class="rounded w-5 h-5 text-emerald-600 focus:ring-0">
+        </label>
+
+        <div class="grid grid-cols-2 gap-2 text-xs pt-1">
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-brassica" checked class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Brocolis & Choux</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-seafood" checked class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Poissons (hors Saumon)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-pork" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Porc / Charcuterie</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-redmeat" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Viande rouge (bœuf...)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-strongcheese" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Fromages forts (bleu, chèvre)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-mildcheese" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Fromages doux (emmental...)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-gluten" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Gluten (blé)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-lactose" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Lactose (lait, crème)</span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer">
+            <input type="checkbox" id="ex-mushrooms" class="rounded text-[#FA4A33] focus:ring-0">
+            <span>Champignons</span>
+          </label>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-semibold text-slate-500 mb-1">Autres aversions particulières (virgule) :</label>
+          <input type="text" id="ex-custom" placeholder="ex: poivrons, aubergine, oignons crus" 
+            class="w-full text-xs border border-slate-300 rounded-xl p-2.5 focus:ring-2 focus:ring-[#FA4A33] focus:outline-none">
+        </div>
+      </div>
+
+      <button type="button" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 5 : NOMBRE DE REPAS ================= -->
+    <div id="step-5" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Nombre de repas uniques</h2>
+        <p class="text-xs text-slate-500">14 repas = 14 recettes 100% différentes sans aucun doublon.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center space-y-4">
+        <div class="text-4xl font-black text-[#FA4A33]">
+          <span id="mealsCountDisplay">7</span> <span class="text-lg font-bold text-slate-500">repas</span>
+        </div>
+        <input type="range" id="mealsCount" min="1" max="14" value="7" class="w-full accent-[#FA4A33] cursor-pointer">
+        <p class="text-xs text-slate-400">Chaque repas aura sa propre fiche pas-à-pas complète.</p>
+      </div>
+
+      <button type="button" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 6 : BUDGET CIBLE (MAX +10%, PAS DE LIMITE BASSE) ================= -->
+    <div id="step-6" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Budget indicatif cible</h2>
+        <p class="text-xs text-slate-500">Plafond strict à +10% maximum. Aucune limite basse imposée.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center space-y-4">
+        <div class="text-4xl font-black text-emerald-600">
+          <span id="budgetDisplay">35</span> <span class="text-lg font-bold text-slate-500">€</span>
+        </div>
+        <input type="range" id="budgetInput" min="15" max="120" step="5" value="35" class="w-full accent-emerald-600 cursor-pointer">
+        <div class="text-xs font-semibold text-slate-600 bg-slate-50 py-2.5 rounded-xl border border-slate-100">
+          Plafond maximal autorisé (+10%) : <span id="budgetMaxLimit" class="font-bold text-emerald-700">38.50</span> € 
+          <span class="block text-[11px] text-slate-400 font-normal mt-0.5">(Si le total dépasse ce plafond, la génération sera bloquée)</span>
+        </div>
+      </div>
+
+      <button type="button" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 7 : BESOINS ÉNERGÉTIQUES ================= -->
+    <div id="step-7" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Besoins énergétiques</h2>
+        <p class="text-xs text-slate-500">Dimensionnement précis des portions individuelles.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div class="grid grid-cols-3 gap-3 text-xs">
+          <div>
+            <label class="block font-bold text-slate-600 mb-1">Genre</label>
+            <select id="userGender" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-[#FA4A33]">
+              <option value="male" selected>Homme</option>
+              <option value="female">Femme</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-600 mb-1">Taille (cm)</label>
+            <input type="number" id="userHeight" value="178" min="120" max="230" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-[#FA4A33]">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-600 mb-1">Poids (kg)</label>
+            <input type="number" id="userWeight" value="72" min="35" max="200" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-medium focus:ring-2 focus:ring-[#FA4A33]">
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex justify-between items-center text-xs">
+          <span class="text-slate-600 font-medium">Besoins moyens calculés / repas :</span>
+          <span id="calculatedNeedsDisplay" class="font-bold text-slate-800 text-sm">~580 kcal</span>
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-700">Imposer un objectif calorique strict (facultatif)</span>
+            <input type="checkbox" id="customKcalToggle" class="rounded text-[#FA4A33] focus:ring-0">
+          </div>
+
+          <div id="customKcalBlock" class="hidden space-y-2">
+            <div class="flex justify-between text-xs text-slate-600 font-medium">
+              <span>Cible par repas</span>
+              <span class="font-bold text-[#FA4A33]"><span id="targetKcalVal">550</span> kcal (marge ±10% : <span id="targetKcalRange">495 - 605</span> kcal)</span>
+            </div>
+            <input type="range" id="customKcalSlider" min="400" max="850" step="25" value="550" class="w-full accent-[#FA4A33] cursor-pointer">
+          </div>
+        </div>
+      </div>
+
+      <button type="button" onclick="nextStep()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-3.5 rounded-2xl shadow transition cursor-pointer">Suivant</button>
+    </div>
+
+    <!-- ================= ÉTAPE 8 : TEMPS DE PRÉPARATION ================= -->
+    <div id="step-8" class="wizard-step space-y-6 hidden">
+      <div class="text-center space-y-1">
+        <h2 class="text-2xl font-black text-slate-900">Temps de préparation</h2>
+        <p class="text-xs text-slate-500">Choisissez votre rythme de cuisine au quotidien.</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2.5">
+        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
+          <div class="flex items-center gap-3">
+            <span class="text-lg">⚡</span>
+            <div>
+              <span class="text-xs font-bold text-slate-800 block">Ultra-rapide (≤ 15 minutes)</span>
+              <span class="text-[11px] text-slate-400">Wraps, gnocchis express, salades et poêlées</span>
+            </div>
+          </div>
+          <input type="radio" name="timeLimitRadio" value="15" class="text-[#FA4A33]">
+        </label>
+
+        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🍳</span>
+            <div>
+              <span class="text-xs font-bold text-slate-800 block">Quotidien & Poêlées (≤ 25 minutes)</span>
+              <span class="text-[11px] text-slate-400">Dahl, pavé de saumon croustillant, chili doux</span>
+            </div>
+          </div>
+          <input type="radio" name="timeLimitRadio" value="25" checked class="text-[#FA4A33]">
+        </label>
+
+        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🥘</span>
+            <div>
+              <span class="text-xs font-bold text-slate-800 block">Mijotés & Four (≤ 45 minutes)</span>
+              <span class="text-[11px] text-slate-400">Parmentier, gratins, patate douce rôtie</span>
+            </div>
+          </div>
+          <input type="radio" name="timeLimitRadio" value="45" class="text-[#FA4A33]">
+        </label>
+
+        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🎲</span>
+            <div>
+              <span class="text-xs font-bold text-slate-800 block">Panaché varié (tous temps)</span>
+              <span class="text-[11px] text-slate-400">Diversité maximale pour toute la semaine</span>
+            </div>
+          </div>
+          <input type="radio" name="timeLimitRadio" value="all" class="text-[#FA4A33]">
+        </label>
+      </div>
+
+      <button type="button" onclick="buildAndValidatePlan()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-base cursor-pointer">
+        <span>Générer mes menus et ma liste de courses</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- ================= ÉCRAN FINAL : RÉSULTATS & FEEDBACK ================= -->
+    <div id="step-results" class="wizard-step space-y-6 hidden w-full max-w-4xl mx-auto">
+      
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+        <button type="button" onclick="goToStep(1)" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3 py-2 rounded-lg flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-arrow-left"></i> Recommencer
+        </button>
+        <div class="text-xs text-slate-600">
+          Magasin : <strong id="resStoreName" class="text-slate-800 font-semibold">Lidl Châtenay-Malabry</strong>
+        </div>
+        <button type="button" onclick="regenerateDiversePlan()" class="text-xs bg-rose-50 hover:bg-rose-100 text-[#FA4A33] font-bold px-3 py-2 rounded-lg flex items-center gap-1.5 transition border border-rose-200">
+          <i class="fa-solid fa-shuffle"></i> Autre proposition (≥ 75% inédite)
+        </button>
+      </div>
+
+      <!-- Métriques -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] text-slate-500 font-medium block">Total Panier Réel</span>
+          <span id="resTotalBudget" class="text-xl font-black text-emerald-600">0.00 €</span>
+        </div>
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] text-slate-500 font-medium block">Plafond Max (+10%)</span>
+          <span id="resTargetBudget" class="text-xs font-bold text-slate-700">≤ 38.50 €</span>
+        </div>
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] text-slate-500 font-medium block">Calories / Plat (Moy.)</span>
+          <span id="resAvgKcal" class="text-xl font-black text-amber-500">0 kcal</span>
+        </div>
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] text-slate-500 font-medium block">Plats 100% Différents</span>
+          <span id="resMealsCount" class="text-xl font-black text-[#FA4A33]">7 / 7</span>
+        </div>
+      </div>
+
+      <!-- Onglets Menus vs Panier -->
+      <div class="flex border-b border-slate-300 gap-6 text-xs font-bold uppercase tracking-wider">
+        <button id="tab-btn-meals" onclick="switchResultTab('meals')" class="pb-2 border-b-2 border-[#FA4A33] text-[#FA4A33] flex items-center gap-2">
+          <i class="fa-solid fa-utensils"></i> Menus Sélectionnés (<span id="mealsCountBadge">0</span>)
+        </button>
+        <button id="tab-btn-cart" onclick="switchResultTab('cart')" class="pb-2 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-cart-shopping"></i> Panier consolidé en rayon (<span id="cartCountBadge">0</span> articles)
+        </button>
+      </div>
+
+      <div id="view-meals-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+      <div id="view-cart-list" class="hidden space-y-4">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider">Articles en rayon pour vos repas</h3>
+            <p class="text-[11px] text-slate-500">Formats entiers d'emballage pour limiter le gaspillage</p>
+          </div>
+          <button onclick="copyCart()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-3 py-1.5 rounded-lg border flex items-center gap-1.5">
+            <i class="fa-regular fa-copy"></i> Copier la liste
+          </button>
+        </div>
+        <div id="cartSectionsContainer" class="space-y-3"></div>
+      </div>
+
+      <!-- Module Feedback -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3 mt-8">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">💬</span>
+          <h4 class="font-bold text-slate-800 text-sm">Donnez votre avis sur vos menus</h4>
+        </div>
+        <p class="text-xs text-slate-500">Un ingrédient manquant, une étape peu claire ou une idée de recette ? Dites-le nous !</p>
+
+        <div class="flex items-center gap-2 text-amber-400 text-lg" id="feedbackStars">
+          <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" onclick="rateFeedback(1)"></i>
+          <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" onclick="rateFeedback(2)"></i>
+          <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" onclick="rateFeedback(3)"></i>
+          <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" onclick="rateFeedback(4)"></i>
+          <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" onclick="rateFeedback(5)"></i>
+        </div>
+
+        <textarea id="feedbackText" rows="2" placeholder="Votre retour ou suggestion ici..." 
+          class="w-full text-xs border border-slate-200 rounded-xl p-3 focus:ring-2 focus:ring-[#FA4A33] focus:outline-none custom-scroll"></textarea>
+
+        <div class="flex justify-between items-center">
+          <span id="feedbackSuccessMsg" class="hidden text-xs text-emerald-600 font-bold">Merci pour votre retour ! 🙌</span>
+          <button type="button" onclick="submitFeedback()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-xl transition ml-auto">
+            Envoyer
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= MODALE FICHE RECETTE ================= -->
+  <div id="recipeModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" style="display: none;">
+    <div class="bg-white w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col relative z-50">
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-start">
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="modalTypeTag" class="text-[10px] font-black uppercase tracking-wider bg-[#FA4A33] text-white px-2 py-0.5 rounded">CHAUD</span>
+            <span id="modalEquipTag" class="text-[10px] font-bold bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Plaques</span>
+          </div>
+          <h3 id="modalTitle" class="text-base font-bold mt-1 leading-snug">Titre Recette</h3>
+        </div>
+        <button type="button" onclick="closeRecipeModal()" class="text-slate-400 hover:text-white text-2xl font-bold p-1 cursor-pointer">&times;</button>
+      </div>
+      
+      <div class="p-5 overflow-y-auto space-y-4 text-xs custom-scroll">
+        <div class="grid grid-cols-3 gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-center">
+          <div>
+            <span class="text-slate-400 block text-[10px] font-medium">Temps</span>
+            <span id="modalTime" class="font-extrabold text-slate-800 text-xs">15 min</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block text-[10px] font-medium">Énergie</span>
+            <span id="modalKcal" class="font-extrabold text-amber-500 text-xs">550 kcal</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block text-[10px] font-medium">Macros</span>
+            <span id="modalMacros" class="font-bold text-slate-700 text-[10px]">P: 35g G: 60g L: 14g</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 mb-1.5 flex items-center gap-1.5 text-xs">
+            <i class="fa-solid fa-knife text-[#FA4A33]"></i> Ingrédients, Dosages d'Épices & Découpe (1 pers.) :
+          </h4>
+          <ul id="modalIngredientsList" class="divide-y divide-slate-100 bg-slate-50 p-3 rounded-xl border border-slate-100 space-y-1.5"></ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 mb-1.5 flex items-center gap-1.5 text-xs">
+            <i class="fa-solid fa-fire-burner text-[#FA4A33]"></i> Cuisson chronométrée détaillée pas-à-pas :
+          </h4>
+          <ol id="modalStepsList" class="space-y-2 text-slate-700 list-decimal list-inside leading-relaxed"></ol>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 p-3 border-t border-slate-200 text-right">
+        <button type="button" onclick="closeRecipeModal()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold px-4 py-2 rounded-lg cursor-pointer">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ================= INITIALISATION DYNAMIQUE DU CATALOGUE ================= */
+    async function initDynamicCatalog() {
+      try {
+        const res = await fetch('/data/catalog.json');
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.items) {
+            for (const [key, val] of Object.entries(data.items)) {
+              if (PANTRY[key] && val.price) {
+                PANTRY[key].price = val.price;
+              }
+            }
+            console.log("Catalogue actualisé chargé depuis GitHub/Vercel (Date :", data.last_updated, ")");
+          }
+        }
+      } catch (e) {
+        console.log("Utilisation des prix locaux de réserve.");
+      }
+    }
+
+    /* ================= GESTION DU PARCOURS WIZARD ================= */
+    let currentStep = 1;
+    const totalSteps = 8;
+
+    window.updateWizardUI = function() {
+      document.querySelectorAll('.wizard-step').forEach(el => el.classList.add('hidden'));
+
+      if (currentStep <= totalSteps) {
+        document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+        document.getElementById('stepCounter').innerText = `Étape ${currentStep} sur ${totalSteps}`;
+        document.getElementById('progressBar').style.width = `${(currentStep / totalSteps) * 100}%`;
+        document.getElementById('topBackBtn').classList.toggle('hidden', currentStep === 1);
+      } else {
+        document.getElementById('step-results').classList.remove('hidden');
+        document.getElementById('stepCounter').innerText = 'Menus & Courses prêts';
+        document.getElementById('progressBar').style.width = '100%';
+        document.getElementById('topBackBtn').classList.remove('hidden');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.nextStep = function() {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateWizardUI();
+      }
+    };
+
+    window.prevStep = function() {
+      if (currentStep > 1) {
+        currentStep--;
+        updateWizardUI();
+      }
+    };
+
+    window.goToStep = function(s) {
+      currentStep = s;
+      updateWizardUI();
+    };
+
+    // Gestion de la limitation à 3 objectifs
+    document.querySelectorAll('.goal-cb').forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (document.querySelectorAll('.goal-cb:checked').length > 3) cb.checked = false;
+      });
+    });
+
+    // Profil métabolique
+    function updateCalculatedNeeds() {
+      const g = document.getElementById('userGender').value;
+      const h = parseFloat(document.getElementById('userHeight').value) || 178;
+      const w = parseFloat(document.getElementById('userWeight').value) || 72;
+
+      let bmr = (10 * w) + (6.25 * h) - (5 * 25);
+      bmr += (g === 'female') ? -161 : 5;
+      const mealTarget = Math.round((bmr * 1.35) / 3);
+
+      document.getElementById('calculatedNeedsDisplay').innerText = `~${mealTarget} kcal`;
+      return mealTarget;
+    }
+
+    ['userGender', 'userHeight', 'userWeight'].forEach(id => {
+      document.getElementById(id).addEventListener('change', updateCalculatedNeeds);
+      document.getElementById(id).addEventListener('input', updateCalculatedNeeds);
+    });
+
+    const customKcalToggle = document.getElementById('customKcalToggle');
+    const customKcalBlock = document.getElementById('customKcalBlock');
+    const customKcalSlider = document.getElementById('customKcalSlider');
+
+    customKcalToggle.addEventListener('change', (e) => {
+      customKcalBlock.classList.toggle('hidden', !e.target.checked);
+    });
+
+    customKcalSlider.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      document.getElementById('targetKcalVal').innerText = val;
+      const min = Math.round(val * 0.9);
+      const max = Math.round(val * 1.1);
+      document.getElementById('targetKcalRange').innerText = `${min} - ${max}`;
+    });
+
+    document.getElementById('mealsCount').addEventListener('input', e => {
+      document.getElementById('mealsCountDisplay').innerText = e.target.value;
+    });
+
+    // Règle de budget : Plafond strict +10%, pas de plancher minimum
+    document.getElementById('budgetInput').addEventListener('input', e => {
+      const val = parseInt(e.target.value);
+      document.getElementById('budgetDisplay').innerText = val;
+      const maxCap = (val * 1.10).toFixed(2);
+      document.getElementById('budgetMaxLimit').innerText = maxCap;
+    });
+
+    /* ================= CATALOGUE MAGASINS IDF ================= */
+    const STORES_LIST = [
+      "Lidl - 1 Rue de Hanovre, 92290 Châtenay-Malabry",
+      "Lidl - 88 Av. Aristide Briand, 92160 Antony",
+      "Lidl - 12 Rue du Saule Trapu, 91300 Massy",
+      "Lidl - 45 Rue de la Convention, 75015 Paris",
+      "Lidl - 110 Rue de Belleville, 75020 Paris",
+      "Lidl - 110 Av. de Fontainebleau, 94270 Le Kremlin-Bicêtre",
+      "Aldi - 15 Rue Velpeau, 92160 Antony",
+      "Aldi - 50 Rte de Versailles, 91160 Champlan",
+      "Aldi - 200 Rue Saint-Maur, 75010 Paris",
+      "Auchan Supermarché - 40 Av. Division Leclerc, 92290 Châtenay-Malabry",
+      "Auchan Hypermarché - Centre Cial Vélizy 2, 78140 Vélizy-Villacoublay"
+    ];
+
+    const storeInput = document.getElementById('storeInput');
+    const storeDropdown = document.getElementById('storeDropdown');
+
+    storeInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) { storeDropdown.classList.add('hidden'); return; }
+      const matches = STORES_LIST.filter(s => s.toLowerCase().includes(q));
+      if (matches.length === 0) {
+        storeDropdown.innerHTML = `<div class="p-2.5 text-slate-400">Magasin personnalisé sélectionné</div>`;
+      } else {
+        storeDropdown.innerHTML = matches.map(s => `
+          <div class="p-2.5 hover:bg-slate-50 cursor-pointer font-medium text-slate-700" onclick="chooseStore('${s}')">${s}</div>
+        `).join('');
+      }
+      storeDropdown.classList.remove('hidden');
+    });
+
+    function chooseStore(name) {
+      storeInput.value = name;
+      storeDropdown.classList.add('hidden');
+    }
+
+    /* ================= BASE DE DONNÉES INGRÉDIENTS ================= */
+    const PANTRY = {
+      salmon: { name: "Pavé de Saumon frais de Norvège 250g", price: 4.89, dept: "Poissonnerie", isFrozen: false },
+      chicken: { name: "Filets de poulet frais 500g", price: 4.59, dept: "Boucherie", isFrozen: false },
+      turkey: { name: "Escalopes de dinde 400g", price: 3.99, dept: "Boucherie", isFrozen: false },
+      beef_hache: { name: "Steaks hachés pur bœuf 15% 400g", price: 4.19, dept: "Boucherie", isFrozen: false },
+      jambon: { name: "Jambon blanc supérieur x4 (180g)", price: 1.99, dept: "Charcuterie", isFrozen: false },
+      lardons: { name: "Lardons nature fumés 200g", price: 1.49, dept: "Charcuterie", isFrozen: false },
+      eggs: { name: "Œufs de plein air x10", price: 2.29, dept: "Crèmerie", isFrozen: false },
+      pasta: { name: "Pâtes Penne Rigate 500g", price: 0.89, dept: "Épicerie", isFrozen: false },
+      coquillettes: { name: "Coquillettes 500g", price: 0.89, dept: "Épicerie", isFrozen: false },
+      spaghetti: { name: "Spaghetti 500g", price: 0.89, dept: "Épicerie", isFrozen: false },
+      gnocchi: { name: "Gnocchis à poêler frais 400g", price: 1.49, dept: "Frais", isFrozen: false },
+      rice: { name: "Riz Basmati 1kg", price: 1.85, dept: "Épicerie", isFrozen: false },
+      semoule: { name: "Semoule moyenne de blé 500g", price: 0.99, dept: "Épicerie", isFrozen: false },
+      quinoa: { name: "Quinoa blanc bio 500g", price: 2.19, dept: "Épicerie", isFrozen: false },
+      lentils: { name: "Lentilles vertes 500g", price: 1.29, dept: "Épicerie", isFrozen: false },
+      red_beans: { name: "Haricots rouges en boîte 400g", price: 0.79, dept: "Conserves", isFrozen: false },
+      white_beans: { name: "Haricots blancs cuisinés boîte 400g", price: 0.89, dept: "Conserves", isFrozen: false },
+      chickpeas: { name: "Pois chiches en boîte 400g", price: 0.85, dept: "Conserves", isFrozen: false },
+      potatoes: { name: "Pommes de terre fraîches 2.5kg", price: 2.49, dept: "Fruits & Légumes", isFrozen: false },
+      sweet_potatoes: { name: "Patates douces 1kg", price: 1.99, dept: "Fruits & Légumes", isFrozen: false },
+      zucchini: { name: "Courgettes fraîches 1kg", price: 1.69, dept: "Fruits & Légumes", isFrozen: false },
+      carrots: { name: "Carottes vrac 1kg", price: 1.19, dept: "Fruits & Légumes", isFrozen: false },
+      tomatoes_coulis: { name: "Coulis de tomates purée 500g", price: 0.89, dept: "Conserves", isFrozen: false },
+      spinach_fresh: { name: "Pousses d'épinards fraîches 200g", price: 1.49, dept: "Fruits & Légumes", isFrozen: false },
+      tortillas: { name: "Galettes Wraps x6", price: 1.35, dept: "Épicerie", isFrozen: false },
+      bread: { name: "Pain de campagne tranché 500g", price: 1.29, dept: "Boulangerie", isFrozen: false },
+      feta: { name: "Feta AOP grecque 200g", price: 1.99, dept: "Crèmerie", isFrozen: false },
+      emmental: { name: "Emmental râpé 200g", price: 1.65, dept: "Crèmerie", isFrozen: false },
+      creme: { name: "Crème fraîche fluide 20cl", price: 0.89, dept: "Crèmerie", isFrozen: false },
+      coconut_milk: { name: "Lait de coco cuisine 200ml", price: 0.99, dept: "Épicerie", isFrozen: false }
+    };
+
+    /* ================= CATALOGUE DE RECETTES ================= */
+    const MASTER_RECIPES = [
+      // 1. PLATS VÉGÉTARIENS
+      {
+        id: "veg_1", name: "Gnocchis dorés à la poêle, courgettes au thym et feta rôtie",
+        prepTime: 12, calories: 520, macros: "P: 18g | G: 72g | L: 17g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "gnocchi", "onepot", "eco"],
+        ingredients: [
+          { key: "gnocchi", display: "180g de gnocchis à poêler", cut: "Prêts à cuire." },
+          { key: "zucchini", display: "1/2 courgette", cut: "Tailler en dés réguliers de 5 mm." },
+          { key: "feta", display: "40g de feta AOP", cut: "Émietter en gros morceaux." }
+        ],
+        steps: [
+          "Mettre une poêle antiadhésive sur feu vif avec 1 cuillère à café d'huile d'olive.",
+          "Déposer les gnocchis et les faire dorer 3 minutes à feu vif sans y toucher pour former une croûte bien croustillante.",
+          "Ajouter les dés de courgette, assaisonner avec 1 cuillère à café de thym séché (~2 g), 1 pincée de fleur de sel et 2 tours de moulin à poivre.",
+          "Faire sauter l'ensemble 4 minutes à feu moyen en remuant régulièrement jusqu'à ce que la courgette soit tendre.",
+          "Émietter la feta sur les gnocchis brûlants et couvrir la poêle 1 minute hors du feu pour que le fromage ramollisse.",
+          "Servir immédiatement avec un filet d'huile d'olive fraîche pour lier les sucs."
+        ]
+      },
+      {
+        id: "veg_2", name: "Shakshuka minute aux haricots rouges, tomates au cumin et œuf coulant",
+        prepTime: 14, calories: 480, macros: "P: 22g | G: 52g | L: 18g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "oeuf", "onepot", "eco"],
+        ingredients: [
+          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." },
+          { key: "red_beans", display: "140g de haricots rouges", cut: "Rincés et égouttés." },
+          { key: "tomatoes_coulis", display: "120g de coulis de tomate", cut: "Direct." },
+          { key: "tortillas", display: "1 galette wrap", cut: "À tiédir." }
+        ],
+        steps: [
+          "Faire chauffer 1 cuillère à café d'huile d'olive dans une sauteuse à feu moyen.",
+          "Ajouter 1 cuillère à café rase de cumin moulu (~3 g) et 1/2 cuillère à café de paprika doux (~2 g) pour torréfier les épices 30 secondes.",
+          "Verser le coulis de tomate et les haricots rouges égouttés, saler, poivrer et laisser frémir 4 minutes à feu moyen.",
+          "Former un petit creux au centre de la sauce tomate à l'aide d'une cuillère et y casser l'œuf entier.",
+          "Couvrir hermétiquement et cuire 3 minutes et demie à feu doux : le blanc doit être pris et le jaune parfaitement liquide.",
+          "Toaster la galette wrap 30 secondes dans une poêle sèche et déguster en la trempant dans le jaune coulant et la sauce épicée."
+        ]
+      },
+      {
+        id: "veg_3", name: "Dahl de lentilles au lait de coco, carottes fondantes et cumin",
+        prepTime: 24, calories: 520, macros: "P: 24g | G: 68g | L: 16g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "legumineuse", "onepot", "eco"],
+        ingredients: [
+          { key: "lentils", display: "80g de lentilles vertes", cut: "Rincées." },
+          { key: "carrots", display: "1 belle carotte", cut: "En petits dés de 5 mm." },
+          { key: "coconut_milk", display: "80ml de lait de coco", cut: "Prêt." },
+          { key: "tomatoes_coulis", display: "80g de coulis de tomate", cut: "Direct." }
+        ],
+        steps: [
+          "Dans une casserole, faire chauffer 1 cuillère à café d'huile avec 1 cuillère à café bombée de curry doux (~4 g) et 1/2 cuillère à café de curcuma (~2 g).",
+          "Ajouter les dés de carotte et les faire suer 3 minutes à feu moyen en remuant.",
+          "Verser les lentilles rincées et 200 ml d'eau non salée, couvrir et laisser cuire 16 minutes à petits bouillons.",
+          "Une fois l'eau presque absorbée, verser le coulis de tomate et le lait de coco crémeux.",
+          "Ajouter 1/2 cuillère à café de sel fin et un tour de poivre noir, puis laisser compoter 4 minutes à découvert pour épaissir.",
+          "Dresser dans un bol bien chaud avec une touche d'aromates frais."
+        ]
+      },
+      {
+        id: "veg_4", name: "Œufs au plat, haricots blancs à la tomate et pain grillé à l'ail",
+        prepTime: 15, calories: 490, macros: "P: 23g | G: 54g | L: 19g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "oeuf", "eco"],
+        ingredients: [
+          { key: "eggs", display: "2 œufs de plein air", cut: "Entiers." },
+          { key: "white_beans", display: "160g de haricots blancs", cut: "Égouttés." },
+          { key: "tomatoes_coulis", display: "80g de coulis de tomate", cut: "Direct." },
+          { key: "bread", display: "2 tranches de pain", cut: "Tranchées." }
+        ],
+        steps: [
+          "Dans une petite casserole, déposer les haricots blancs avec le coulis de tomate.",
+          "Assaisonner d'1/2 cuillère à café d'ail en poudre (~2 g), 1 cuillère à café d'origan séché (~2 g), sel et poivre.",
+          "Laisser mijoter doucement 5 minutes à feu doux en remuant.",
+          "Dans une poêle antiadhésive avec une noisette de matière grasse, cuire les 2 œufs au plat 3 minutes à feu moyen.",
+          "Faire griller les 2 tranches de pain de campagne au grille-pain ou à sec dans une poêle chaude.",
+          "Déposer les haricots crémeux dans l'assiette, déposer les œufs miroirs dessus et servir avec le pain grillé."
+        ]
+      },
+      {
+        id: "veg_5", name: "Curry de pois chiches aux épinards frais, coulis et riz basmati",
+        prepTime: 20, calories: 540, macros: "P: 20g | G: 74g | L: 14g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "legumineuse", "eco"],
+        ingredients: [
+          { key: "chickpeas", display: "150g de pois chiches en boîte", cut: "Rincés et égouttés." },
+          { key: "spinach_fresh", display: "80g d'épinards frais", cut: "Lavés." },
+          { key: "tomatoes_coulis", display: "100g de coulis de tomate", cut: "Prêt." },
+          { key: "rice", display: "60g de riz basmati", cut: "Rincé." }
+        ],
+        steps: [
+          "Plonger le riz basmati dans une casserole d'eau bouillante salée et cuire 11 minutes.",
+          "Dans une poêle profonde, chauffer 1 cuillère à café d'huile d'olive avec 1 cuillère à café de garam masala ou curry (~3 g).",
+          "Ajouter les pois chiches rincés et le coulis de tomate, puis saler et poivrer.",
+          "Laisser mijoter 6 minutes à feu moyen pour que les pois chiches absorbent les saveurs épicées.",
+          "Ajouter les pousses d'épinards fraîches et mélanger 2 minutes jusqu'à ce qu'elles tombent légèrement.",
+          "Égoutter le riz et dresser le curry fumant par-dessus."
+        ]
+      },
+      {
+        id: "veg_6", name: "Penne all'Arrabbiata aux tomates concassées, ail, piment doux et origan",
+        prepTime: 15, calories: 470, macros: "P: 15g | G: 78g | L: 10g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "pates", "express", "eco"],
+        ingredients: [
+          { key: "pasta", display: "85g de penne rigate", cut: "Crues." },
+          { key: "tomatoes_coulis", display: "130g de coulis de tomate", cut: "Direct." }
+        ],
+        steps: [
+          "Cuire les penne 10 minutes al dente dans une grande casserole d'eau salée.",
+          "Dans une poêle, chauffer 1 cuillère à soupe d'huile d'olive vierge extra.",
+          "Ajouter 1/2 cuillère à café de piment doux (~2 g) et 1 cuillère à café d'ail déshydraté (~3 g) et remuer 30 secondes.",
+          "Verser le coulis de tomate, assaisonner d'1 cuillère à café d'origan séché (~2 g) et d'une pincée de sel.",
+          "Laisser réduire la sauce tomate 5 minutes à feu moyen.",
+          "Égoutter les pâtes en gardant 2 cuillères d'eau de cuisson, mélanger le tout dans la poêle 1 minute et servir brûlant."
+        ]
+      },
+      {
+        id: "veg_7", name: "Bowl de quinoa aux patates douces rôties et pois chiches croustillants",
+        prepTime: 30, calories: 560, macros: "P: 21g | G: 82g | L: 16g", type: "Chaud", timeBracket: "45",
+        requiredEquipment: ["stove", "oven"], requiresFreezer: false, tags: ["veggie", "four"],
+        ingredients: [
+          { key: "quinoa", display: "65g de quinoa", cut: "Rincé." },
+          { key: "sweet_potatoes", display: "180g de patate douce", cut: "En dés réguliers de 1.5 cm." },
+          { key: "chickpeas", display: "100g de pois chiches", cut: "Bien séchés au torchon." }
+        ],
+        steps: [
+          "Préchauffer le four à 200°C en chaleur tournante.",
+          "Dans un saladier, enrober les dés de patate douce et les pois chiches avec 1 cuillère à soupe d'huile, 1 cuillère à café de paprika fumé (~3 g), 1/2 cuillère de cumin (~2 g) et 1 pincée de sel.",
+          "Étaler sur une plaque recouverte de papier cuisson et enfourner 22 minutes en remuant à mi-cuisson.",
+          "Pendant ce temps, faire cuire le quinoa dans de l'eau bouillante salée pendant 12 minutes, puis égoutter.",
+          "Déposer le quinoa tiède en base dans un grand bol creux.",
+          "Disposer les patates douces fondantes et les pois chiches croustillants sur le dessus."
+        ]
+      },
+      {
+        id: "veg_8", name: "Tian provençal au four de courgettes, pommes de terre et feta dorée",
+        prepTime: 40, calories: 490, macros: "P: 18g | G: 58g | L: 20g", type: "Chaud", timeBracket: "45",
+        requiredEquipment: ["oven"], requiresFreezer: false, tags: ["veggie", "four"],
+        ingredients: [
+          { key: "potatoes", display: "220g de pommes de terre", cut: "En fines rondelles de 2 mm." },
+          { key: "zucchini", display: "1 courgette", cut: "En fines rondelles de 2 mm." },
+          { key: "feta", display: "50g de feta AOP", cut: "En tranches fines de 3 mm." }
+        ],
+        steps: [
+          "Préchauffer le four à 190°C.",
+          "Huiler légèrement le fond d'un plat à gratin individuel avec un pinceau ou du papier essuie-tout.",
+          "Ranger les rondelles de pommes de terre et de courgettes à la verticale en les alternant de manière bien serrée.",
+          "Intercaler régulièrement les tranches de feta grecque entre les légumes.",
+          "Arroser d'1 cuillère à soupe d'huile d'olive, parsemer d'1 cuillère à café bombée d'herbes de Provence (~3 g), sel fin et poivre.",
+          "Couvrir d'une feuille de papier cuisson pendant 20 minutes, puis retirer la feuille et cuire encore 20 minutes pour gratiner les bords."
+        ]
+      },
+      {
+        id: "veg_9", name: "Salade fraîche de pois chiches au cumin, feta AOP et rubans de courgette",
+        prepTime: 10, calories: 490, macros: "P: 21g | G: 50g | L: 19g", type: "Froid", timeBracket: "15",
+        requiredEquipment: [], requiresFreezer: false, tags: ["veggie", "froid", "express", "eco"],
+        ingredients: [
+          { key: "chickpeas", display: "160g de pois chiches", cut: "Rincés et séchés au torchon." },
+          { key: "feta", display: "45g de feta AOP", cut: "Émiettée à la main." },
+          { key: "zucchini", display: "1/2 courgette", cut: "En rubans transparents à l'économe." },
+          { key: "carrots", display: "1/2 carotte", cut: "Râpée finement." }
+        ],
+        steps: [
+          "Dans un saladier, préparer la vinaigrette : 1 cuillère à soupe d'huile d'olive, 1 cuillère à café de jus de citron, 1/2 cuillère à café de cumin moulu (~2 g), sel et poivre noir.",
+          "Verser les pois chiches égouttés dans la sauce et mélanger pour bien les imprégner d'épices.",
+          "Tailler la courgette crue en rubans fins et râper la demi-carotte.",
+          "Ajouter les légumes croquants dans le saladier avec les pois chiches.",
+          "Parsemer la feta émiettée sur le dessus sans trop mélanger pour ne pas la briser en purée.",
+          "Déguster immédiatement ou réserver 10 minutes au frais."
+        ]
+      },
+      {
+        id: "veg_10", name: "Salade tiède de lentilles vertes, feta AOP et œuf mollet",
+        prepTime: 23, calories: 510, macros: "P: 28g | G: 48g | L: 20g", type: "Froid", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "froid", "salade", "oeuf"],
+        ingredients: [
+          { key: "lentils", display: "80g de lentilles vertes", cut: "Rincées." },
+          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." },
+          { key: "feta", display: "40g de feta AOP", cut: "Émiettée." },
+          { key: "carrots", display: "1/2 carotte", cut: "En fins bâtonnets croustillants." }
+        ],
+        steps: [
+          "Cuire les lentilles 20 minutes dans une casserole d'eau sans sel avec une pincée de thym, puis égoutter.",
+          "Dans une petite casserole d'eau bouillante, plonger l'œuf délicatement et cuire exactement 6 minutes.",
+          "Refroidir immédiatement l'œuf dans un bol d'eau avec des glaçons pour stopper la cuisson et faciliter l'écalage.",
+          "Dans un bol, mélanger les lentilles tièdes avec 1 cuillère à soupe d'huile d'olive, 1 cuillère de vinaigre, sel et poivre.",
+          "Ajouter les bâtonnets de carottes crues et la feta émiettée.",
+          "Écaler l'œuf mollet avec précaution, le poser au centre et fendre le dessus pour laisser s'écouler le jaune doré."
+        ]
+      },
+      {
+        id: "veg_11", name: "Poêlée chaude de quinoa aux épinards fondants et œuf poêlé",
+        prepTime: 18, calories: 500, macros: "P: 21g | G: 54g | L: 19g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "oeuf", "onepot"],
+        ingredients: [
+          { key: "quinoa", display: "70g de quinoa", cut: "Rincé sous l'eau." },
+          { key: "spinach_fresh", display: "100g d'épinards", cut: "Lavés." },
+          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." },
+          { key: "feta", display: "30g de feta", cut: "Émiettée." }
+        ],
+        steps: [
+          "Faire cuire le quinoa pendant 12 minutes dans de l'eau bouillante salée, puis égoutter soigneusement.",
+          "Dans une poêle, faire chauffer une cuillère d'huile et y faire tomber les pousses d'épinards 2 minutes avec 1 pincée de muscade râpée (~1 g).",
+          "Verser le quinoa cuit et la feta émiettée dans la poêle avec les épinards et réchauffer 1 minute à feu doux.",
+          "Dans une petite poêle à part, cuire l'œuf au plat 3 minutes pour garder le jaune bien coulant.",
+          "Dresser le mélange quinoa-épinards dans l'assiette creuse.",
+          "Couronner avec l'œuf au plat et assaisonner d'un tour de moulin à poivre."
+        ]
+      },
+      {
+        id: "veg_12", name: "Riz blanc sauté aux oignons caramélisés et œuf au plat coulant",
+        prepTime: 15, calories: 480, macros: "P: 18g | G: 72g | L: 13g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "eco", "oeuf"],
+        ingredients: [
+          { key: "rice", display: "75g de riz basmati", cut: "Rincé." },
+          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." }
+        ],
+        steps: [
+          "Cuire le riz basmati 11 minutes dans l'eau bouillante salée, égoutter et laisser tiédir 2 minutes.",
+          "Dans une poêle avec 1 cuillère à soupe d'huile, faire sauter le riz à feu très vif pendant 3 minutes.",
+          "Assaisonner le riz avec 1/2 cuillère à café d'ail en poudre (~2 g), sel fin et poivre pour donner du relief.",
+          "Dans une poêle à part, faire cuire l'œuf au plat 3 minutes à feu moyen.",
+          "Disposer le riz sauté bien doré et croustillant dans un bol.",
+          "Poser l'œuf au plat délicatement par-dessus et percer le jaune avant de déguster."
+        ]
+      },
+      {
+        id: "veg_13", name: "Penne au concentré de tomate, huile d'olive, ail et origan",
+        prepTime: 15, calories: 470, macros: "P: 14g | G: 78g | L: 11g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "pates", "express", "eco"],
+        ingredients: [
+          { key: "pasta", display: "85g de penne rigate", cut: "Crues." },
+          { key: "tomatoes_coulis", display: "100g de coulis de tomate", cut: "Direct." }
+        ],
+        steps: [
+          "Faire bouillir une casserole d'eau salée et cuire les penne 10 minutes al dente.",
+          "Dans une sauteuse, chauffer 1 cuillère à soupe d'huile d'olive avec 1 cuillère à café d'origan séché (~2 g) et 1 pincée de piment doux.",
+          "Verser le coulis de tomate, saler et laisser compoter 5 minutes à feu moyen.",
+          "Prélever 2 cuillères à soupe d'eau de cuisson des pâtes et les incorporer dans la sauce tomate.",
+          "Égoutter les pâtes et les jeter dans la sauteuse bien chaude.",
+          "Remuer vigoureusement 1 minute pour que la sauce nappe les rainures des penne et servir."
+        ]
+      },
+      {
+        id: "veg_14", name: "Poêlée de haricots blancs mijotés à la pulpe de tomate et ail",
+        prepTime: 12, calories: 430, macros: "P: 19g | G: 62g | L: 9g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "eco", "onepot"],
+        ingredients: [
+          { key: "white_beans", display: "180g de haricots blancs", cut: "Égouttés." },
+          { key: "tomatoes_coulis", display: "100g de coulis de tomate", cut: "Direct." },
+          { key: "bread", display: "2 tranches de pain", cut: "Tranchées." }
+        ],
+        steps: [
+          "Rincer les haricots blancs en boîte sous l'eau tiède et les égoutter.",
+          "Dans une poêle, verser 1 cuillère à café d'huile d'olive avec 1/2 cuillère à café d'ail déshydraté (~2 g) et 1 cuillère de thym (~2 g).",
+          "Ajouter le coulis de tomate et les haricots blancs, saler et poivrer.",
+          "Laisser mijoter doucement 5 minutes à feu moyen jusqu'à texture onctueuse.",
+          "Faire dorer les tranches de pain de campagne au grille-pain ou à sec dans une poêle.",
+          "Napper les tartines chaudes avec la poêlée de haricots fondants."
+        ]
+      },
+      {
+        id: "veg_15", name: "Pommes de terre sautées à la poêle au thym et œuf au plat",
+        prepTime: 20, calories: 470, macros: "P: 17g | G: 64g | L: 15g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["veggie", "express", "eco", "oeuf"],
+        ingredients: [
+          { key: "potatoes", display: "250g de pommes de terre", cut: "En petits dés de 1 cm." },
+          { key: "eggs", display: "1 œuf de plein air", cut: "Entier." }
+        ],
+        steps: [
+          "Éplucher les pommes de terre et les découper en petits cubes réguliers de 1 cm pour accélérer la cuisson.",
+          "Faire chauffer 1 cuillère à soupe d'huile dans une poêle à feu moyen et y jeter les dés de pommes de terre.",
+          "Assaisonner d'1 cuillère à café de thym séché (~2 g), de sel et de poivre moulu.",
+          "Couvrir et laisser cuire 12 minutes en secouant la poêle toutes les 3 minutes.",
+          "Pousser les pommes de terre dorées sur le côté et casser l'œuf au plat directement dans l'espace libre.",
+          "Cuire l'œuf 3 minutes jusqu'à ce que le blanc soit figé et servir l'ensemble bien chaud."
+        ]
+      },
+
+      // 2. PLATS VOLAILLE
+      {
+        id: "vol_1", name: "Wrap toasté au poulet doré au paprika, haricots rouges et coulis",
+        prepTime: 15, calories: 540, macros: "P: 39g | G: 58g | L: 13g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["volaille", "express", "wrap"],
+        ingredients: [
+          { key: "chicken", display: "140g de filet de poulet frais", cut: "Tailler en fines aiguillettes de 5 mm." },
+          { key: "tortillas", display: "2 galettes wraps", cut: "Prêtes." },
+          { key: "red_beans", display: "80g de haricots rouges", cut: "Rincer et égoutter." },
+          { key: "tomatoes_coulis", display: "50g de coulis de tomate", cut: "Direct." }
+        ],
+        steps: [
+          "Découper le blanc de poulet en très fines aiguillettes de 5 mm pour garantir une cuisson express.",
+          "Chauffer 1 cuillère à café d'huile dans une poêle à feu vif.",
+          "Faire sauter le poulet 4 minutes en assaisonnant avec 1 cuillère à café de paprika fumé (~3 g), sel et poivre.",
+          "Ajouter les haricots rouges égouttés et le coulis de tomate, puis mélanger 2 minutes à feu moyen.",
+          "Passer les 2 galettes 20 secondes au micro-ondes ou dans une poêle sèche tiède.",
+          "Déposer la garniture au centre, replier les bords, rouler fermement et trancher en diagonale."
+        ]
+      },
+      {
+        id: "vol_2", name: "Poêlée de coquillettes à la dinde au curry et emmental filant",
+        prepTime: 15, calories: 550, macros: "P: 42g | G: 62g | L: 14g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["volaille", "express"],
+        ingredients: [
+          { key: "coquillettes", display: "80g de coquillettes", cut: "Crues." },
+          { key: "turkey", display: "130g de dinde", cut: "Tailler en dés de 1 cm." },
+          { key: "emmental", display: "30g d'emmental râpé", cut: "Prêt." }
+        ],
+        steps: [
+          "Faire bouillir une casserole d'eau salée et cuire les coquillettes pendant 7 minutes, puis égoutter.",
+          "Dans une sauteuse avec 1 cuillère à café d'huile, saisir les dés de dinde 4 minutes à feu vif.",
+          "Assaisonner la dinde avec 1 cuillère à café bombée de curry doux de Madras (~4 g), sel et poivre.",
+          "Verser les coquillettes chaudes directement dans la sauteuse avec la dinde.",
+          "Saupoudrer les 30g d'emmental râpé sur les pâtes.",
+          "Couvrir hors du feu pendant 1 minute jusqu'à ce que le fromage forme des filaments fondants et servir."
+        ]
+      },
+      {
+        id: "vol_3", name: "Curry de poulet express au lait de coco, courgettes et riz basmati",
+        prepTime: 25, calories: 610, macros: "P: 40g | G: 64g | L: 18g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["volaille", "monde"],
+        ingredients: [
+          { key: "chicken", display: "140g de filet de poulet", cut: "Couper en bouchées de 2 cm." },
+          { key: "rice", display: "70g de riz basmati", cut: "Rincer sous l'eau." },
+          { key: "zucchini", display: "1/2 courgette", cut: "Tailler en dés de 1 cm." },
+          { key: "coconut_milk", display: "80ml de lait de coco", cut: "Prêt." }
+        ],
+        steps: [
+          "Cuire le riz basmati pendant 11 minutes dans l'eau bouillante salée, puis égoutter.",
+          "Dans une sauteuse chaude, faire dorer les bouchées de poulet 3 minutes avec un filet d'huile.",
+          "Ajouter les dés de courgette et faire revenir 3 minutes supplémentaires.",
+          "Saupoudrer d'1 cuillère à café de curry en poudre (~3 g) et 1/2 cuillère de curcuma (~2 g).",
+          "Verser le lait de coco, saler, poivrer et laisser mijoter 8 minutes à feu doux sous couvercle.",
+          "Dresser le riz basmati dans l'assiette et napper avec la sauce crémeuse au poulet."
+        ]
+      },
+
+      // 3. PLATS POISSON (SAUMON)
+      {
+        id: "fish_1", name: "Pavé de saumon rôti côté peau, riz basmati et courgettes au romarin",
+        prepTime: 20, calories: 590, macros: "P: 36g | G: 58g | L: 20g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["saumon", "frais"],
+        ingredients: [
+          { key: "salmon", display: "1 pavé de saumon frais (125g)", cut: "Sécher soigneusement la peau." },
+          { key: "rice", display: "70g de riz basmati", cut: "Rincé." },
+          { key: "zucchini", display: "1/2 courgette", cut: "Tailler en rondelles régulières de 4 mm." }
+        ],
+        steps: [
+          "Mettre le riz basmati à cuire dans l'eau bouillante salée pendant 11 minutes, puis égoutter.",
+          "Dans une poêle avec 1 cuillère à café d'huile, faire sauter les rondelles de courgettes 6 minutes à feu moyen avec 1 cuillère à café de romarin séché (~2 g), sel et poivre.",
+          "Décaler les courgettes sur le côté de la poêle et déposer le pavé de saumon côté peau.",
+          "Laisser saisir 4 minutes à feu moyen sans le bouger pour que la peau croustille naturellement.",
+          "Retourner délicatement le pavé et cuire la face chair pendant 3 minutes à feu doux pour préserver le fondant.",
+          "Dresser le riz égoutté, entourer des courgettes et poser le pavé de saumon croustillant dessus."
+        ]
+      },
+      {
+        id: "fish_2", name: "Patate douce rôtie au paprika doux et pavé de saumon au four",
+        prepTime: 35, calories: 610, macros: "P: 37g | G: 58g | L: 23g", type: "Chaud", timeBracket: "45",
+        requiredEquipment: ["oven"], requiresFreezer: false, tags: ["saumon", "four"],
+        ingredients: [
+          { key: "sweet_potatoes", display: "200g de patate douce", cut: "Détailler en cubes de 1.5 cm." },
+          { key: "salmon", display: "1 pavé de saumon frais (125g)", cut: "Prêt." },
+          { key: "spinach_fresh", display: "60g d'épinards frais", cut: "Rincés." }
+        ],
+        steps: [
+          "Préchauffer le four à 200°C en chaleur tournante.",
+          "Mélanger les cubes de patates douces avec 1 cuillère à soupe d'huile, 1 cuillère à café de paprika doux (~3 g) et 1 pincée de sel.",
+          "Étaler sur une plaque et enfourner pour 20 minutes de pré-cuisson.",
+          "Sortir la plaque, déposer le saumon à côté des patates douces, saler et poivrer le poisson.",
+          "Enfourner l'ensemble 12 minutes à 190°C : le saumon rôtit délicatement et les patates caramélisent.",
+          "Déposer les épinards crus dans l'assiette et verser les patates et le saumon chauds par-dessus pour attendrir les feuilles."
+        ]
+      },
+
+      // 4. PLATS BŒUF & PORC
+      {
+        id: "beef_1", name: "Chili con carne express au bœuf haché, haricots rouges et riz basmati",
+        prepTime: 20, calories: 630, macros: "P: 42g | G: 70g | L: 17g", type: "Chaud", timeBracket: "25",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["viande_rouge", "complet"],
+        ingredients: [
+          { key: "beef_hache", display: "130g de bœuf haché frais 15%", cut: "Émietté à la spatule." },
+          { key: "red_beans", display: "120g de haricots rouges", cut: "Rincés et égouttés." },
+          { key: "tomatoes_coulis", display: "110g de coulis de tomate", cut: "Direct." },
+          { key: "rice", display: "60g de riz basmati", cut: "Rincé." }
+        ],
+        steps: [
+          "Lancer la cuisson du riz basmati dans l'eau bouillante salée pour 11 minutes.",
+          "Dans une sauteuse chaude sans matière grasse, déposer la viande hachée de bœuf.",
+          "Assaisonner d'1 cuillère à café de cumin moulu (~3 g), 1 cuillère de paprika doux (~3 g), sel et poivre noir.",
+          "Saisir 4 minutes à feu vif en écrasant à la spatule pour bien dorer la viande.",
+          "Verser le coulis de tomate et les haricots rouges égouttés, couvrir et laisser mijoter 8 minutes à feu doux.",
+          "Égoutter le riz et disposer le chili fumant à côté."
+        ]
+      },
+      {
+        id: "pork_1", name: "Coquillettes au beurre, dés de jambon blanc et emmental râpé",
+        prepTime: 10, calories: 510, macros: "P: 28g | G: 68g | L: 14g", type: "Chaud", timeBracket: "15",
+        requiredEquipment: ["stove"], requiresFreezer: false, tags: ["porc", "express", "eco"],
+        ingredients: [
+          { key: "coquillettes", display: "85g de coquillettes", cut: "Crues." },
+          { key: "jambon", display: "2 tranches de jambon blanc", cut: "En carrés de 1 cm." },
+          { key: "emmental", display: "30g d'emmental râpé", cut: "Prêt." }
+        ],
+        steps: [
+          "Faire bouillir une grande casserole d'eau salée et cuire les coquillettes 7 minutes al dente.",
+          "Égoutter les pâtes et les remettre immédiatement dans la casserole encore chaude hors du feu.",
+          "Ajouter une belle noix de beurre salé (~10 g) et 2 tours de moulin à poivre.",
+          "Incorporer les carrés de jambon blanc et remuer pour les tiédir au contact des pâtes.",
+          "Saupoudrer l'emmental râpé généreusement sur le dessus.",
+          "Mélanger délicatement pour que le fromage fonde en filaments onctueux et déguster aussitôt."
+        ]
+      }
+    ];
+
+    /* ================= ALGORITHME STRICT, OBJECTIFS & BLOCAGE BUDGET ================= */
+    let finalMealsPlan = [];
+    let consolidatedCart = {};
+    let previousPlanIds = new Set();
+
+    function buildAndValidatePlan(forceDiversity = false) {
+      const errBox = document.getElementById('globalErrorAlert');
+      const errMsg = document.getElementById('globalErrorMsg');
+      const errDiag = document.getElementById('globalErrorDiagnosis');
+      errBox.classList.add('hidden');
+      errDiag.innerHTML = '';
+
+      const requestedMeals = parseInt(document.getElementById('mealsCount').value);
+      const targetBudget = parseFloat(document.getElementById('budgetInput').value);
+      const maxBudgetLimit = targetBudget * 1.10;
+      const selectedTime = document.querySelector('input[name="timeLimitRadio"]:checked').value;
+      const storageType = document.querySelector('input[name="storageType"]:checked').value;
+
+      const hasCustomKcal = document.getElementById('customKcalToggle').checked;
+      const targetKcal = hasCustomKcal ? parseInt(document.getElementById('customKcalSlider').value) : updateCalculatedNeeds();
+
+      const hasStove = document.getElementById('equip-stove').checked;
+      const hasOven = document.getElementById('equip-oven').checked;
+
+      const goalLessMeat = document.getElementById('goal-less-meat').checked;
+      const goalMental = document.getElementById('goal-mental').checked;
+      const goalCheap = document.getElementById('goal-cheap').checked;
+
+      const exVegetarian = document.getElementById('ex-vegetarian').checked;
+      const exBrassica = document.getElementById('ex-brassica').checked;
+      const exSeafood = document.getElementById('ex-seafood').checked;
+      const exPork = document.getElementById('ex-pork').checked;
+      const exRedMeat = document.getElementById('ex-redmeat').checked;
+      const exMildCheese = document.getElementById('ex-mildcheese').checked;
+      const exGluten = document.getElementById('ex-gluten').checked;
+      const exLactose = document.getElementById('ex-lactose').checked;
+      const exCustom = document.getElementById('ex-custom').value.toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+
+      let availableRecipes = MASTER_RECIPES.filter(recipe => {
+        if (selectedTime !== 'all' && recipe.timeBracket !== selectedTime) return false;
+        if (storageType === 'fridge-only' && recipe.requiresFreezer) return false;
+        if (recipe.requiredEquipment.includes('stove') && !hasStove) return false;
+        if (recipe.requiredEquipment.includes('oven') && !hasOven) return false;
+
+        if (hasCustomKcal) {
+          const minAllowed = targetKcal * 0.9;
+          const maxAllowed = targetKcal * 1.1;
+          if (recipe.calories < minAllowed || recipe.calories > maxAllowed) return false;
+        }
+
+        if (exVegetarian && !recipe.tags.includes('veggie')) return false;
+        if (exBrassica && recipe.tags.includes('choux')) return false;
+        if (exSeafood && recipe.tags.includes('poisson_autre')) return false;
+        if (exPork && recipe.tags.includes('porc')) return false;
+        if (exRedMeat && recipe.tags.includes('viande_rouge')) return false;
+        if (exMildCheese && (recipe.tags.includes('fromage_doux') || recipe.ingredients.some(i => i.key === 'emmental'))) return false;
+        if (exGluten && (recipe.tags.includes('pates') || recipe.tags.includes('gnocchi') || recipe.tags.includes('wrap'))) return false;
+        if (exLactose && (recipe.tags.includes('fromage') || recipe.ingredients.some(i => i.key === 'feta' || i.key === 'emmental' || i.key === 'creme'))) return false;
+
+        const fullTxt = (recipe.name + " " + recipe.ingredients.map(i => i.display).join(' ')).toLowerCase();
+        for (let word of exCustom) {
+          if (fullTxt.includes(word)) return false;
+        }
+
+        return true;
+      });
+
+      if (availableRecipes.length < requestedMeals) {
+        let diagTips = [];
+        if (selectedTime !== 'all') diagTips.push(`• Le filtre de temps <strong>"≤ ${selectedTime} min"</strong> écarte une partie des plats mijotés.`);
+        if (exVegetarian) diagTips.push(`• Le filtre <strong>"Régime 100% Végétarien"</strong> bloque les viandes et le saumon.`);
+        if (exGluten) diagTips.push(`• L'exclusion <strong>"Gluten"</strong> élimine les penne, coquillettes, wraps et gnocchis.`);
+        if (hasCustomKcal) diagTips.push(`• L'objectif calorique strict (<strong>${targetKcal} kcal ±10%</strong>) réduit la marge de manœuvre.`);
+        if (exRedMeat && exPork) diagTips.push(`• Le cumul <strong>"Sans porc" + "Sans viande rouge"</strong> restreint les protéines disponibles.`);
+
+        showDiagnosticError(availableRecipes.length, requestedMeals, diagTips);
+        return;
+      }
+
+      finalMealsPlan = [];
+      const veggiePool = availableRecipes.filter(r => r.tags.includes('veggie'));
+      const meatPool = availableRecipes.filter(r => !r.tags.includes('veggie'));
+
+      let targetVeggieCount = 0;
+      if (exVegetarian) {
+        targetVeggieCount = requestedMeals;
+      } else if (goalLessMeat) {
+        targetVeggieCount = Math.ceil(requestedMeals * 0.70);
+      }
+
+      if (targetVeggieCount > 0 && veggiePool.length < targetVeggieCount) {
+        let diagTips = [`• L'objectif <strong>"Manger moins de viande"</strong> exige au moins ${targetVeggieCount} recettes végétariennes différentes, mais seules ${veggiePool.length} correspondent à vos aversions actuelles.`];
+        showDiagnosticError(veggiePool.length, requestedMeals, diagTips);
+        return;
+      }
+
+      let shuffledVeggie = [...veggiePool].sort(() => 0.5 - Math.random());
+      const selectedVeggie = shuffledVeggie.slice(0, targetVeggieCount);
+
+      const remainingSlots = requestedMeals - targetVeggieCount;
+      let remainingPool = [...meatPool, ...shuffledVeggie.slice(targetVeggieCount)].sort(() => 0.5 - Math.random());
+      
+      if (goalMental) {
+        remainingPool.sort((a, b) => (b.prepTime <= 15 ? 1 : 0) - (a.prepTime <= 15 ? 1 : 0));
+      }
+
+      const selectedRemaining = remainingPool.slice(0, remainingSlots);
+
+      finalMealsPlan = [...selectedVeggie, ...selectedRemaining].sort(() => 0.5 - Math.random());
+      previousPlanIds = new Set(finalMealsPlan.map(r => r.id));
+
+      const budgetSuccess = computeCartAndEnforceBudget(targetBudget, maxBudgetLimit);
+      if (!budgetSuccess) {
+        return;
+      }
+
+      currentStep = totalSteps + 1;
+      updateWizardUI();
+    }
+
+    function regenerateDiversePlan() {
+      buildAndValidatePlan(true);
+    }
+
+    function showDiagnosticError(count, requested, tips) {
+      const errBox = document.getElementById('globalErrorAlert');
+      const errMsg = document.getElementById('globalErrorMsg');
+      const errDiag = document.getElementById('globalErrorDiagnosis');
+      
+      errMsg.innerHTML = `Vos critères ne laissent que <strong>${count} recette(s) compatible(s)</strong> pour les <strong>${requested} repas demandés</strong>.`;
+      
+      if (tips.length > 0) {
+        errDiag.innerHTML = `<span class="block font-bold text-rose-900 mb-1">D'où vient le problème et quoi décocher :</span>` + tips.map(t => `<div class="text-rose-700">${t}</div>`).join('');
+      } else {
+        errDiag.innerHTML = `Élargissez le temps de préparation à <strong>"Panaché varié"</strong> ou décochez certaines exclusions pour continuer.`;
+      }
+
+      errBox.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function computeCartAndEnforceBudget(targetBudget, maxBudgetLimit) {
+      const portionsCount = {};
+      let totalKcal = 0;
+
+      finalMealsPlan.forEach(r => {
+        totalKcal += r.calories;
+        r.ingredients.forEach(i => {
+          portionsCount[i.key] = (portionsCount[i.key] || 0) + 1;
+        });
+      });
+
+      consolidatedCart = {};
+      let calculatedTotal = 0;
+
+      for (const [key, qty] of Object.entries(portionsCount)) {
+        const pItem = PANTRY[key];
+        if (!pItem) continue;
+
+        let packs = 1;
+        if (qty >= 5) packs = 2;
+        if (qty >= 9) packs = 3;
+
+        const cost = packs * pItem.price;
+        calculatedTotal += cost;
+
+        consolidatedCart[key] = {
+          name: pItem.name,
+          dept: pItem.dept,
+          packs: packs,
+          unitPrice: pItem.price,
+          totalPrice: cost
+        };
+      }
+
+      if (calculatedTotal > maxBudgetLimit) {
+        const errBox = document.getElementById('globalErrorAlert');
+        const errMsg = document.getElementById('globalErrorMsg');
+        const errDiag = document.getElementById('globalErrorDiagnosis');
+
+        errMsg.innerHTML = `Budget insuffisant ! Le coût réel du panier en supermarché pour ces <strong>${finalMealsPlan.length} repas</strong> est de <strong>${calculatedTotal.toFixed(2)} €</strong>, ce qui dépasse votre plafond autorisé de <strong>${maxBudgetLimit.toFixed(2)} €</strong> (+10% max).`;
+        errDiag.innerHTML = `<span class="block font-bold text-rose-900 mb-1">Pour continuer, vous devez soit :</span>
+          <div class="text-rose-700">• Augmenter votre budget cible à au moins <strong>${Math.ceil(calculatedTotal)} €</strong> à l'Étape 6.</div>
+          <div class="text-rose-700">• Réduire le nombre de repas (ex: 7 repas au lieu de 14).</div>`;
+
+        errBox.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return false;
+      }
+
+      document.getElementById('resStoreName').innerText = document.getElementById('storeInput').value.split('-')[1]?.trim() || "Lidl";
+      document.getElementById('resTotalBudget').innerText = calculatedTotal.toFixed(2) + " €";
+      document.getElementById('resTargetBudget').innerText = `≤ ${maxBudgetLimit.toFixed(2)} €`;
+      document.getElementById('resAvgKcal').innerText = Math.round(totalKcal / finalMealsPlan.length) + " kcal";
+      document.getElementById('resMealsCount').innerText = `${finalMealsPlan.length} / ${finalMealsPlan.length}`;
+      document.getElementById('mealsCountBadge').innerText = finalMealsPlan.length;
+
+      renderMealsGrid();
+      renderCartBreakdown();
+      return true;
+    }
+
+    function renderMealsGrid() {
+      const container = document.getElementById('view-meals-list');
+      container.innerHTML = '';
+
+      finalMealsPlan.forEach((recipe, idx) => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between";
+        card.onclick = () => showRecipeDetail(recipe);
+
+        const isVeggie = recipe.tags.includes('veggie');
+        const badgeColor = isVeggie ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800';
+        const badgeIcon = isVeggie ? 'fa-leaf' : 'fa-fire';
+
+        card.innerHTML = `
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-slate-100 text-[#FA4A33] px-2 py-0.5 rounded">Repas ${idx + 1}</span>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded ${badgeColor} flex items-center gap-1">
+                  <i class="fa-solid ${badgeIcon}"></i> ${isVeggie ? 'Végétarien' : recipe.type}
+                </span>
+                <span class="text-xs text-slate-500 font-semibold"><i class="fa-regular fa-clock mr-1"></i>${recipe.prepTime}m</span>
+              </div>
+            </div>
+            <h4 class="font-bold text-slate-800 text-sm leading-snug mt-1 hover:text-[#FA4A33]">${recipe.name}</h4>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+            <span class="font-black text-amber-500">${recipe.calories} kcal</span>
+            <span class="text-[#FA4A33] font-bold flex items-center gap-1">Voir la recette complète <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function renderCartBreakdown() {
+      const container = document.getElementById('cartSectionsContainer');
+      container.innerHTML = '';
+
+      const depts = {};
+      let totalItems = 0;
+
+      Object.values(consolidatedCart).forEach(i => {
+        totalItems += i.packs;
+        if (!depts[i.dept]) depts[i.dept] = [];
+        depts[i.dept].push(i);
+      });
+
+      document.getElementById('cartCountBadge').innerText = totalItems;
+
+      for (const [dept, items] of Object.entries(depts)) {
+        const box = document.createElement('div');
+        box.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm";
+
+        const list = items.map(it => `
+          <li class="flex justify-between items-center py-2 text-xs border-b border-slate-50 last:border-0">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" class="rounded text-[#FA4A33] focus:ring-0">
+              <span class="font-medium text-slate-700">${it.packs}x ${it.name}</span>
+            </label>
+            <span class="font-bold text-slate-800">${it.totalPrice.toFixed(2)} €</span>
+          </li>
+        `).join('');
+
+        box.innerHTML = `
+          <h5 class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-tag text-[#FA4A33]"></i> Rayon ${dept}
+          </h5>
+          <ul class="divide-y divide-slate-100">${list}</ul>
+        `;
+        container.appendChild(box);
+      }
+    }
+
+    function showRecipeDetail(recipe) {
+      document.getElementById('modalTitle').innerText = recipe.name;
+      document.getElementById('modalTypeTag').innerText = recipe.tags.includes('veggie') ? 'VÉGÉTARIEN' : recipe.type.toUpperCase();
+      document.getElementById('modalTime').innerText = recipe.prepTime + " min";
+      document.getElementById('modalKcal').innerText = recipe.calories + " kcal";
+      document.getElementById('modalMacros').innerText = recipe.macros;
+      document.getElementById('modalEquipTag').innerText = recipe.requiredEquipment.length > 0 ? recipe.requiredEquipment.join(', ') : 'Sans cuisson';
+
+      const ingUl = document.getElementById('modalIngredientsList');
+      ingUl.innerHTML = recipe.ingredients.map(ing => `
+        <li class="py-1.5 flex flex-col">
+          <span class="font-bold text-slate-800">• ${ing.display}</span>
+          <span class="text-slate-500 italic mt-0.5 text-[11px]"><strong class="not-italic text-[#FA4A33]">Découpe & Dosage :</strong> ${ing.cut}</span>
+        </li>
+      `).join('');
+
+      const stepOl = document.getElementById('modalStepsList');
+      stepOl.innerHTML = recipe.steps.map(s => `
+        <li class="py-1 leading-relaxed">${s}</li>
+      `).join('');
+
+      const modalEl = document.getElementById('recipeModal');
+      modalEl.classList.remove('hidden');
+      modalEl.style.display = 'flex';
+    }
+
+    function closeRecipeModal() {
+      const modalEl = document.getElementById('recipeModal');
+      modalEl.classList.add('hidden');
+      modalEl.style.display = 'none';
+    }
+
+    function switchResultTab(tab) {
+      if (tab === 'meals') {
+        document.getElementById('view-meals-list').classList.remove('hidden');
+        document.getElementById('view-cart-list').classList.add('hidden');
+        document.getElementById('tab-btn-meals').className = "pb-2 border-b-2 border-[#FA4A33] text-[#FA4A33] flex items-center gap-2";
+        document.getElementById('tab-btn-cart').className = "pb-2 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2";
+      } else {
+        document.getElementById('view-meals-list').classList.add('hidden');
+        document.getElementById('view-cart-list').classList.remove('hidden');
+        document.getElementById('tab-btn-cart').className = "pb-2 border-b-2 border-[#FA4A33] text-[#FA4A33] flex items-center gap-2";
+        document.getElementById('tab-btn-meals').className = "pb-2 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2";
+      }
+    }
+
+    function copyCart() {
+      let t = "🛒 LISTE OPTIPANIER (" + document.getElementById('resStoreName').innerText + ")\n";
+      t += "Total estimé : " + document.getElementById('resTotalBudget').innerText + "\n\n";
+      Object.values(consolidatedCart).forEach(i => {
+        t += `- ${i.packs}x ${i.name} (${i.totalPrice.toFixed(2)}€)\n`;
+      });
+      navigator.clipboard.writeText(t).then(() => alert("Liste de courses copiée !"));
+    }
+
+    /* ================= FEEDBACK ================= */
+    let selectedRating = 5;
+
+    function rateFeedback(stars) {
+      selectedRating = stars;
+      const starIcons = document.querySelectorAll('#feedbackStars i');
+      starIcons.forEach((icon, idx) => {
+        if (idx < stars) {
+          icon.className = "fa-solid fa-star cursor-pointer hover:scale-110 transition text-amber-400";
+        } else {
+          icon.className = "fa-regular fa-star cursor-pointer hover:scale-110 transition text-slate-300";
+        }
+      });
+    }
+
+    function submitFeedback() {
+      const text = document.getElementById('feedbackText').value.trim();
+      const successMsg = document.getElementById('feedbackSuccessMsg');
+      localStorage.setItem('optipanier_last_feedback', JSON.stringify({ rating: selectedRating, comment: text, date: new Date().toISOString() }));
+      successMsg.classList.remove('hidden');
+      document.getElementById('feedbackText').value = '';
+      setTimeout(() => successMsg.classList.add('hidden'), 4000);
+    }
+
+    // Lancement
+    document.addEventListener('DOMContentLoaded', () => {
+      initDynamicCatalog();
+      updateWizardUI();
+      updateCalculatedNeeds();
+    });
+  </script>
+</body>
+</html>
