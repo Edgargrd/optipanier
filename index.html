@@ -923,12 +923,28 @@ async function loadRecipesCatalog() {
       const portionsCount = {};
       let totalKcal = 0;
 
-      finalMealsPlan.forEach(r => {
-        totalKcal += r.calories;
-        r.ingredients.forEach(i => {
-          portionsCount[i.key] = (portionsCount[i.key] || 0) + 1;
-        });
+      window.aggregatedIngredients = {};
+
+    finalMealsPlan.forEach(r => {
+      totalKcal += (r.calories || 0);
+      (r.ingredients || []).forEach(i => {
+        const key = i.key || i.item || 'autre';
+        portionsCount[key] = (portionsCount[key] || 0) + 1;
+
+        const displayName = i.display || i.item || i.key || 'Ingrédient';
+        const qty = Number(i.qty) || 0;
+        const unit = i.unit || 'g';
+
+        if (!window.aggregatedIngredients[key]) {
+          window.aggregatedIngredients[key] = {
+            display: displayName,
+            qty: 0,
+            unit: unit
+          };
+        }
+        window.aggregatedIngredients[key].qty += qty;
       });
+    });
 
       consolidatedCart = {};
       let calculatedTotal = 0;
@@ -1016,43 +1032,79 @@ async function loadRecipesCatalog() {
     }
 
     function renderCartBreakdown() {
-      const container = document.getElementById('cartSectionsContainer');
-      container.innerHTML = '';
+  const container = document.getElementById('cartSectionsContainer');
+  if (!container) return;
+  container.innerHTML = '';
 
-      const depts = {};
-      let totalItems = 0;
+  const depts = {};
+  let totalItems = 0;
 
-      Object.values(consolidatedCart).forEach(i => {
-        totalItems += i.packs;
-        if (!depts[i.dept]) depts[i.dept] = [];
-        depts[i.dept].push(i);
-      });
+  // Utilisation en priorité de la liste complète des ingrédients agrégés
+  const itemsToRender = (window.aggregatedIngredients && Object.keys(window.aggregatedIngredients).length > 0)
+    ? Object.entries(window.aggregatedIngredients).map(([key, data]) => {
+        const pItem = (typeof PANTRY !== 'undefined' && PANTRY[key]) ? PANTRY[key] : null;
+        let dept = pItem ? pItem.dept : 'Épicerie & Frais';
+        
+        if (!pItem) {
+          const lKey = key.toLowerCase();
+          if (lKey.includes('poulet') || lKey.includes('boeuf') || lKey.includes('steak') || lKey.includes('saumon') || lKey.includes('thon') || lKey.includes('tofu') || lKey.includes('oeuf')) {
+            dept = 'Boucherie & Poissonnerie';
+          } else if (lKey.includes('courgette') || lKey.includes('carotte') || lKey.includes('poivron') || lKey.includes('epinard') || lKey.includes('tomate') || lKey.includes('oignon') || lKey.includes('brocoli')) {
+            dept = 'Fruits & Légumes';
+          } else if (lKey.includes('riz') || lKey.includes('pates') || lKey.includes('quinoa') || lKey.includes('semoule') || lKey.includes('lentille') || lKey.includes('pois')) {
+            dept = 'Féculents & Légumineuses';
+          }
+        }
 
-      document.getElementById('cartCountBadge').innerText = totalItems;
+        const estPrice = pItem ? (pItem.price * Math.ceil(data.qty / 500)) : 1.99;
+        return {
+          name: data.display,
+          qtyDisplay: `${Math.round(data.qty)} ${data.unit}`,
+          dept: dept,
+          price: estPrice
+        };
+      })
+    : Object.values(consolidatedCart).map(i => ({
+        name: i.name,
+        qtyDisplay: `${i.packs}x lot`,
+        dept: i.dept || 'Autres',
+        price: i.totalPrice || 0
+      }));
 
-      for (const [dept, items] of Object.entries(depts)) {
-        const box = document.createElement('div');
-        box.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm";
+  itemsToRender.forEach(it => {
+    totalItems++;
+    if (!depts[it.dept]) depts[it.dept] = [];
+    depts[it.dept].push(it);
+  });
 
-        const list = items.map(it => `
-          <li class="flex justify-between items-center py-2 text-xs border-b border-slate-50 last:border-0">
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" class="rounded text-[#FA4A33] focus:ring-0">
-              <span class="font-medium text-slate-700">${it.packs}x ${it.name}</span>
-            </label>
-            <span class="font-bold text-slate-800">${it.totalPrice.toFixed(2)} €</span>
-          </li>
-        `).join('');
+  const badge = document.getElementById('cartCountBadge');
+  if (badge) badge.innerText = totalItems;
 
-        box.innerHTML = `
-          <h5 class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2 flex items-center gap-1.5">
-            <i class="fa-solid fa-tag text-[#FA4A33]"></i> Rayon ${dept}
-          </h5>
-          <ul class="divide-y divide-slate-100">${list}</ul>
-        `;
-        container.appendChild(box);
-      }
-    }
+  for (const [dept, items] of Object.entries(depts)) {
+    const box = document.createElement('div');
+    box.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2";
+
+    const listHtml = items.map(it => `
+      <li class="flex justify-between items-center py-2 text-xs border-b border-slate-100 last:border-0">
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" class="rounded text-[#FA4A33] focus:ring-0 w-4 h-4">
+          <span class="font-medium text-slate-700">${it.name}</span>
+        </label>
+        <span class="font-bold text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
+          ${it.qtyDisplay}
+        </span>
+      </li>
+    `).join('');
+
+    box.innerHTML = `
+      <h5 class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+        <i class="fa-solid fa-tag text-[#FA4A33]"></i> Rayon ${dept}
+      </h5>
+      <ul class="divide-y divide-slate-100">${listHtml}</ul>
+    `;
+    container.appendChild(box);
+  }
+}
 
   function showRecipeDetail(recipe) {
   document.getElementById('modalTitle').innerText = recipe.name;
