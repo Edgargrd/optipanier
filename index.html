@@ -811,33 +811,33 @@ async function loadRecipesCatalog() {
       if (typeof loadRecipesCatalog === 'function') await loadRecipesCatalog();
     }
 
-    let availableRecipes = (window.MASTER_RECIPES || []).filter(recipe => {
-      // 1. Filtre temps de préparation
+    // 1. Sécurité chargement du catalogue
+    if (!MASTER_RECIPES || MASTER_RECIPES.length === 0) {
+      await loadRecipesCatalog();
+    }
+
+    // 2. Filtrage souple et sans blocage
+    let availableRecipes = MASTER_RECIPES.filter(recipe => {
+      // Filtre Temps : seulement si "quick" est coché et que la recette dépasse 20 min
       if (selectedTime === 'quick') {
-        const t = Number(recipe.prepTime || recipe.prep_time || 0);
+        const t = Number(recipe.prepTime || recipe.prep_time || 20);
         if (t > 20) return false;
       }
 
-      // 2. Filtre équipements (ne bloque JAMAIS si hasStove n'est pas explicitement false)
-      // Si l'utilisateur n'a rien coché ou que l'option n'est pas active, on ne bloque pas
-      if (typeof hasOven !== 'undefined' && !hasOven && recipe.requiredEquipment && recipe.requiredEquipment.includes('oven')) {
-        return false;
-      }
-
-      // 3. Filtre Végétarien
+      // Filtre Végétarien
       if (exVegetarian) {
         const isVeg = (recipe.diet === 'veggie') || (recipe.tags && recipe.tags.includes('veggie'));
         if (!isVeg) return false;
       }
 
-      // 4. Filtre Halal
+      // Filtre Halal
       if (exHalal) {
         const isHalal = (recipe.diet === 'halal') || (recipe.tags && recipe.tags.includes('halal')) || (recipe.diet === 'veggie');
         const hasPork = recipe.tags && recipe.tags.includes('porc');
         if (!isHalal || hasPork) return false;
       }
 
-      // 5. Filtre Porc
+      // Filtre Porc
       if (exPork && recipe.tags && recipe.tags.includes('porc')) {
         return false;
       }
@@ -845,7 +845,13 @@ async function loadRecipesCatalog() {
       return true;
     });
 
-      if (availableRecipes.length < requestedMeals) {
+    console.log("Recettes totales :", MASTER_RECIPES.length, "Recettes filtrées :", availableRecipes.length);
+
+    // Filet de sécurité absolu : si des filtres trop stricts vident tout, on prend le catalogue global
+    if (availableRecipes.length < requestedMeals) {
+      console.warn("Filtres trop restrictifs, utilisation du catalogue de secours.");
+      availableRecipes = [...MASTER_RECIPES];
+    }
         let diagTips = [];
       if (selectedTime === 'quick') diagTips.push(`• Le filtre <strong>"Express & Quotidien (≤ 20 min)"</strong> écarte les plats mijotés.`);
         if (exVegetarian) diagTips.push(`• Le filtre <strong>"Régime 100% Végétarien"</strong> bloque les viandes et le saumon.`);
