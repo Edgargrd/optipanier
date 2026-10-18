@@ -777,7 +777,8 @@ async function loadRecipesCatalog() {
       const requestedMeals = parseInt(document.getElementById('mealsCount').value);
       const targetBudget = parseFloat(document.getElementById('budgetInput').value);
       const maxBudgetLimit = targetBudget * 1.10;
-      const selectedTime = document.querySelector('input[name="timeLimitRadio"]:checked').value;
+      const selectedTimeEl = document.querySelector('input[name="timeLimitRadio"]:checked');
+    const selectedTime = selectedTimeEl ? selectedTimeEl.value : 'all';
       const storageType = document.querySelector('input[name="storageType"]:checked').value;
 
       const hasCustomKcal = document.getElementById('customKcalToggle').checked;
@@ -802,12 +803,18 @@ async function loadRecipesCatalog() {
       const exCustom = document.getElementById('ex-custom').value.toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
 
       let availableRecipes = MASTER_RECIPES.filter(recipe => {
-if (selectedTime === 'quick') {
-  const duration = recipe.prepTime || recipe.prep_time || 20;
-  if (duration > 20) return false;
-}
-        if (recipe.requiredEquipment.includes('stove') && !hasStove) return false;
-        if (recipe.requiredEquipment.includes('oven') && !hasOven) return false;
+// ```javascript
+    // Filtre temps
+    if (selectedTime === 'quick') {
+      const t = recipe.prepTime || recipe.prep_time || 0;
+      if (t > 20) return false;
+    }
+
+    // Filtre équipements (avec vérification si l'utilisateur a renseigné l'équipement)
+    if (recipe.requiredEquipment) {
+      if (recipe.requiredEquipment.includes('stove') && !hasStove && typeof hasStove !== 'undefined') return false;
+      if (recipe.requiredEquipment.includes('oven') && !hasOven) return false;
+    }
 
         if (hasCustomKcal) {
           const minAllowed = targetKcal * 0.9;
@@ -906,7 +913,7 @@ if (selectedTime === 'quick') {
       if (tips.length > 0) {
         errDiag.innerHTML = `<span class="block font-bold text-rose-900 mb-1">D'où vient le problème et quoi décocher :</span>` + tips.map(t => `<div class="text-rose-700">${t}</div>`).join('');
       } else {
-        errDiag.innerHTML = `Élargissez le temps de préparation à <strong>"Panaché varié"</strong> ou décochez certaines exclusions pour continuer.`;
+       errDiag.innerHTML = `Choisissez l'option <strong>"Équilibré & Plaisir (Mix de durées)"</strong> ou décochez certaines exclusions pour continuer.`;
       }
 
       errBox.classList.remove('hidden');
