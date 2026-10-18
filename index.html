@@ -852,16 +852,7 @@ async function loadRecipesCatalog() {
       console.warn("Filtres trop restrictifs, utilisation du catalogue de secours.");
       availableRecipes = [...MASTER_RECIPES];
     }
-        let diagTips = [];
-      if (selectedTime === 'quick') diagTips.push(`• Le filtre <strong>"Express & Quotidien (≤ 20 min)"</strong> écarte les plats mijotés.`);
-        if (exVegetarian) diagTips.push(`• Le filtre <strong>"Régime 100% Végétarien"</strong> bloque les viandes et le saumon.`);
-        if (exGluten) diagTips.push(`• L'exclusion <strong>"Gluten"</strong> élimine les penne, coquillettes, wraps et gnocchis.`);
-        if (hasCustomKcal) diagTips.push(`• L'objectif calorique strict (<strong>${targetKcal} kcal ±10%</strong>) réduit la marge de manœuvre.`);
-        if (exRedMeat && exPork) diagTips.push(`• Le cumul <strong>"Sans porc" + "Sans viande rouge"</strong> restreint les protéines disponibles.`);
-
-        showDiagnosticError(availableRecipes.length, requestedMeals, diagTips);
-        return;
-      }
+        
 
      finalMealsPlan = [];
       const maxPerBase = Math.max(1, Math.floor(requestedMeals * 0.20));
