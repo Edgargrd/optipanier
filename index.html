@@ -361,63 +361,31 @@
     </div>
 
     <!-- ================= ÉTAPE 8 : TEMPS DE PRÉPARATION ================= -->
-    <div id="step-8" class="wizard-step space-y-6 hidden">
-      <div class="text-center space-y-1">
-        <h2 class="text-2xl font-black text-slate-900">Temps de préparation</h2>
-        <p class="text-xs text-slate-500">Choisissez votre rythme de cuisine au quotidien.</p>
+   <div class="space-y-3">
+  <!-- Option 1 : Rapide (<= 20 min) -->
+  <label class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl cursor-pointer hover:border-slate-400 transition">
+    <div class="flex items-center space-x-3">
+      <span class="text-xl">⚡</span>
+      <div>
+        <span class="text-sm font-bold text-slate-800 block">Express & Quotidien (≤ 20 minutes)</span>
+        <span class="text-xs text-slate-500">Poêlées rapides, wraps, salades et cuisson express</span>
       </div>
-
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2.5">
-        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">⚡</span>
-            <div>
-              <span class="text-xs font-bold text-slate-800 block">Ultra-rapide (≤ 15 minutes)</span>
-              <span class="text-[11px] text-slate-400">Wraps, gnocchis express, salades et poêlées</span>
-            </div>
-          </div>
-          <input type="radio" name="timeLimitRadio" value="15" class="text-[#FA4A33]">
-        </label>
-
-        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🍳</span>
-            <div>
-              <span class="text-xs font-bold text-slate-800 block">Quotidien & Poêlées (≤ 25 minutes)</span>
-              <span class="text-[11px] text-slate-400">Dahl, pavé de saumon croustillant, chili doux</span>
-            </div>
-          </div>
-          <input type="radio" name="timeLimitRadio" value="25" checked class="text-[#FA4A33]">
-        </label>
-
-        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🥘</span>
-            <div>
-              <span class="text-xs font-bold text-slate-800 block">Mijotés & Four (≤ 45 minutes)</span>
-              <span class="text-[11px] text-slate-400">Parmentier, gratins, patate douce rôtie</span>
-            </div>
-          </div>
-          <input type="radio" name="timeLimitRadio" value="45" class="text-[#FA4A33]">
-        </label>
-
-        <label class="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🎲</span>
-            <div>
-              <span class="text-xs font-bold text-slate-800 block">Panaché varié (tous temps)</span>
-              <span class="text-[11px] text-slate-400">Diversité maximale pour toute la semaine</span>
-            </div>
-          </div>
-          <input type="radio" name="timeLimitRadio" value="all" class="text-[#FA4A33]">
-        </label>
-      </div>
-
-      <button type="button" onclick="buildAndValidatePlan()" class="w-full bg-[#FA4A33] hover:bg-[#E03A24] text-white font-bold py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-base cursor-pointer">
-        <span>Générer mes menus et ma liste de courses</span>
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
     </div>
+    <input type="radio" name="timeLimitRadio" value="quick" class="w-4 h-4 text-emerald-600">
+  </label>
+
+  <!-- Option 2 : Tous temps -->
+  <label class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl cursor-pointer hover:border-slate-400 transition">
+    <div class="flex items-center space-x-3">
+      <span class="text-xl">🍲</span>
+      <div>
+        <span class="text-sm font-bold text-slate-800 block">Équilibré & Plaisir (Mix de durées)</span>
+        <span class="text-xs text-slate-500">Recettes rapides en semaine et plats mijotés ou rôtis</span>
+      </div>
+    </div>
+    <input type="radio" name="timeLimitRadio" value="all" checked class="w-4 h-4 text-emerald-600">
+  </label>
+</div>
 
     <!-- ================= ÉCRAN FINAL : RÉSULTATS & FEEDBACK ================= -->
     <div id="step-results" class="wizard-step space-y-6 hidden w-full max-w-4xl mx-auto">
@@ -823,7 +791,10 @@ async function loadRecipesCatalog() {
       const exCustom = document.getElementById('ex-custom').value.toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
 
       let availableRecipes = MASTER_RECIPES.filter(recipe => {
-if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return false;        if (storageType === 'fridge-only' && recipe.requiresFreezer) return false;
+if (selectedTime === 'quick') {
+  const duration = recipe.prepTime || recipe.prep_time || 20;
+  if (duration > 20) return false;
+}
         if (recipe.requiredEquipment.includes('stove') && !hasStove) return false;
         if (recipe.requiredEquipment.includes('oven') && !hasOven) return false;
 
@@ -834,10 +805,10 @@ if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return f
         }
 
         if (exVegetarian && !recipe.tags.includes('veggie')) return false;
-        if (exHalal) {
-  const isHalal = recipe.tags.includes('halal') || recipe.tags.includes('veggie');
-  if (!isHalal || recipe.tags.includes('porc')) return false;
-}
+       if (exHalal) {
+          const isHalal = (recipe.tags && (recipe.tags.includes('halal') || recipe.tags.includes('veggie')));
+          if (!isHalal || (recipe.tags && recipe.tags.includes('porc'))) return false;
+        }
         if (exBrassica && recipe.tags.includes('choux')) return false;
         if (exSeafood && recipe.tags.includes('poisson_autre')) return false;
         if (exPork && recipe.tags.includes('porc')) return false;
@@ -856,7 +827,7 @@ if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return f
 
       if (availableRecipes.length < requestedMeals) {
         let diagTips = [];
-        if (selectedTime !== 'all') diagTips.push(`• Le filtre de temps <strong>"≤ ${selectedTime} min"</strong> écarte une partie des plats mijotés.`);
+      if (selectedTime === 'quick') diagTips.push(`• Le filtre <strong>"Express & Quotidien (≤ 20 min)"</strong> écarte les plats mijotés.`);
         if (exVegetarian) diagTips.push(`• Le filtre <strong>"Régime 100% Végétarien"</strong> bloque les viandes et le saumon.`);
         if (exGluten) diagTips.push(`• L'exclusion <strong>"Gluten"</strong> élimine les penne, coquillettes, wraps et gnocchis.`);
         if (hasCustomKcal) diagTips.push(`• L'objectif calorique strict (<strong>${targetKcal} kcal ±10%</strong>) réduit la marge de manœuvre.`);
