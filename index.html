@@ -759,8 +759,9 @@ async function loadRecipesCatalog() {
     MASTER_RECIPES = rawRecipes.map(r => ({
       id: r.id,
       name: r.name,
-      timeBracket: r.prep_time <= 15 ? '15' : (r.prep_time <= 30 ? '30' : '45'),
+      baseKey: r.baseKey,
       prepTime: r.prep_time,
+      timeBracket: String(r.prep_time),
       calories: r.calories,
       requiresFreezer: false,
       requiredEquipment: ['stove'],
@@ -770,19 +771,17 @@ async function loadRecipesCatalog() {
         r.diet === 'halal' ? 'halal' : null
       ].filter(Boolean),
       ingredients: r.ingredients.map(ing => ({
-        key: ing.item,
-        display: ing.item,
+        key: ing.key,
+        display: ing.display,
         qty: ing.qty,
         unit: ing.unit
       }))
     }));
-    console.log(`OptiPanier : ${MASTER_RECIPES.length} recettes prêtes !`);
+    console.log(`OptiPanier : ${MASTER_RECIPES.length} recettes prêtes.`);
   } catch (err) {
-    console.error("Erreur de chargement recipes.json :", err);
+    console.error("Erreur recipes.json :", err);
   }
 }
-
-loadRecipesCatalog();
 
     /* ================= ALGORITHME STRICT, OBJECTIFS & BLOCAGE BUDGET ================= */
     let finalMealsPlan = [];
@@ -867,36 +866,39 @@ if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return f
         return;
       }
 
-      finalMealsPlan = [];
-      const veggiePool = availableRecipes.filter(r => r.tags.includes('veggie'));
-      const meatPool = availableRecipes.filter(r => !r.tags.includes('veggie'));
+     finalMealsPlan = [];
+      const maxPerBase = Math.max(1, Math.floor(requestedMeals * 0.20));
+      const baseTracker = {};
 
-      let targetVeggieCount = 0;
-      if (exVegetarian) {
-        targetVeggieCount = requestedMeals;
-      } else if (goalLessMeat) {
-        targetVeggieCount = Math.ceil(requestedMeals * 0.70);
-      }
-
-      if (targetVeggieCount > 0 && veggiePool.length < targetVeggieCount) {
-        let diagTips = [`• L'objectif <strong>"Manger moins de viande"</strong> exige au moins ${targetVeggieCount} recettes végétariennes différentes, mais seules ${veggiePool.length} correspondent à vos aversions actuelles.`];
-        showDiagnosticError(veggiePool.length, requestedMeals, diagTips);
-        return;
-      }
-
-      let shuffledVeggie = [...veggiePool].sort(() => 0.5 - Math.random());
-      const selectedVeggie = shuffledVeggie.slice(0, targetVeggieCount);
-
-      const remainingSlots = requestedMeals - targetVeggieCount;
-      let remainingPool = [...meatPool, ...shuffledVeggie.slice(targetVeggieCount)].sort(() => 0.5 - Math.random());
-      
+      // Tri prioritaire si l'option charge mentale est cochée (plats rapides en premier)
+      let candidates = [...availableRecipes];
       if (goalMental) {
-        remainingPool.sort((a, b) => (b.prepTime <= 15 ? 1 : 0) - (a.prepTime <= 15 ? 1 : 0));
+        candidates.sort((a, b) => (b.prepTime <= 15 ? 1 : 0) - (a.prepTime <= 15 ? 1 : 0));
+      } else {
+        candidates.sort(() => 0.5 - Math.random());
       }
 
-      const selectedRemaining = remainingPool.slice(0, remainingSlots);
+      // Passe 1 : sélection avec plafond strict de 20% par protéine / ingrédient de base
+      for (const rec of candidates) {
+        if (finalMealsPlan.length >= requestedMeals) break;
+        const base = rec.baseKey || (rec.ingredients[0] ? rec.ingredients[0].key : 'autre');
+        const currentCount = baseTracker[base] || 0;
 
-      finalMealsPlan = [...selectedVeggie, ...selectedRemaining].sort(() => 0.5 - Math.random());
+        if (currentCount < maxPerBase) {
+          finalMealsPlan.push(rec);
+          baseTracker[base] = currentCount + 1;
+        }
+      }
+
+      // Passe 2 : complément si les filtres sont trop stricts pour atteindre le total
+      if (finalMealsPlan.length < requestedMeals) {
+        for (const rec of candidates) {
+          if (finalMealsPlan.length >= requestedMeals) break;
+          if (!finalMealsPlan.some(selected => selected.id === rec.id)) {
+            finalMealsPlan.push(rec);
+          }
+        }
+      }
       previousPlanIds = new Set(finalMealsPlan.map(r => r.id));
 
       const budgetSuccess = computeCartAndEnforceBudget(targetBudget, maxBudgetLimit);
@@ -996,7 +998,7 @@ if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return f
 
       finalMealsPlan.forEach((recipe, idx) => {
         const card = document.createElement('div');
-        card.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between";
+      card.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm cursor-pointer hover:border-slate-400 hover:shadow-md transition";
         card.onclick = () => showRecipeDetail(recipe);
 
         const isVeggie = recipe.tags.includes('veggie');
@@ -1064,31 +1066,53 @@ if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return f
       }
     }
 
-    function showRecipeDetail(recipe) {
-      document.getElementById('modalTitle').innerText = recipe.name;
-      document.getElementById('modalTypeTag').innerText = recipe.tags.includes('veggie') ? 'VÉGÉTARIEN' : recipe.type.toUpperCase();
-      document.getElementById('modalTime').innerText = recipe.prepTime + " min";
-      document.getElementById('modalKcal').innerText = recipe.calories + " kcal";
-      document.getElementById('modalMacros').innerText = recipe.macros;
-      document.getElementById('modalEquipTag').innerText = recipe.requiredEquipment.length > 0 ? recipe.requiredEquipment.join(', ') : 'Sans cuisson';
+  function showRecipeDetail(recipe) {
+  document.getElementById('modalTitle').innerText = recipe.name;
+  
+  const typeTag = document.getElementById('modalTypeTag');
+  if (typeTag) {
+    typeTag.innerText = recipe.tags && recipe.tags.includes('veggie') ? 'Végétarien' : (recipe.diet === 'halal' ? 'Halal' : 'Classique');
+  }
+  
+  const timeEl = document.getElementById('modalTime');
+  if (timeEl) timeEl.innerText = (recipe.prepTime || recipe.prep_time || 20) + " min";
+  
+  const kcalEl = document.getElementById('modalKcal');
+  if (kcalEl) kcalEl.innerText = (recipe.calories || 500) + " kcal";
+  
+  const macrosEl = document.getElementById('modalMacros');
+  if (macrosEl) macrosEl.innerText = recipe.macros || "Équilibré";
+  
+  const equipEl = document.getElementById('modalEquipTag');
+  if (equipEl) equipEl.innerText = (recipe.requiredEquipment && recipe.requiredEquipment.length) ? recipe.requiredEquipment.join(', ') : "Plaques";
 
-      const ingUl = document.getElementById('modalIngredientsList');
-      ingUl.innerHTML = recipe.ingredients.map(ing => `
-        <li class="py-1.5 flex flex-col">
-          <span class="font-bold text-slate-800">• ${ing.display}</span>
-          <span class="text-slate-500 italic mt-0.5 text-[11px]"><strong class="not-italic text-[#FA4A33]">Découpe & Dosage :</strong> ${ing.cut}</span>
-        </li>
-      `).join('');
+  const ingUl = document.getElementById('modalIngredientsList');
+  if (ingUl) {
+    ingUl.innerHTML = (recipe.ingredients || []).map(ing => `
+      <li class="py-1.5 flex justify-between border-b border-slate-100 last:border-0">
+        <span class="font-bold text-slate-800">${ing.display || ing.key || ing.item}</span>
+        <span class="text-slate-500 font-semibold">${ing.qty} ${ing.unit}</span>
+      </li>
+    `).join('');
+  }
 
-      const stepOl = document.getElementById('modalStepsList');
-      stepOl.innerHTML = recipe.steps.map(s => `
-        <li class="py-1 leading-relaxed">${s}</li>
-      `).join('');
+  const stepOl = document.getElementById('modalStepsList');
+  if (stepOl) {
+    const steps = recipe.steps || [
+      "Préparer et découper les ingrédients.",
+      "Faire cuire les féculents et faire dorer la base protéinée à la poêle.",
+      "Ajouter les légumes et assaisonner selon votre goût.",
+      "Dresser chaud dans une assiette ou un bol."
+    ];
+    stepOl.innerHTML = steps.map(s => `<li class="py-1 leading-relaxed text-slate-700">${s}</li>`).join('');
+  }
 
-      const modalEl = document.getElementById('recipeModal');
-      modalEl.classList.remove('hidden');
-      modalEl.style.display = 'flex';
-    }
+  const modalEl = document.getElementById('recipeModal');
+  if (modalEl) {
+    modalEl.classList.remove('hidden');
+    modalEl.style.display = 'flex';
+  }
+}
 
     function closeRecipeModal() {
       const modalEl = document.getElementById('recipeModal');
@@ -1149,6 +1173,43 @@ if (selectedTime !== 'all' && recipe.prepTime > parseInt(selectedTime)) return f
       updateWizardUI();
       updateCalculatedNeeds();
     });
+    function openRecipeModal(rec) {
+  document.getElementById('modalRecipeTitle').textContent = rec.name;
+  document.getElementById('modalRecipeTime').textContent = `⏱️ ${rec.prepTime || rec.prep_time} min`;
+  document.getElementById('modalRecipeKcal').textContent = `🔥 ${rec.calories} kcal`;
+
+  const ul = document.getElementById('modalRecipeIngredients');
+  ul.innerHTML = (rec.ingredients || []).map(i => {
+    const nom = i.display || i.key || i.item;
+    return `<li><strong>${nom}</strong> : ${i.qty} ${i.unit}</li>`;
+  }).join('');
+
+  document.getElementById('recipeModal').classList.remove('hidden');
+}
+
+function closeRecipeModal() {
+  document.getElementById('recipeModal').classList.add('hidden');
+}
   </script>
+  <!-- Fenêtre modale de détail de recette -->
+<div id="recipeModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl">
+    <div class="flex justify-between items-start">
+      <h3 id="modalRecipeTitle" class="text-base font-bold text-slate-900 pr-4"></h3>
+      <button type="button" onclick="closeRecipeModal()" class="text-slate-400 hover:text-slate-700 text-2xl font-bold leading-none">&times;</button>
+    </div>
+    <div class="flex gap-2 text-xs font-semibold">
+      <span id="modalRecipeTime" class="bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg"></span>
+      <span id="modalRecipeKcal" class="bg-amber-50 text-amber-700 px-2.5 py-1 rounded-lg"></span>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Ingrédients nécessaires</h4>
+      <ul id="modalRecipeIngredients" class="text-sm space-y-1.5 text-slate-600 list-disc list-inside bg-slate-50 p-3 rounded-xl max-h-48 overflow-y-auto"></ul>
+    </div>
+    <button type="button" onclick="closeRecipeModal()" class="w-full py-2.5 bg-slate-900 text-white rounded-xl text-sm font-semibold hover:bg-slate-800 transition">
+      Fermer
+    </button>
+  </div>
+</div>
 </body>
 </html>
