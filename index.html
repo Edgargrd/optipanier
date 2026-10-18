@@ -767,7 +767,10 @@ async function loadRecipesCatalog() {
     let consolidatedCart = {};
     let previousPlanIds = new Set();
 
-    function buildAndValidatePlan(forceDiversity = false) {
+    async function buildAndValidatePlan(forceDiversity = false) {
+        if (!MASTER_RECIPES || MASTER_RECIPES.length === 0) {
+    await loadRecipesCatalog();
+  }
       const errBox = document.getElementById('globalErrorAlert');
       const errMsg = document.getElementById('globalErrorMsg');
       const errDiag = document.getElementById('globalErrorDiagnosis');
@@ -802,46 +805,45 @@ async function loadRecipesCatalog() {
       const exLactose = document.getElementById('ex-lactose').checked;
       const exCustom = document.getElementById('ex-custom').value.toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
 
-      let availableRecipes = MASTER_RECIPES.filter(recipe => {
-// ```javascript
-    // Filtre temps
-    if (selectedTime === 'quick') {
-      const t = recipe.prepTime || recipe.prep_time || 0;
-      if (t > 20) return false;
+      // Sécurité : s'assurer que le catalogue est bien chargé
+    if (!window.MASTER_RECIPES || window.MASTER_RECIPES.length === 0) {
+      console.warn("MASTER_RECIPES vide, rechargement...");
+      if (typeof loadRecipesCatalog === 'function') await loadRecipesCatalog();
     }
 
-    // Filtre équipements (avec vérification si l'utilisateur a renseigné l'équipement)
-    if (recipe.requiredEquipment) {
-      if (recipe.requiredEquipment.includes('stove') && !hasStove && typeof hasStove !== 'undefined') return false;
-      if (recipe.requiredEquipment.includes('oven') && !hasOven) return false;
-    }
+    let availableRecipes = (window.MASTER_RECIPES || []).filter(recipe => {
+      // 1. Filtre temps de préparation
+      if (selectedTime === 'quick') {
+        const t = Number(recipe.prepTime || recipe.prep_time || 0);
+        if (t > 20) return false;
+      }
 
-        if (hasCustomKcal) {
-          const minAllowed = targetKcal * 0.9;
-          const maxAllowed = targetKcal * 1.1;
-          if (recipe.calories < minAllowed || recipe.calories > maxAllowed) return false;
-        }
+      // 2. Filtre équipements (ne bloque JAMAIS si hasStove n'est pas explicitement false)
+      // Si l'utilisateur n'a rien coché ou que l'option n'est pas active, on ne bloque pas
+      if (typeof hasOven !== 'undefined' && !hasOven && recipe.requiredEquipment && recipe.requiredEquipment.includes('oven')) {
+        return false;
+      }
 
-        if (exVegetarian && !recipe.tags.includes('veggie')) return false;
-       if (exHalal) {
-          const isHalal = (recipe.tags && (recipe.tags.includes('halal') || recipe.tags.includes('veggie')));
-          if (!isHalal || (recipe.tags && recipe.tags.includes('porc'))) return false;
-        }
-        if (exBrassica && recipe.tags.includes('choux')) return false;
-        if (exSeafood && recipe.tags.includes('poisson_autre')) return false;
-        if (exPork && recipe.tags.includes('porc')) return false;
-        if (exRedMeat && recipe.tags.includes('viande_rouge')) return false;
-        if (exMildCheese && (recipe.tags.includes('fromage_doux') || recipe.ingredients.some(i => i.key === 'emmental'))) return false;
-        if (exGluten && (recipe.tags.includes('pates') || recipe.tags.includes('gnocchi') || recipe.tags.includes('wrap'))) return false;
-        if (exLactose && (recipe.tags.includes('fromage') || recipe.ingredients.some(i => i.key === 'feta' || i.key === 'emmental' || i.key === 'creme'))) return false;
+      // 3. Filtre Végétarien
+      if (exVegetarian) {
+        const isVeg = (recipe.diet === 'veggie') || (recipe.tags && recipe.tags.includes('veggie'));
+        if (!isVeg) return false;
+      }
 
-        const fullTxt = (recipe.name + " " + recipe.ingredients.map(i => i.display).join(' ')).toLowerCase();
-        for (let word of exCustom) {
-          if (fullTxt.includes(word)) return false;
-        }
+      // 4. Filtre Halal
+      if (exHalal) {
+        const isHalal = (recipe.diet === 'halal') || (recipe.tags && recipe.tags.includes('halal')) || (recipe.diet === 'veggie');
+        const hasPork = recipe.tags && recipe.tags.includes('porc');
+        if (!isHalal || hasPork) return false;
+      }
 
-        return true;
-      });
+      // 5. Filtre Porc
+      if (exPork && recipe.tags && recipe.tags.includes('porc')) {
+        return false;
+      }
+
+      return true;
+    });
 
       if (availableRecipes.length < requestedMeals) {
         let diagTips = [];
