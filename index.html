@@ -927,31 +927,40 @@ async function loadRecipesCatalog() {
 
     finalMealsPlan.forEach(r => {
       totalKcal += (r.calories || 0);
-      (r.ingredients || []).forEach(i => {
-        const key = i.key || i.item || 'autre';
-        portionsCount[key] = (portionsCount[key] || 0) + 1;
 
-        const displayName = i.display || i.item || i.key || 'Ingrédient';
-        const qty = Number(i.qty) || 0;
-        const unit = i.unit || 'g';
+      // On s'assure de lire les ingrédients quel que soit le format
+      const ingredientsList = r.ingredients || r.recipe_ingredients || [];
+
+      ingredientsList.forEach(i => {
+        // Détection du vrai nom de l'ingrédient
+        const rawName = i.name || i.nom || i.ingredient || i.item || i.key || (typeof i === 'string' ? i : 'Aliment');
+        // Clé unique propre (ex: "riz", "escalope de poulet")
+        const key = rawName.toLowerCase().trim();
+        
+        // Détection de la quantité et de l'unité
+        const qty = Number(i.qty || i.quantity || i.amount || 100);
+        const unit = i.unit || i.unite || 'g';
 
         if (!window.aggregatedIngredients[key]) {
           window.aggregatedIngredients[key] = {
-            display: displayName,
+            display: rawName.charAt(0).toUpperCase() + rawName.slice(1),
             qty: 0,
             unit: unit
           };
         }
         window.aggregatedIngredients[key].qty += qty;
+        portionsCount[key] = (portionsCount[key] || 0) + 1;
       });
     });
 
       consolidatedCart = {};
       let calculatedTotal = 0;
 
-      for (const [key, qty] of Object.entries(portionsCount)) {
-        const pItem = PANTRY[key];
-        if (!pItem) continue;
+      for (const [key, data] of Object.entries(window.aggregatedIngredients)) {
+  const pItem = (typeof PANTRY !== 'undefined' && PANTRY[key]) ? PANTRY[key] : null;
+  const itemCost = pItem ? (pItem.price * Math.ceil(data.qty / 500)) : 2.50;
+  calculatedTotal += itemCost;
+}
 
         let packs = 1;
         if (qty >= 5) packs = 2;
