@@ -990,6 +990,57 @@ async function loadRecipesCatalog() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    finalMealsPlan = shuffle(selectedList).slice(0, requestedMeals);
+    // --- MODULE D'AJUSTEMENT CALORIQUE STRICT PAR REPAS ---
+    const targetCaloriesInput = document.getElementById('targetCaloriesInput') || document.getElementById('calorieTarget');
+    const isCalorieStrictActive = document.getElementById('strictCaloriesCheckbox')?.checked || (targetCaloriesInput && targetCaloriesInput.value > 0);
+    const targetKcalPerMeal = targetCaloriesInput && Number(targetCaloriesInput.value) > 0 
+      ? Number(targetCaloriesInput.value) 
+      : 0;
+
+    if (isCalorieStrictActive && targetKcalPerMeal >= 350 && targetKcalPerMeal <= 1200) {
+      finalMealsPlan.forEach(recipe => {
+        const baseKcal = Number(recipe.calories) || 500;
+        const deltaKcal = targetKcalPerMeal - baseKcal;
+
+        // Détection des catégories d'ingrédients de la recette
+        let fecIngredient = (recipe.ingredients || []).find(i => {
+          const k = (i.item || i.key || '').toLowerCase();
+          return ['riz', 'pates', 'quinoa', 'semoule', 'patate', 'pomme_de_terre', 'lentille', 'pois'].some(term => k.includes(term));
+        });
+
+        let oilIngredient = (recipe.ingredients || []).find(i => {
+          const k = (i.item || i.key || '').toLowerCase();
+          return ['huile', 'beurre', 'creme', 'lait_coco'].some(term => k.includes(term));
+        });
+
+        if (fecIngredient) {
+          const fecKey = (fecIngredient.item || fecIngredient.key || '').toLowerCase();
+          const isTuber = fecKey.includes('patate') || fecKey.includes('pomme_de_terre');
+          // Densité calorique : 0.9 kcal/g pour tubercule cuit/pesé, 3.5 kcal/g pour féculent sec
+          const kcalPerGram = isTuber ? 0.9 : 3.5;
+
+          // 80% de l'effort calorique sur le féculent
+          const fecDeltaGrams = Math.round((deltaKcal * 0.80) / kcalPerGram);
+          const currentFecQty = Number(fecIngredient.qty) || (isTuber ? 180 : 80);
+          
+          // Bornes de réalisme culinaire (sec: 40g à 160g ; tubercule: 100g à 350g)
+          const minFec = isTuber ? 100 : 40;
+          const maxFec = isTuber ? 350 : 160;
+          fecIngredient.qty = Math.min(maxFec, Math.max(minFec, currentFecQty + fecDeltaGrams));
+        }
+
+        if (oilIngredient) {
+          // 20% de l'effort calorique sur les lipides (9 kcal/ml)
+          const oilDeltaMl = Math.round((deltaKcal * 0.20) / 9);
+          const currentOilQty = Number(oilIngredient.qty) || 10;
+          oilIngredient.qty = Math.min(25, Math.max(5, currentOilQty + oilDeltaMl));
+        }
+
+        // Fixe la valeur exacte affichée sur la carte et la modale
+        recipe.calories = Math.round(targetKcalPerMeal);
+      });
+    }
     function computeCartAndEnforceBudget(targetBudget, maxBudgetLimit) {
   const portionsCount = {};
   let totalKcal = 0;
