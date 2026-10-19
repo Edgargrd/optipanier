@@ -1119,25 +1119,81 @@ async function loadRecipesCatalog() {
   const equipEl = document.getElementById('modalEquipTag');
   if (equipEl) equipEl.innerText = (recipe.requiredEquipment && recipe.requiredEquipment.length) ? recipe.requiredEquipment.join(', ') : "Plaques";
 
+  // 1. Calibration des grammages & affichage des ingrédients
   const ingUl = document.getElementById('modalIngredientsList');
+  const ingredientsData = (recipe.ingredients || []).map(ing => {
+    const rawKey = (ing.item || ing.key || ing.name || '').toLowerCase();
+    const displayName = ing.display || ing.name || ing.item || ing.key || 'Aliment';
+    let qty = Number(ing.qty) || 150;
+    const unit = ing.unit || 'g';
+
+    // Ajustement des ratios standards par portion si resté à 150g brut
+    if (qty === 150 && unit === 'g') {
+      if (rawKey.includes('patate') || rawKey.includes('pomme_de_terre')) qty = 200;
+      else if (rawKey.includes('riz') || rawKey.includes('pates') || rawKey.includes('quinoa') || rawKey.includes('semoule')) qty = 80;
+      else if (rawKey.includes('brocoli') || rawKey.includes('courgette') || rawKey.includes('haricot') || rawKey.includes('poivron')) qty = 180;
+      else if (rawKey.includes('boeuf') || rawKey.includes('veau') || rawKey.includes('poulet') || rawKey.includes('saumon')) qty = 160;
+    }
+
+    return { key: rawKey, display: displayName, qty: qty, unit: unit };
+  });
+
   if (ingUl) {
-    ingUl.innerHTML = (recipe.ingredients || []).map(ing => `
+    ingUl.innerHTML = ingredientsData.map(ing => `
       <li class="py-1.5 flex justify-between border-b border-slate-100 last:border-0">
-        <span class="font-bold text-slate-800">${ing.display || ing.key || ing.item}</span>
+        <span class="font-bold text-slate-800">${ing.display}</span>
         <span class="text-slate-500 font-semibold">${ing.qty} ${ing.unit}</span>
       </li>
     `).join('');
   }
 
+  // 2. Génération chronométrée détaillée pas-à-pas (6 à 7 étapes ciblées)
   const stepOl = document.getElementById('modalStepsList');
   if (stepOl) {
-    const steps = recipe.steps || [
-      "Préparer et découper les ingrédients.",
-      "Faire cuire les féculents et faire dorer la base protéinée à la poêle.",
-      "Ajouter les légumes et assaisonner selon votre goût.",
-      "Dresser chaud dans une assiette ou un bol."
+    const prot = ingredientsData.find(i => 
+      ['veau', 'boeuf', 'poulet', 'saumon', 'thon', 'tofu', 'oeuf', 'porc', 'dinde', 'steak'].some(k => i.key.includes(k))
+    ) || { display: 'la protéine', key: '' };
+
+    const fec = ingredientsData.find(i => 
+      ['riz', 'patate', 'pomme_de_terre', 'pates', 'quinoa', 'semoule', 'lentille', 'pois'].some(k => i.key.includes(k))
+    ) || { display: 'le féculent', key: '' };
+
+    const leg = ingredientsData.find(i => 
+      ['brocoli', 'courgette', 'carotte', 'poivron', 'epinard', 'tomate', 'oignon', 'haricot'].some(k => i.key.includes(k))
+    ) || { display: 'les légumes', key: '' };
+
+    // Découpes adaptées
+    let cutProt = `tailler ${prot.display.toLowerCase()} en lamelles régulières de 1 à 2 cm d'épaisseur`;
+    if (prot.key.includes('saumon') || prot.key.includes('tofu')) cutProt = `couper ${prot.display.toLowerCase()} en pavés ou cubes nets de 2,5 cm`;
+
+    let cutLeg = `détailler ${leg.display.toLowerCase()} en fleurettes de 3 cm (ou rondelles de 5 mm)`;
+    if (leg.key.includes('poivron') || leg.key.includes('oignon')) cutLeg = `émincer ${leg.display.toLowerCase()} en fines lanières de 5 mm`;
+
+    let prepFec = `éplucher et tailler ${fec.display.toLowerCase()} en cubes réguliers de 2 cm`;
+    let cookFecTime = "12 à 15 min dans une casserole d'eau bouillante salée (départ eau froide pour les tubercules)";
+    if (fec.key.includes('riz') || fec.key.includes('quinoa')) {
+      prepFec = `rincer ${fec.display.toLowerCase()} à l'eau claire pendant 30 secondes`;
+      cookFecTime = "11 min dans 2 fois son volume d'eau bouillante à feu doux, à couvert";
+    } else if (fec.key.includes('pates')) {
+      prepFec = `peser la quantité exacte`;
+      cookFecTime = "9 min dans un grand volume d'eau bouillante salée (1L pour 100g)";
+    }
+
+    const detailedSteps = [
+      `<strong>Mise en place & découpes nettes (4 min) :</strong> Laver les végétaux. Sur planche propre, ${cutProt}. Puis, ${cutLeg}. Pour ${fec.display.toLowerCase()}, ${prepFec}.`,
+      `<strong>Lancement des féculents (chronomètre : 0:00) :</strong> Faire cuire ${fec.display.toLowerCase()} pendant ${cookFecTime}. Égoutter dès la fin du temps.`,
+      `<strong>Saisie de la base protéinée (chronomètre : 5:00 à 10:00) :</strong> Chauffer 1 cuillère à café d'huile dans une poêle ou un wok à feu vif (thermostat 7/9). Déposer ${prot.display.toLowerCase()} sans remuer pendant 2 min pour obtenir une coloration dorée, puis retourner et saisir 3 à 4 min supplémentaires. Réserver sur une assiette.`,
+      `<strong>Sauté des légumes au croquant (chronomètre : 10:00 à 16:00) :</strong> Dans la même poêle avec le jus de cuisson, verser ${leg.display.toLowerCase()}. Faire sauter à feu moyen-vif pendant 6 min en remuant régulièrement avec 2 cuillères à soupe d'eau pour créer une légère vapeur.`,
+      `<strong>Assemblage & fusion des cuissons (chronomètre : 16:00 à 18:00) :</strong> Réintégrer ${prot.display.toLowerCase()} et ${fec.display.toLowerCase()} égoutté dans la poêle chaude. Mélanger l'ensemble à feu doux pendant 2 min pour homogénéiser les températures.`,
+      `<strong>Assaisonnement ciblé précis (au choix) :</strong> Ne pas saler à l'aveugle. Incorporer soit <em>Option A (profil chaud/épicé)</em> : 1 c. à café rase de paprika doux + ½ c. à café d'ail semoule + 2 tours de moulin à poivre ; soit <em>Option B (profil herbes/frais)</em> : 1 c. à café d'herbes de Provence + 1 filet de jus de citron jaune + 1 pincée de fleur de sel.`,
+      `<strong>Dressage structuré :</strong> Disposer immédiatement dans une assiette creuse ou un bol large : féculents en base, légumes répartis sur le flanc, protéines dorées sur le dessus.`
     ];
-    stepOl.innerHTML = steps.map(s => `<li class="py-1 leading-relaxed text-slate-700">${s}</li>`).join('');
+
+    stepOl.innerHTML = detailedSteps.map(s => `
+      <li class="py-2 text-xs leading-relaxed text-slate-700 border-b border-slate-100 last:border-0">
+        ${s}
+      </li>
+    `).join('');
   }
 
   const modalEl = document.getElementById('recipeModal');
