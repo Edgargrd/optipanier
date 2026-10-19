@@ -959,6 +959,60 @@ async function loadRecipesCatalog() {
     }
 
     finalMealsPlan = shuffle(selectedList).slice(0, requestedMeals);
+
+    // --- MODULE D'AJUSTEMENT CALORIQUE STRICT PAR REPAS ---
+    const calEl = document.getElementById('targetCaloriesInput') || 
+                  document.getElementById('calGoal') || 
+                  document.getElementById('targetKcal') || 
+                  document.getElementById('calorieTarget') || 
+                  document.getElementById('caloriesInput') ||
+                  document.querySelector('input[type="number"][name*="cal"]');
+
+    const rawKcalVal = calEl ? Number(calEl.value) : 0;
+    const isStrictActive = document.getElementById('strictCaloriesCheckbox')?.checked || 
+                           document.getElementById('strictCal')?.checked || 
+                           rawKcalVal > 0;
+
+    const desiredMealKcal = (rawKcalVal >= 350 && rawKcalVal <= 1200) ? Math.round(rawKcalVal) : 0;
+
+    if (isStrictActive && desiredMealKcal > 0) {
+      finalMealsPlan = finalMealsPlan.map(recipe => {
+        const r = JSON.parse(JSON.stringify(recipe));
+        const baseKcal = Number(r.calories || r.kcal || 500);
+        const deltaKcal = desiredMealKcal - baseKcal;
+
+        const fec = (r.ingredients || []).find(i => {
+          const k = (i.item || i.key || i.name || '').toLowerCase();
+          return ['riz', 'pates', 'quinoa', 'semoule', 'patate', 'pomme_de_terre', 'lentille', 'pois'].some(t => k.includes(t));
+        });
+
+        const oil = (r.ingredients || []).find(i => {
+          const k = (i.item || i.key || i.name || '').toLowerCase();
+          return ['huile', 'beurre', 'creme', 'lait_coco'].some(t => k.includes(t));
+        });
+
+        if (fec) {
+          const fecKey = (fec.item || fec.key || fec.name || '').toLowerCase();
+          const isTuber = fecKey.includes('patate') || fecKey.includes('pomme_de_terre');
+          const kcalPerG = isTuber ? 0.9 : 3.5;
+          const fecDeltaGrams = Math.round((deltaKcal * 0.80) / kcalPerG);
+          const currentFecQty = Number(fec.qty) || (isTuber ? 180 : 80);
+          const minFec = isTuber ? 100 : 40;
+          const maxFec = isTuber ? 400 : 200;
+          fec.qty = Math.min(maxFec, Math.max(minFec, currentFecQty + fecDeltaGrams));
+        }
+
+        if (oil) {
+          const oilDeltaMl = Math.round((deltaKcal * 0.20) / 9);
+          const currentOilQty = Number(oil.qty) || 10;
+          oil.qty = Math.min(25, Math.max(5, currentOilQty + oilDeltaMl));
+        }
+
+        r.calories = desiredMealKcal;
+        r.kcal = desiredMealKcal;
+        return r;
+      });
+    }
     previousPlanIds = new Set(finalMealsPlan.map(r => r.id));
       const budgetSuccess = computeCartAndEnforceBudget(targetBudget, maxBudgetLimit);
       if (!budgetSuccess) {
