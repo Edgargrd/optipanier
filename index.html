@@ -749,12 +749,16 @@ async function loadRecipesCatalog() {
         r.diet === 'veggie' ? 'veggie' : null,
         r.diet === 'halal' ? 'halal' : null
       ].filter(Boolean),
-      ingredients: r.ingredients.map(ing => ({
-        key: ing.key,
-        display: ing.display,
-        qty: ing.qty,
-        unit: ing.unit
-      }))
+      ingredients: (r.ingredients || []).map(ing => {
+              const k = (ing.item || ing.key || ing.name || 'aliment').toLowerCase().trim();
+              const disp = ing.display || ing.name || ing.item || ing.key || k;
+              return {
+                key: k,
+                display: disp.charAt(0).toUpperCase() + disp.slice(1).replace(/_/g, ' '),
+                qty: Number(ing.qty) || 100,
+                unit: ing.unit || 'g'
+              };
+            })
     }));
     console.log(`OptiPanier : ${MASTER_RECIPES.length} recettes prêtes.`);
   } catch (err) {
@@ -928,8 +932,8 @@ async function loadRecipesCatalog() {
     totalKcal += (r.calories || 0);
 
     (r.ingredients || []).forEach(i => {
-      const key = (i.key || 'divers').toLowerCase().trim();
-      const display = i.display || i.name || key;
+      const key = (i.key || i.item || 'divers').toLowerCase().trim();
+      const display = i.display || i.name || i.item || (key.charAt(0).toUpperCase() + key.slice(1));
       const qty = Number(i.qty) || 100;
       const unit = i.unit || 'g';
 
