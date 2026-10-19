@@ -920,90 +920,88 @@ async function loadRecipesCatalog() {
     }
 
     function computeCartAndEnforceBudget(targetBudget, maxBudgetLimit) {
-      const portionsCount = {};
-      let totalKcal = 0;
+  const portionsCount = {};
+  let totalKcal = 0;
+  window.aggregatedIngredients = {};
 
-      window.aggregatedIngredients = {};
+  finalMealsPlan.forEach(r => {
+    totalKcal += (r.calories || 0);
+    const ingredientsList = r.ingredients || r.recipe_ingredients || [];
 
-    finalMealsPlan.forEach(r => {
-      totalKcal += (r.calories || 0);
+    ingredientsList.forEach(i => {
+      const rawName = i.name || i.nom || i.ingredient || i.item || i.key || (typeof i === 'string' ? i : 'Aliment');
+      const key = rawName.toLowerCase().trim();
+      const qty = Number(i.qty || i.quantity || i.amount || 100);
+      const unit = i.unit || i.unite || 'g';
 
-      // On s'assure de lire les ingrédients quel que soit le format
-      const ingredientsList = r.ingredients || r.recipe_ingredients || [];
-
-      ingredientsList.forEach(i => {
-        // Détection du vrai nom de l'ingrédient
-        const rawName = i.name || i.nom || i.ingredient || i.item || i.key || (typeof i === 'string' ? i : 'Aliment');
-        // Clé unique propre (ex: "riz", "escalope de poulet")
-        const key = rawName.toLowerCase().trim();
-        
-        // Détection de la quantité et de l'unité
-        const qty = Number(i.qty || i.quantity || i.amount || 100);
-        const unit = i.unit || i.unite || 'g';
-
-        if (!window.aggregatedIngredients[key]) {
-          window.aggregatedIngredients[key] = {
-            display: rawName.charAt(0).toUpperCase() + rawName.slice(1),
-            qty: 0,
-            unit: unit
-          };
-        }
-        window.aggregatedIngredients[key].qty += qty;
-        portionsCount[key] = (portionsCount[key] || 0) + 1;
-      });
-    });
-
-      consolidatedCart = {};
-      let calculatedTotal = 0;
-
-      for (const [key, data] of Object.entries(window.aggregatedIngredients)) {
-  const pItem = (typeof PANTRY !== 'undefined' && PANTRY[key]) ? PANTRY[key] : null;
-  const itemCost = pItem ? (pItem.price * Math.ceil(data.qty / 500)) : 2.50;
-  calculatedTotal += itemCost;
-}
-
-        let packs = 1;
-        if (qty >= 5) packs = 2;
-        if (qty >= 9) packs = 3;
-
-        const cost = packs * pItem.price;
-        calculatedTotal += cost;
-
-        consolidatedCart[key] = {
-          name: pItem.name,
-          dept: pItem.dept,
-          packs: packs,
-          unitPrice: pItem.price,
-          totalPrice: cost
+      if (!window.aggregatedIngredients[key]) {
+        window.aggregatedIngredients[key] = {
+          display: rawName.charAt(0).toUpperCase() + rawName.slice(1),
+          qty: 0,
+          unit: unit
         };
       }
+      window.aggregatedIngredients[key].qty += qty;
+      portionsCount[key] = (portionsCount[key] || 0) + 1;
+    });
+  });
 
-      if (calculatedTotal > maxBudgetLimit) {
-        const errBox = document.getElementById('globalErrorAlert');
-        const errMsg = document.getElementById('globalErrorMsg');
-        const errDiag = document.getElementById('globalErrorDiagnosis');
+  consolidatedCart = {};
+  let calculatedTotal = 0;
 
-        errMsg.innerHTML = `Budget insuffisant ! Le coût réel du panier en supermarché pour ces <strong>${finalMealsPlan.length} repas</strong> est de <strong>${calculatedTotal.toFixed(2)} €</strong>, ce qui dépasse votre plafond autorisé de <strong>${maxBudgetLimit.toFixed(2)} €</strong> (+10% max).`;
-        errDiag.innerHTML = `<span class="block font-bold text-rose-900 mb-1">Pour continuer, vous devez soit :</span>
-          <div class="text-rose-700">• Augmenter votre budget cible à au moins <strong>${Math.ceil(calculatedTotal)} €</strong> à l'Étape 6.</div>
-          <div class="text-rose-700">• Réduire le nombre de repas (ex: 7 repas au lieu de 14).</div>`;
+  for (const [key, data] of Object.entries(window.aggregatedIngredients)) {
+    const pItem = (typeof PANTRY !== 'undefined' && PANTRY[key]) ? PANTRY[key] : null;
+    const packs = Math.max(1, Math.ceil(data.qty / 500));
+    const unitPrice = pItem ? pItem.price : 1.99;
+    const cost = packs * unitPrice;
 
-        errBox.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return false;
-      }
+    calculatedTotal += cost;
+    consolidatedCart[key] = {
+      name: data.display,
+      dept: pItem ? pItem.dept : 'Épicerie & Frais',
+      packs: packs,
+      unitPrice: unitPrice,
+      totalPrice: cost
+    };
+  }
 
-      document.getElementById('resStoreName').innerText = document.getElementById('storeInput').value.split('-')[1]?.trim() || "Lidl";
-      document.getElementById('resTotalBudget').innerText = calculatedTotal.toFixed(2) + " €";
-      document.getElementById('resTargetBudget').innerText = `≤ ${maxBudgetLimit.toFixed(2)} €`;
-      document.getElementById('resAvgKcal').innerText = Math.round(totalKcal / finalMealsPlan.length) + " kcal";
-      document.getElementById('resMealsCount').innerText = `${finalMealsPlan.length} / ${finalMealsPlan.length}`;
-      document.getElementById('mealsCountBadge').innerText = finalMealsPlan.length;
+  if (calculatedTotal > maxBudgetLimit) {
+    const errBox = document.getElementById('globalErrorAlert');
+    const errMsg = document.getElementById('globalErrorMsg');
+    const errDiag = document.getElementById('globalErrorDiagnosis');
 
-      renderMealsGrid();
-      renderCartBreakdown();
-      return true;
-    
+    if (errMsg) errMsg.innerHTML = `Budget insuffisant ! Le coût réel du panier en supermarché dépasse le plafond.`;
+    if (errDiag) errDiag.innerHTML = `<span class="block font-bold text-rose-900 mb-1">Pour continuer, vous pouvez :</span>
+      <div class="text-rose-700">• Augmenter votre budget cible.</div>
+      <div class="text-rose-700">• Réduire le nombre de repas.</div>`;
+
+    if (errBox) errBox.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return false;
+  }
+
+  const storeEl = document.getElementById('resStoreName');
+  if (storeEl) storeEl.innerText = document.getElementById('storeSelect')?.value || 'Supermarché';
+  
+  const totalEl = document.getElementById('resTotalBudget');
+  if (totalEl) totalEl.innerText = calculatedTotal.toFixed(2);
+  
+  const targetEl = document.getElementById('resTargetBudget');
+  if (targetEl) targetEl.innerText = `≤ ${maxBudgetLimit.toFixed(2)} €`;
+  
+  const kcalEl = document.getElementById('resAvgKcal');
+  if (kcalEl) kcalEl.innerText = Math.round(totalKcal / (finalMealsPlan.length || 1));
+  
+  const mealsCountEl = document.getElementById('resMealsCount');
+  if (mealsCountEl) mealsCountEl.innerText = finalMealsPlan.length;
+  
+  const badgeEl = document.getElementById('mealsCountBadge');
+  if (badgeEl) badgeEl.innerText = finalMealsPlan.length;
+
+  renderMealsGrid();
+  renderCartBreakdown();
+  return true;
+}
 
     function renderMealsGrid() {
       const container = document.getElementById('view-meals-list');
