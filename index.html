@@ -1048,26 +1048,114 @@ async function loadRecipesCatalog() {
   if (!container) return;
   container.innerHTML = '';
 
+  const selectedStore = document.getElementById('storeSelect')?.value || 'default';
   const depts = {};
   let totalItems = 0;
 
+  // Dictionnaire de correspondance clés françaises -> catalogue PANTRY
+  const KEY_MAPPING = {
+    'poulet': 'chicken',
+    'saumon': 'salmon',
+    'dinde': 'turkey',
+    'boeuf': 'beef_hache',
+    'veau': 'beef_hache',
+    'jambon': 'jambon',
+    'oeuf': 'eggs',
+    'oeufs': 'eggs',
+    'thon': 'tuna',
+    'tofu': 'tofu',
+    'riz': 'rice',
+    'riz basmati': 'rice',
+    'pates': 'pasta',
+    'pâtes': 'pasta',
+    'semoule': 'semolina',
+    'semoule fine': 'semolina',
+    'quinoa': 'quinoa',
+    'lentilles': 'lentils',
+    'lentilles corail': 'lentils',
+    'pois chiches': 'chickpeas',
+    'patate': 'sweet_potato',
+    'patates douces': 'sweet_potato',
+    'pomme de terre': 'potato',
+    'pommes de terre': 'potato',
+    'courgette': 'zucchini',
+    'courgettes': 'zucchini',
+    'brocoli': 'broccoli',
+    'brocolis': 'broccoli',
+    'carotte': 'carrot',
+    'carottes': 'carrot',
+    'haricot': 'green_beans',
+    'haricots verts': 'green_beans',
+    'epinard': 'spinach',
+    'epinards': 'spinach',
+    'tomate': 'tomato',
+    'tomates': 'tomato',
+    'poivron': 'bell_pepper',
+    'poivrons': 'bell_pepper',
+    'oignon': 'onion',
+    'oignons': 'onion',
+    'huile': 'olive_oil',
+    'huile d\'olive': 'olive_oil',
+    'huile_olive': 'olive_oil',
+    'creme': 'cream',
+    'lait de coco': 'coconut_milk',
+    'lait_coco': 'coconut_milk'
+  };
+
+  const catalog = (typeof PANTRY !== 'undefined') ? PANTRY : (window.CATALOG || {});
+
   Object.entries(window.aggregatedIngredients || {}).forEach(([key, data]) => {
     totalItems++;
-    let dept = 'Épicerie & Condiments';
-    const lKey = key.toLowerCase();
+    const cleanKey = key.toLowerCase().trim();
+    const pantryKey = KEY_MAPPING[cleanKey] || cleanKey;
+    const itemData = catalog[pantryKey] || catalog[cleanKey] || null;
 
-    if (lKey.includes('poulet') || lKey.includes('boeuf') || lKey.includes('steak') || lKey.includes('saumon') || lKey.includes('thon') || lKey.includes('tofu') || lKey.includes('oeuf') || lKey.includes('porc')) {
-      dept = 'Boucherie & Poissonnerie';
-    } else if (lKey.includes('courgette') || lKey.includes('carotte') || lKey.includes('poivron') || lKey.includes('epinard') || lKey.includes('tomate') || lKey.includes('oignon') || lKey.includes('brocoli') || lKey.includes('haricot') || lKey.includes('salade')) {
-      dept = 'Fruits & Légumes';
-    } else if (lKey.includes('riz') || lKey.includes('pates') || lKey.includes('quinoa') || lKey.includes('semoule') || lKey.includes('lentille') || lKey.includes('pois') || lKey.includes('pomme_de_terre') || lKey.includes('patate')) {
-      dept = 'Féculents & Féculents';
-    } else if (lKey.includes('huile') || lKey.includes('lait_coco') || lKey.includes('creme') || lKey.includes('sauce') || lKey.includes('epice')) {
-      dept = 'Huiles & Sauces';
+    // Récupération du prix selon le magasin sélectionné ou prix de base
+    let unitPrice = 1.99;
+    let deptName = 'Épicerie & Condiments';
+    let packWeight = 500;
+
+    if (itemData) {
+      if (itemData.prices && itemData.prices[selectedStore]) {
+        unitPrice = Number(itemData.prices[selectedStore]);
+      } else if (itemData.price) {
+        unitPrice = Number(itemData.price);
+      }
+      if (itemData.dept) deptName = itemData.dept;
+      if (itemData.packageWeight) packWeight = Number(itemData.packageWeight);
+    } else {
+      if (cleanKey.includes('poulet') || cleanKey.includes('boeuf') || cleanKey.includes('veau') || cleanKey.includes('saumon') || cleanKey.includes('thon') || cleanKey.includes('tofu') || cleanKey.includes('oeuf') || cleanKey.includes('steak')) {
+        deptName = 'Boucherie & Poissonnerie';
+        unitPrice = 3.80;
+        packWeight = cleanKey.includes('oeuf') ? 6 : 400;
+      } else if (cleanKey.includes('courgette') || cleanKey.includes('brocoli') || cleanKey.includes('carotte') || cleanKey.includes('poivron') || cleanKey.includes('tomate') || cleanKey.includes('oignon') || cleanKey.includes('haricot') || cleanKey.includes('epinard')) {
+        deptName = 'Fruits & Légumes';
+        unitPrice = 1.80;
+        packWeight = 500;
+      } else if (cleanKey.includes('riz') || cleanKey.includes('pates') || cleanKey.includes('semoule') || cleanKey.includes('quinoa') || cleanKey.includes('lentille') || cleanKey.includes('pois') || cleanKey.includes('patate')) {
+        deptName = 'Féculents & Légumineuses';
+        unitPrice = 1.90;
+        packWeight = 500;
+      } else if (cleanKey.includes('huile') || cleanKey.includes('lait_coco') || cleanKey.includes('creme')) {
+        deptName = 'Huiles & Sauces';
+        unitPrice = 2.40;
+        packWeight = (data.unit === 'ml') ? 250 : 200;
+      }
     }
 
-    if (!depts[dept]) depts[dept] = [];
-    depts[dept].push(data);
+    const packs = Math.max(1, Math.ceil(data.qty / packWeight));
+    const totalPrice = packs * unitPrice;
+
+    if (!depts[deptName]) depts[deptName] = [];
+    depts[deptName].push({
+      name: data.display,
+      qty: Math.round(data.qty),
+      unit: data.unit,
+      packs: packs,
+      packWeight: packWeight,
+      unitPrice: unitPrice,
+      totalPrice: totalPrice
+    });
   });
 
   const badge = document.getElementById('cartCountBadge');
@@ -1075,24 +1163,31 @@ async function loadRecipesCatalog() {
 
   for (const [deptName, items] of Object.entries(depts)) {
     const box = document.createElement('div');
-    box.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2 mb-3";
+    box.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3 mb-4";
 
     const listHtml = items.map(it => `
-      <li class="flex justify-between items-center py-2 text-xs border-b border-slate-100 last:border-0">
-        <label class="flex items-center gap-2 cursor-pointer select-none">
+      <li class="flex justify-between items-center py-2.5 text-xs border-b border-slate-100 last:border-0">
+        <label class="flex items-center gap-3 cursor-pointer select-none">
           <input type="checkbox" class="rounded text-[#FA4A33] focus:ring-0 w-4 h-4">
-          <span class="font-medium text-slate-700">${it.display}</span>
+          <div>
+            <span class="font-bold text-slate-800 text-sm block">${it.name}</span>
+            <span class="text-slate-400 text-[11px]">Besoin : ${it.qty} ${it.unit} &bull; ${it.packs} pack${it.packs > 1 ? 's' : ''} (${it.packs * it.packWeight} ${it.unit})</span>
+          </div>
         </label>
-        <span class="font-bold text-slate-500 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200">
-          ${Math.round(it.qty)} ${it.unit}
-        </span>
+        <div class="text-right">
+          <span class="font-bold text-slate-900 text-sm block">${it.totalPrice.toFixed(2)} €</span>
+          <span class="text-slate-400 text-[10px]">${it.unitPrice.toFixed(2)} € / pack</span>
+        </div>
       </li>
     `).join('');
 
     box.innerHTML = `
-      <h5 class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-        <i class="fa-solid fa-tag text-[#FA4A33]"></i> ${deptName}
-      </h5>
+      <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-slate-700">
+          <i class="fa-solid fa-tag text-[#FA4A33]"></i> ${deptName}
+        </h5>
+        <span class="text-[11px] font-semibold text-slate-400">${items.length} article${items.length > 1 ? 's' : ''}</span>
+      </div>
       <ul class="divide-y divide-slate-100">${listHtml}</ul>
     `;
     container.appendChild(box);
