@@ -892,8 +892,7 @@ async function loadRecipesCatalog() {
       }
 
       finalMealsPlan = shuffle(pool);
-      return finalMealsPlan;
-    }
+      } else {
 
       // Tri prioritaire si l'option charge mentale est cochée (plats rapides en premier)
       let candidates = [...availableRecipes];
@@ -925,7 +924,7 @@ async function loadRecipesCatalog() {
         }
       }
       previousPlanIds = new Set(finalMealsPlan.map(r => r.id));
-
+}
       const budgetSuccess = computeCartAndEnforceBudget(targetBudget, maxBudgetLimit);
       if (!budgetSuccess) {
         return;
