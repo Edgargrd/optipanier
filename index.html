@@ -834,13 +834,17 @@ async function loadRecipesCatalog() {
         if (!isVeg) return false;
       }
 
-      // Filtre Halal
-      if (exHalal) {
-        const isHalal = (recipe.diet === 'halal') || (recipe.tags && recipe.tags.includes('halal')) || (recipe.diet === 'veggie');
-        const hasPork = recipe.tags && recipe.tags.includes('porc');
-        if (!isHalal || hasPork) return false;
-      }
+      // Filtre Halal : autorise les viandes certifiées halal, les poissons et les plats végétariens (interdit strictement porc/alcool)
+    if (exHalal) {
+      const hasPork = (recipe.tags && recipe.tags.includes('porc')) || (recipe.baseKey || '').toLowerCase().includes('porc');
+      if (hasPork) return false;
 
+      const isHalalMeat = (recipe.diet === 'halal') || (recipe.tags && recipe.tags.includes('halal'));
+      const isFish = ['saumon', 'thon', 'poisson', 'cabillaud', 'colin', 'crevette'].some(p => (recipe.baseKey || '').toLowerCase().includes(p));
+      const isVeggie = recipe.diet === 'veggie' || (recipe.tags && recipe.tags.includes('veggie')) || ['tofu', 'oeuf', 'lentille', 'pois_chiche'].some(p => (recipe.baseKey || '').toLowerCase().includes(p));
+
+      if (!isHalalMeat && !isFish && !isVeggie) return false;
+    }
       // Filtre Porc
       if (exPork && recipe.tags && recipe.tags.includes('porc')) {
         return false;
@@ -859,8 +863,37 @@ async function loadRecipesCatalog() {
         
 
      finalMealsPlan = [];
-      const maxPerBase = Math.max(1, Math.floor(requestedMeals * 0.20));
-      const baseTracker = {};
+    const maxPerBase = Math.max(1, Math.floor(requestedMeals * 0.20));
+    const baseTracker = {};
+
+    // Application stricte des quotas Halal si l'option est active (Max 50% viande halal, 30% poisson, 20% végétarien)
+    if (exHalal) {
+      const shuffle = arr => arr.slice().sort(() => Math.random() - 0.5);
+
+      const halalMeat = availableRecipes.filter(r => (r.diet === 'halal' || (r.tags && r.tags.includes('halal'))) && ['veau', 'boeuf', 'poulet', 'dinde', 'steak'].some(p => (r.baseKey || '').toLowerCase().includes(p)));
+      const fish = availableRecipes.filter(r => ['saumon', 'thon', 'poisson', 'cabillaud', 'colin', 'crevette'].some(p => (r.baseKey || '').toLowerCase().includes(p)));
+      const veggie = availableRecipes.filter(r => r.diet === 'veggie' || (r.tags && r.tags.includes('veggie')) || ['tofu', 'oeuf', 'lentille', 'pois_chiche'].some(p => (r.baseKey || '').toLowerCase().includes(p)));
+
+      const maxMeatCount = Math.floor(requestedMeals * 0.50);
+      const targetFishCount = Math.max(1, Math.round(requestedMeals * 0.30));
+      const targetVeggieCount = Math.max(0, requestedMeals - maxMeatCount - targetFishCount);
+
+      const pickedMeat = shuffle(halalMeat).slice(0, maxMeatCount);
+      const pickedFish = shuffle(fish).slice(0, targetFishCount);
+      const pickedVeggie = shuffle(veggie).slice(0, targetVeggieCount);
+
+      let pool = [...pickedMeat, ...pickedFish, ...pickedVeggie];
+
+      // Sécurité si un groupe manque de choix
+      if (pool.length < requestedMeals) {
+        const remaining = requestedMeals - pool.length;
+        const remainingCandidates = shuffle(availableRecipes.filter(r => !pool.some(p => p.id === r.id)));
+        pool = pool.concat(remainingCandidates.slice(0, remaining));
+      }
+
+      finalMealsPlan = shuffle(pool);
+      return finalMealsPlan;
+    }
 
       // Tri prioritaire si l'option charge mentale est cochée (plats rapides en premier)
       let candidates = [...availableRecipes];
