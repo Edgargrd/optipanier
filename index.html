@@ -870,29 +870,77 @@ async function loadRecipesCatalog() {
     if (exHalal) {
       const shuffle = arr => arr.slice().sort(() => Math.random() - 0.5);
 
-      const halalMeat = availableRecipes.filter(r => (r.diet === 'halal' || (r.tags && r.tags.includes('halal'))) && ['veau', 'boeuf', 'poulet', 'dinde', 'steak'].some(p => (r.baseKey || '').toLowerCase().includes(p)));
-      const fish = availableRecipes.filter(r => ['saumon', 'thon', 'poisson', 'cabillaud', 'colin', 'crevette'].some(p => (r.baseKey || '').toLowerCase().includes(p)));
-      const veggie = availableRecipes.filter(r => r.diet === 'veggie' || (r.tags && r.tags.includes('veggie')) || ['tofu', 'oeuf', 'lentille', 'pois_chiche'].some(p => (r.baseKey || '').toLowerCase().includes(p)));
+      // 1. Détection bilingue robuste des catégories (baseKey + premier ingrédient)
+      const isFishRecipe = r => {
+        const b = (r.baseKey || '').toLowerCase();
+        const firstIng = (r.ingredients && r.ingredients[0] ? (r.ingredients[0].item || r.ingredients[0].key || '') : '').toLowerCase();
+        return ['saumon', 'salmon', 'thon', 'tuna', 'cabillaud', 'cod', 'colin', 'poisson', 'fish', 'crevette', 'shrimp'].some(k => b.includes(k) || firstIng.includes(k));
+      };
 
-      const maxMeatCount = Math.floor(requestedMeals * 0.50);
-      const targetFishCount = Math.max(1, Math.round(requestedMeals * 0.30));
-      const targetVeggieCount = Math.max(0, requestedMeals - maxMeatCount - targetFishCount);
+      const isMeatHalalRecipe = r => {
+        const b = (r.baseKey || '').toLowerCase();
+        const firstIng = (r.ingredients && r.ingredients[0] ? (r.ingredients[0].item || r.ingredients[0].key || '') : '').toLowerCase();
+        const isMeat = ['poulet', 'chicken', 'veau', 'veal', 'boeuf', 'beef', 'dinde', 'turkey'].some(k => b.includes(k) || firstIng.includes(k));
+        const isHalal = (r.diet === 'halal') || (r.tags && r.tags.includes('halal')) || (r.name || '').toLowerCase().includes('halal');
+        return isMeat && isHalal;
+      };
 
-      const pickedMeat = shuffle(halalMeat).slice(0, maxMeatCount);
-      const pickedFish = shuffle(fish).slice(0, targetFishCount);
-      const pickedVeggie = shuffle(veggie).slice(0, targetVeggieCount);
+      const isVeggieRecipe = r => {
+        const isVeg = r.diet === 'veggie' || (r.tags && r.tags.includes('veggie'));
+        return isVeg && !isFishRecipe(r) && !isMeatHalalRecipe(r);
+      };
 
-      let pool = [...pickedMeat, ...pickedFish, ...pickedVeggie];
+      // 2. Constitution des réservoirs
+      const fishPool = shuffle(availableRecipes.filter(isFishRecipe));
+      const meatPool = shuffle(availableRecipes.filter(isMeatHalalRecipe));
+      const veggiePool = shuffle(availableRecipes.filter(isVeggieRecipe));
 
-      // Sécurité si un groupe manque de choix
-      if (pool.length < requestedMeals) {
-        const remaining = requestedMeals - pool.length;
-        const remainingCandidates = shuffle(availableRecipes.filter(r => !pool.some(p => p.id === r.id)));
-        pool = pool.concat(remainingCandidates.slice(0, remaining));
-      }
+      // 3. Quotas stricts : 50% viande max, 30% poisson, 20% végétarien
+      const meatTarget = Math.floor(requestedMeals * 0.50);                      // 3 pour 7 repas
+      const fishTarget = Math.max(1, Math.round(requestedMeals * 0.30));          // 2 pour 7 repas
+      const veggieTarget = Math.max(1, requestedMeals - meatTarget - fishTarget); // 2 pour 7 repas
 
-      finalMealsPlan = shuffle(pool);
-      } else {
+      const selected = [];
+      const usedBases = {};
+
+      // Sélection anti-doublon (plafond strict d'1 plat par base identique)
+      const pickDiverse = (pool, count) => {
+        let picked = 0;
+        for (const recipe of pool) {
+          if (picked >= count) break;
+          const base = (recipe.baseKey || (recipe.ingredients && recipe.ingredients[0] ? (recipe.ingredients[0].item || recipe.ingredients[0].key) : 'base')).toLowerCase();
+          if ((usedBases[base] || 0) < 1) {
+            selected.push(recipe);
+            usedBases[base] = (usedBases[base] || 0) + 1;
+            picked++;
+          }
+        }
+        if (picked < count) {
+          for (const recipe of pool) {
+            if (picked >= count) break;
+            if (!selected.some(s => s.id === recipe.id)) {
+              selected.push(recipe);
+              picked++;
+            }
+          }
+        }
+      };
+
+      pickDiverse(meatPool, meatTarget);
+      pickDiverse(fishPool, fishTarget);
+      pickDiverse(veggiePool, veggieTarget);
+
+      // Normalisation des badges de régime
+      selected.forEach(r => {
+        if (!r.diet || r.diet === 'undefined') {
+          if (isVeggieRecipe(r)) r.diet = 'veggie';
+          else if (isFishRecipe(r)) r.diet = 'poisson';
+          else r.diet = 'halal';
+        }
+      });
+
+      finalMealsPlan = shuffle(selected);
+    } else {
 
       // Tri prioritaire si l'option charge mentale est cochée (plats rapides en premier)
       let candidates = [...availableRecipes];
