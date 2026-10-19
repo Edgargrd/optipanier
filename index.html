@@ -926,17 +926,35 @@ async function loadRecipesCatalog() {
 
   finalMealsPlan.forEach(r => {
     totalKcal += (r.calories || 0);
-    const ingredientsList = r.ingredients || r.recipe_ingredients || [];
 
-    ingredientsList.forEach(i => {
-      const rawName = i.name || i.nom || i.ingredient || i.item || i.key || (typeof i === 'string' ? i : 'Aliment');
-      const key = rawName.toLowerCase().trim();
-      const qty = Number(i.qty || i.quantity || i.amount || 100);
-      const unit = i.unit || i.unite || 'g';
+    const rawList = r.ingredients || r.recipe_ingredients || r.items || [];
+
+    rawList.forEach(i => {
+      let displayName = '';
+      let qty = 1;
+      let unit = 'g';
+
+      if (typeof i === 'string') {
+        displayName = i.trim();
+        const match = i.match(/^([\d.,]+)\s*([a-zA-ZÀ-ÿ]+)?\s*(?:de|d')?\s*(.*)$/);
+        if (match) {
+          qty = parseFloat(match[1].replace(',', '.')) || 1;
+          unit = match[2] || 'g';
+          displayName = match[3] || displayName;
+        }
+      } else if (typeof i === 'object' && i !== null) {
+        displayName = i.name || i.nom || i.item || i.ingredient || i.display || i.key || '';
+        qty = Number(i.quantity || i.qty || i.amount || 100);
+        unit = i.unit || i.unite || 'g';
+      }
+
+      if (!displayName || displayName === 'Ingrédient') return;
+
+      const key = displayName.toLowerCase().trim();
 
       if (!window.aggregatedIngredients[key]) {
         window.aggregatedIngredients[key] = {
-          display: rawName.charAt(0).toUpperCase() + rawName.slice(1),
+          display: displayName.charAt(0).toUpperCase() + displayName.slice(1),
           qty: 0,
           unit: unit
         };
