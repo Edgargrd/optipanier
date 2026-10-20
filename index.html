@@ -961,31 +961,39 @@ async function loadRecipesCatalog() {
     finalMealsPlan = shuffle(selectedList).slice(0, requestedMeals);
 
     // --- MODULE D'AJUSTEMENT CALORIQUE STRICT PAR REPAS ---
-    const calEl = document.getElementById('targetCaloriesInput') || 
-                  document.getElementById('calGoal') || 
-                  document.getElementById('targetKcal') || 
-                  document.getElementById('calorieTarget') || 
-                  document.getElementById('caloriesInput') ||
-                  document.querySelector('input[type="number"][name*="cal"]');
+    // --- FONCTION SHUFFLE UNIVERSELLE ---
+    const shuffleArray = arr => (arr ? arr.slice().sort(() => Math.random() - 0.5) : []);
 
-    const rawKcalVal = calEl ? Number(calEl.value) : 0;
-    const isStrictActive = document.getElementById('strictCaloriesCheckbox')?.checked || 
-                           document.getElementById('strictCal')?.checked || 
-                           rawKcalVal > 0;
+    // --- MODULE D'AJUSTEMENT CALORIQUE STRICT PAR REPAS ---
+    const customToggle = document.getElementById('customKcalToggle');
+    const customSlider = document.getElementById('customKcalSlider');
+    const isStrictActive = customToggle ? customToggle.checked : false;
 
-    const desiredMealKcal = (rawKcalVal >= 350 && rawKcalVal <= 1200) ? Math.round(rawKcalVal) : 0;
+    // Récupération de la cible calorique choisie (ex: 550, 700)
+    let desiredMealKcal = 0;
+    if (customSlider && Number(customSlider.value) > 0) {
+      desiredMealKcal = Number(customSlider.value);
+    } else {
+      const displaySpan = document.getElementById('targetKcalVal');
+      if (displaySpan && Number(displaySpan.innerText) > 0) {
+        desiredMealKcal = Number(displaySpan.innerText);
+      }
+    }
 
-    if (isStrictActive && desiredMealKcal > 0) {
+    if (isStrictActive && desiredMealKcal >= 350 && desiredMealKcal <= 1200) {
       finalMealsPlan = finalMealsPlan.map(recipe => {
+        // Deep clone pour ne pas altérer les objets de base
         const r = JSON.parse(JSON.stringify(recipe));
         const baseKcal = Number(r.calories || r.kcal || 500);
         const deltaKcal = desiredMealKcal - baseKcal;
 
+        // Détection du féculent (variable d'ajustement principale 80%)
         const fec = (r.ingredients || []).find(i => {
           const k = (i.item || i.key || i.name || '').toLowerCase();
-          return ['riz', 'pates', 'quinoa', 'semoule', 'patate', 'pomme_de_terre', 'lentille', 'pois'].some(t => k.includes(t));
+          return ['riz', 'pates', 'quinoa', 'semoule', 'patate', 'pomme_de_terre', 'boulgour', 'lentille', 'pois'].some(t => k.includes(t));
         });
 
+        // Détection de la matière grasse (variable d'ajustement secondaire 20%)
         const oil = (r.ingredients || []).find(i => {
           const k = (i.item || i.key || i.name || '').toLowerCase();
           return ['huile', 'beurre', 'creme', 'lait_coco'].some(t => k.includes(t));
@@ -998,7 +1006,7 @@ async function loadRecipesCatalog() {
           const fecDeltaGrams = Math.round((deltaKcal * 0.80) / kcalPerG);
           const currentFecQty = Number(fec.qty) || (isTuber ? 180 : 80);
           const minFec = isTuber ? 100 : 40;
-          const maxFec = isTuber ? 400 : 200;
+          const maxFec = isTuber ? 400 : 220;
           fec.qty = Math.min(maxFec, Math.max(minFec, currentFecQty + fecDeltaGrams));
         }
 
@@ -1008,6 +1016,7 @@ async function loadRecipesCatalog() {
           oil.qty = Math.min(25, Math.max(5, currentOilQty + oilDeltaMl));
         }
 
+        // Forçage de la cible sur toutes les propriétés potentielles d'affichage
         r.calories = desiredMealKcal;
         r.kcal = desiredMealKcal;
         return r;
