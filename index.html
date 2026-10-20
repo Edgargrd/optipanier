@@ -981,44 +981,76 @@ async function loadRecipesCatalog() {
     }
 
     if (isStrictActive && desiredMealKcal >= 350 && desiredMealKcal <= 1200) {
-      finalMealsPlan = finalMealsPlan.map(recipe => {
-        // Deep clone pour ne pas altérer les objets de base
-        const r = JSON.parse(JSON.stringify(recipe));
-        const baseKcal = Number(r.calories || r.kcal || 500);
-        const deltaKcal = desiredMealKcal - baseKcal;
+      // Table de référence calorique pour 100g ou 100ml
+      const CALORIE_TABLE = {
+        // Féculents secs (~350 kcal / 100g)
+        riz: 3.5, pates: 3.5, quinoa: 3.6, semoule: 3.5, boulgour: 3.4,
+        lentille: 3.3, pois: 3.4, pois_chiche: 3.4,
+        // Tubercules / féculents frais (~80-90 kcal / 100g)
+        patate: 0.86, pomme_de_terre: 0.80,
+        // Matières grasses (~900 kcal / 100ml ou 100g)
+        huile: 9.0, beurre: 7.2, creme: 3.0, lait_coco: 2.0,
+        // Protéines moyennes (~110-150 kcal / 100g)
+        poulet: 1.2, veau: 1.3, boeuf: 1.5, dinde: 1.1, saumon: 2.0, thon: 1.3, cabillaud: 0.8,
+        // Légumes moyens (~25-35 kcal / 100g)
+        carotte: 0.35, poivron: 0.25, epinard: 0.25, haricot: 0.30, tomate: 0.20, courgette: 0.18
+      };
 
-        // Détection du féculent (variable d'ajustement principale 80%)
+      finalMealsPlan = finalMealsPlan.map(recipe => {
+        const r = JSON.parse(JSON.stringify(recipe));
+        
+        // 1. Calcul du total calorique initial réel ingrédient par ingrédient
+        const computeActualCalories = (ingredients) => {
+          return Math.round(ingredients.reduce((total, ing) => {
+            const key = (ing.item || ing.key || ing.name || '').toLowerCase();
+            const qty = Number(ing.qty) || 0;
+            // Détection de la densité calorique
+            let density = 1.0; // valeur par défaut si non répertorié
+            for (const [food, calPerG] of Object.entries(CALORIE_TABLE)) {
+              if (key.includes(food)) {
+                density = calPerG;
+                break;
+              }
+            }
+            return total + (qty * density);
+          }, 0));
+        };
+
+        const initialKcal = computeActualCalories(r.ingredients || []);
+        const deltaKcal = desiredMealKcal - initialKcal;
+
+        // 2. Repérage des variables d'ajustement
         const fec = (r.ingredients || []).find(i => {
           const k = (i.item || i.key || i.name || '').toLowerCase();
           return ['riz', 'pates', 'quinoa', 'semoule', 'patate', 'pomme_de_terre', 'boulgour', 'lentille', 'pois'].some(t => k.includes(t));
         });
 
-        // Détection de la matière grasse (variable d'ajustement secondaire 20%)
         const oil = (r.ingredients || []).find(i => {
           const k = (i.item || i.key || i.name || '').toLowerCase();
           return ['huile', 'beurre', 'creme', 'lait_coco'].some(t => k.includes(t));
         });
 
+        // 3. Ajustement physique des portions
         if (fec) {
           const fecKey = (fec.item || fec.key || fec.name || '').toLowerCase();
           const isTuber = fecKey.includes('patate') || fecKey.includes('pomme_de_terre');
-          const kcalPerG = isTuber ? 0.9 : 3.5;
-          const fecDeltaGrams = Math.round((deltaKcal * 0.80) / kcalPerG);
+          const density = isTuber ? 0.86 : 3.5;
+          const fecDeltaGrams = Math.round((deltaKcal * 0.80) / density);
           const currentFecQty = Number(fec.qty) || (isTuber ? 180 : 80);
-          const minFec = isTuber ? 100 : 40;
-          const maxFec = isTuber ? 400 : 220;
-          fec.qty = Math.min(maxFec, Math.max(minFec, currentFecQty + fecDeltaGrams));
+          fec.qty = Math.min(isTuber ? 400 : 200, Math.max(isTuber ? 100 : 40, currentFecQty + fecDeltaGrams));
         }
 
         if (oil) {
-          const oilDeltaMl = Math.round((deltaKcal * 0.20) / 9);
+          const oilDeltaMl = Math.round((deltaKcal * 0.20) / 9.0);
           const currentOilQty = Number(oil.qty) || 10;
           oil.qty = Math.min(25, Math.max(5, currentOilQty + oilDeltaMl));
         }
 
-        // Forçage de la cible sur toutes les propriétés potentielles d'affichage
-        r.calories = desiredMealKcal;
-        r.kcal = desiredMealKcal;
+        // 4. Recalcul réel post-ajustement (pas de chiffre magique forcé)
+        const verifiedKcal = computeActualCalories(r.ingredients || []);
+        r.calories = verifiedKcal;
+        r.kcal = verifiedKcal;
+
         return r;
       });
     }
